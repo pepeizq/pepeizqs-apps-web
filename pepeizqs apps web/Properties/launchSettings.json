@@ -21,7 +21,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "https://pepeizq-001-site2.ftempurl.com/",
+      "launchUrl": "https://pepeizqapps.com/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
