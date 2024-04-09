@@ -1,20 +1,27 @@
-using Microsoft.AspNetCore.Mvc;
+#nullable disable
+
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace pepeizqs_apps_web.Pages
 {
 	public class IndexModel : PageModel
 	{
-		private readonly ILogger<IndexModel> _logger;
+        public string idioma = string.Empty;
 
-		public IndexModel(ILogger<IndexModel> logger)
-		{
-			_logger = logger;
-		}
+        private readonly ILogger<IndexModel> _logger;
 
-		public void OnGet()
-		{
+        public IndexModel(ILogger<IndexModel> logger)
+        {
+            _logger = logger;
+        }
 
-		}
-	}
+        public void OnGet()
+        {
+            try
+            {
+                idioma = Request.Headers["Accept-Language"].ToString().Split(";").FirstOrDefault()?.Split(",").FirstOrDefault();
+            }
+            catch { }
+        }
+    }
 }

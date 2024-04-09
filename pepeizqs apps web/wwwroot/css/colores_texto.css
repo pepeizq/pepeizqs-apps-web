@@ -1,0 +1,38 @@
+﻿:root {
+    --fondoOscuro: #003f3f;
+    --fondoOscuroTransparente: rgba(0, 63, 63, 0.9);
+    --fondoCuerpo: #007272;
+    --tamañoTexto: 16px;
+    --colorTexto: #f5f5f5;
+    --colorTextoHover: #b9e2fa;
+    --colorTextoVisitado: #cbeafb;
+    --fondoEntrada: #0d1621;
+    --fondoBoton: #1982bf;
+    --fondoBotonHover: #1671a6;
+    --fondoBotonPequeño: #0d1621;
+    --fondoBotonPequeñoHover: #060a0f;
+    --colorTextoPeligro: #f04f5e;
+    --colorTextoPeligroHover: #b91020;
+    --colorTextoOscuro: #86aeef;
+    --colorTextoAlerta: #664d03;
+    --fondoAlerta: #fff3cd;
+    --colorTextoBien: #011a11;
+    --fondoBien: #057c4f;
+    --colorTextoDlc: #edddf0;
+    --fondoDlc: #733b7f;
+}
+
+@font-face {
+    font-family: 'Motiva Sans';
+    src: url('../fuente/MotivaSansRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    color: #00adad;
+}
+
+    a:hover {
+        color: #008686;
+    }

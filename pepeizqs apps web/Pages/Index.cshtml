@@ -1,7 +1,9 @@
 ﻿@page
 @model IndexModel
+
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = Herramientas.Idiomas.CogerCadena(Model.idioma, "Index.Title");
+    Layout = "/Pages/Shared/_Layout.cshtml";
 }
 
-Rebuilding the web from scratch
+@(await Html.RenderComponentAsync<Componentes.Portada>(RenderMode.ServerPrerendered, new { idioma = @Model.idioma}))

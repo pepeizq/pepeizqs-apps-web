@@ -1,0 +1,73 @@
+﻿.cabecera {
+    height: 70px;
+    background-color: var(--fondoOscuro);
+    z-index: 9999;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 14px;
+}
+
+.cabecera-poner {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto-logo {
+    font-size: 22px;
+    color: var(--colorTexto);
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+    .texto-logo:hover {
+        color: var(--colorTextoHover);
+    }
+
+.cuerpo {
+    background-color: var(--fondoCuerpo);
+    color: var(--colorTexto);
+    height: 100%;
+    font-family: 'Motiva Sans';
+    position: relative;
+}
+
+.cuerpo-ancho {
+    max-width: 1320px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cuerpo-espacio {
+    padding: 40px 10px 60px 10px;
+}
+
+.pie {
+    background-color: var(--fondoOscuro);
+    font-size: var(--tamañoTexto);
+    color: var(--colorTexto);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+}
+
+.texto-pie {
+    font-size: var(--tamañoTexto);
+    color: var(--colorTexto);
+    text-decoration: none;
+}
+
+    .texto-pie:hover {
+        color: var(--colorTextoHover);
+    }
+
+    .texto-pie:visited {
+        color: var(--colorTextoVisitado);
+    }

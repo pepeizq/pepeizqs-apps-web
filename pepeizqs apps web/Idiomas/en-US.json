@@ -1,0 +1,282 @@
+[
+  {
+    "Id": "Index.Title",
+    "Valor": "Home Page"
+  },
+  {
+    "Id": "Index.Subtitle",
+    "Valor": "Website with all the apps, websites and games that i have developed"
+  },
+  {
+    "Id": "Timer0.String0",
+    "Valor": "1 second ago"
+  },
+  {
+    "Id": "Timer0.String1",
+    "Valor": "{0} seconds ago"
+  },
+  {
+    "Id": "Timer0.String2",
+    "Valor": "{0} minutes ago"
+  },
+  {
+    "Id": "Timer0.String3",
+    "Valor": "about a minute ago"
+  },
+  {
+    "Id": "Timer0.String4",
+    "Valor": "{0} hours ago"
+  },
+  {
+    "Id": "Timer0.String5",
+    "Valor": "about an hour ago"
+  },
+  {
+    "Id": "Timer0.String6",
+    "Valor": "{0} days ago"
+  },
+  {
+    "Id": "Timer0.String7",
+    "Valor": "1 day and {0} hours ago"
+  },
+  {
+    "Id": "Timer0.String8",
+    "Valor": "{0} months ago"
+  },
+  {
+    "Id": "Timer0.String9",
+    "Valor": "1 month and {0} days ago"
+  },
+  {
+    "Id": "Timer0.String10",
+    "Valor": "{0} years ago"
+  },
+  {
+    "Id": "Timer0.String11",
+    "Valor": "1 year and {0} months ago"
+  },
+  {
+    "Id": "Timer0.String12",
+    "Valor": "1 year and 1 month ago"
+  },
+  {
+    "Id": "Timer0.String13",
+    "Valor": "1 year ago"
+  },
+  {
+    "Id": "Timer0.String14",
+    "Valor": "1 month and 1 day ago"
+  },
+  {
+    "Id": "Timer0.String15",
+    "Valor": "1 month ago"
+  },
+  {
+    "Id": "Timer0.String16",
+    "Valor": "1 day and 1 hour ago"
+  },
+  {
+    "Id": "Timer0.String17",
+    "Valor": "1 day ago"
+  },
+  {
+    "Id": "Timer1.String0",
+    "Valor": "ends in 1 second"
+  },
+  {
+    "Id": "Timer1.String1",
+    "Valor": "ends in {0} seconds"
+  },
+  {
+    "Id": "Timer1.String2",
+    "Valor": "ends in {0} minutes"
+  },
+  {
+    "Id": "Timer1.String3",
+    "Valor": "ends in 1 minute"
+  },
+  {
+    "Id": "Timer1.String4",
+    "Valor": "ends in {0} hours"
+  },
+  {
+    "Id": "Timer1.String5",
+    "Valor": "ends in 1 hour"
+  },
+  {
+    "Id": "Timer1.String6",
+    "Valor": "ends in {0} days"
+  },
+  {
+    "Id": "Timer1.String7",
+    "Valor": "ends in 1 day and {0} hours"
+  },
+  {
+    "Id": "Timer1.String8",
+    "Valor": "ends in {0} months"
+  },
+  {
+    "Id": "Timer1.String9",
+    "Valor": "ends in 1 month and {0} days"
+  },
+  {
+    "Id": "Timer1.String10",
+    "Valor": "ends in {0} years"
+  },
+  {
+    "Id": "Timer1.String11",
+    "Valor": "ends in 1 year and {0} months"
+  },
+  {
+    "Id": "Timer1.String12",
+    "Valor": "ends in 1 year and 1 month"
+  },
+  {
+    "Id": "Timer1.String13",
+    "Valor": "ends in 1 year"
+  },
+  {
+    "Id": "Timer1.String14",
+    "Valor": "ends in 1 month and 1 day"
+  },
+  {
+    "Id": "Timer1.String15",
+    "Valor": "ends in 1 month"
+  },
+  {
+    "Id": "Timer1.String16",
+    "Valor": "ends in 1 day and 1 hour"
+  },
+  {
+    "Id": "Timer1.String17",
+    "Valor": "ends in 1 day"
+  },
+  {
+    "Id": "Timer2.String0",
+    "Valor": "end in 1 second"
+  },
+  {
+    "Id": "Timer2.String1",
+    "Valor": "end in {0} seconds"
+  },
+  {
+    "Id": "Timer2.String2",
+    "Valor": "end in {0} minutes"
+  },
+  {
+    "Id": "Timer2.String3",
+    "Valor": "end in 1 minute"
+  },
+  {
+    "Id": "Timer2.String4",
+    "Valor": "end in {0} hours"
+  },
+  {
+    "Id": "Timer2.String5",
+    "Valor": "end in 1 hour"
+  },
+  {
+    "Id": "Timer2.String6",
+    "Valor": "end in {0} days"
+  },
+  {
+    "Id": "Timer2.String7",
+    "Valor": "end in 1 day and {0} hours"
+  },
+  {
+    "Id": "Timer2.String8",
+    "Valor": "end in {0} months"
+  },
+  {
+    "Id": "Timer2.String9",
+    "Valor": "end in 1 month and {0} days"
+  },
+  {
+    "Id": "Timer2.String10",
+    "Valor": "end in {0} years"
+  },
+  {
+    "Id": "Timer2.String11",
+    "Valor": "end in 1 year and {0} months"
+  },
+  {
+    "Id": "Timer2.String12",
+    "Valor": "end in 1 year and 1 month"
+  },
+  {
+    "Id": "Timer2.String13",
+    "Valor": "end in 1 year"
+  },
+  {
+    "Id": "Timer2.String14",
+    "Valor": "end in 1 month and 1 day"
+  },
+  {
+    "Id": "Timer2.String15",
+    "Valor": "end in 1 month"
+  },
+  {
+    "Id": "Timer2.String16",
+    "Valor": "end in 1 day and 1 hour"
+  },
+  {
+    "Id": "Timer2.String17",
+    "Valor": "end in 1 day"
+  },
+  {
+    "Id": "Timer3.String1",
+    "Valor": "for 1 day"
+  },
+  {
+    "Id": "Timer3.String2",
+    "Valor": "for {0} days"
+  },
+  {
+    "Id": "Month.1",
+    "Valor": "January"
+  },
+  {
+    "Id": "Month.2",
+    "Valor": "February"
+  },
+  {
+    "Id": "Month.3",
+    "Valor": "March"
+  },
+  {
+    "Id": "Month.4",
+    "Valor": "April"
+  },
+  {
+    "Id": "Month.5",
+    "Valor": "May"
+  },
+  {
+    "Id": "Month.6",
+    "Valor": "June"
+  },
+  {
+    "Id": "Month.7",
+    "Valor": "July"
+  },
+  {
+    "Id": "Month.8",
+    "Valor": "August"
+  },
+  {
+    "Id": "Month.9",
+    "Valor": "September"
+  },
+  {
+    "Id": "Month.10",
+    "Valor": "October"
+  },
+  {
+    "Id": "Month.11",
+    "Valor": "November"
+  },
+  {
+    "Id": "Month.12",
+    "Valor": "December"
+  }
+]

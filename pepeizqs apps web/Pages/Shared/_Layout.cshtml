@@ -1,45 +1,66 @@
-﻿<!DOCTYPE html>
+﻿@{
+    #nullable disable
+
+    string github = "https://github.com/pepeizq/";
+
+    string idioma = Context.Request.Headers["Accept-Language"].ToString().Split(";").FirstOrDefault()?.Split(",").FirstOrDefault();
+
+    string titulo = string.Empty;
+
+    if (ViewData["Title"].ToString() == Herramientas.Idiomas.CogerCadena(idioma, "Index.Title"))
+    {
+        titulo = "pepeizq's apps • " + Herramientas.Idiomas.CogerCadena(idioma, "Index.Subtitle");
+    }
+    else
+    {
+        titulo = ViewData["Title"].ToString() + " • pepeizq's apps";
+    }
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - pepeizqs_apps_web</title>
+    <title>@titulo</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/pepeizqs_apps_web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/colores_texto.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/principal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" type="text/css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007272">
+    <meta name="msapplication-TileColor" content="#007272">
+    <meta name="theme-color" content="#007272">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">pepeizqs_apps_web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <p class="nav navbar-text">Hello, @User.Identity?.Name!</p>
+
+<body class="cuerpo">
+    <header class="cabecera">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm" style="padding: 0px;">
+            <div class="cabecera-poner cuerpo-ancho">
+                <a class="texto-logo" asp-page="/Index">pepeizq's apps</a>
+
+                <div class="">
+                    <div style="display: flex; align-items: center; justify-content: center; font-size: 20px; text-align: center;">
+                        <div style="margin-left: 6px; margin-right: 6px;"><a href="@github" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - pepeizqs_apps_web - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <main role="main" class="cuerpo-ancho cuerpo-espacio">
+        @RenderBody()
+    </main>
+
+    <footer class="pie">
+        <div class="cuerpo-ancho" style="padding-top: 30px; padding-bottom: 30px;">
+            &copy; 2024 - pepeizq's apps
         </div>
     </footer>
 
