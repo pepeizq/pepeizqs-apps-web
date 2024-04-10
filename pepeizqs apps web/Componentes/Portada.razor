@@ -1,4 +1,23 @@
-﻿Rebuilding the web from scratch
+﻿@using Microsoft.AspNetCore.Components.Web;
+@using Proyectos
+
+<div style="background-color: var(--fondoEntrada); padding: 50px;">
+	@foreach (var proyecto in proyectos)
+	{
+		<div class="expandir" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
+			<a href="@proyecto.Ubicacion" style="text-decoration: none; color: var(--colorTexto);">
+				<div style="display: flex; align-items: center; border: 1px solid var(--colorEnlace); background-color: @proyecto.Color1;">
+					<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 100px; height: 100px;" />
+
+					<div style="padding: 20px 30px;">
+						<div style="font-size: 19px;">@proyecto.Nombre</div>
+						<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	}
+</div>
 
 @code {
 
@@ -6,5 +25,12 @@
 
 	[Parameter]
 	public string idioma { get; set; }
+
+	private List<Proyecto> proyectos = new List<Proyecto>();
+
+	protected override void OnInitialized()
+	{
+		proyectos = Proyectos.Listado.Generar();
+	}
 
 }

@@ -1,3 +1,4 @@
+using Herramientas;
 using Microsoft.AspNetCore.Authentication.Negotiate;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,15 +15,40 @@ var builder = WebApplication.CreateBuilder(args);
 //});
 builder.Services.AddRazorPages();
 
+#region Tareas
+
+builder.Services.Configure<HostOptions>(hostOptions =>
+{
+    hostOptions.BackgroundServiceExceptionBehavior = BackgroundServiceExceptionBehavior.Ignore;
+});
+
+builder.Services.AddSingleton<Tareas.TareaGithub>();
+
+builder.Services.AddHostedService(provider => provider.GetRequiredService<Tareas.TareaGithub>());
+
+
+
+builder.Services.AddHttpClient<IDecompiladores, Decompiladores2>()
+    .ConfigurePrimaryHttpMessageHandler(() =>
+        new HttpClientHandler
+        {
+            AutomaticDecompression = System.Net.DecompressionMethods.GZip,
+            MaxConnectionsPerServer = 2
+        });
+
+builder.Services.AddSingleton<IDecompiladores, Decompiladores2>();
+
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-	app.UseExceptionHandler("/Error");
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-	app.UseHsts();
-}
+//if (!app.Environment.IsDevelopment())
+//{
+    //app.UseExceptionHandler("/Error");
+    app.UseDeveloperExceptionPage();
+    app.UseHsts();
+//}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

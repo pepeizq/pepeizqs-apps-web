@@ -54,19 +54,48 @@
         </nav>
     </header>
 
-    <main role="main" class="cuerpo-ancho cuerpo-espacio">
+    <main id="cuerpazo" role="main" class="cuerpo-ancho">
         @RenderBody()
     </main>
 
     <footer class="pie">
-        <div class="cuerpo-ancho" style="padding-top: 30px; padding-bottom: 30px;">
-            &copy; 2024 - pepeizq's apps
+        <div class="cuerpo-ancho" style="padding-top: 30px; padding-bottom: 30px; display: flex; align-items: center; font-size: 17px;">
+            <div style="width: 65%; text-align: left;">
+                <div>
+                    &copy; @DateTime.Now.Year.ToString() • <a href="https://pepeizqapps.com/" style="text-decoration: none;" target="_blank">pepeizq's apps</a> • <a href="https://pepeizqdeals.com/" style="text-decoration: none;" target="_blank">pepeizq's deals</a>
+                </div>
+
+                <div style="font-size: 16px; margin-top: 30px;">
+                   @*  <a href="https://github.com/pepeizq/pepeizqs-deals-web/" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-github" style="font-size: 20px; margin-right: 10px;"></i>@Herramientas.Idiomas.CogerCadena(idioma, "Layout.SourceCode")</a> • <a href="/Contact" style="text-decoration: none;">@Herramientas.Idiomas.CogerCadena(idioma, "Layout.Contact")</a> • <a href="/Privacy" style="text-decoration: none;">@Herramientas.Idiomas.CogerCadena(idioma, "Layout.Privacy")</a> *@
+                </div>
+            </div>
+
+            <div style="width: 25%; text-align: right;">
+                <div style="display: flex; align-items: center; justify-content: center; font-size: 24px; text-align: center;">
+                    <div style="margin-left: 6px; margin-right: 6px;"><a href="@github" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                </div>
+            </div>
+
+            <div style="width: 10%; text-align: right;">
+                <a onclick="moverScroll('cuerpazo')" style="color: var(--colorTextoOscuro); text-decoration: none; cursor: pointer;">
+                    <i class="fa-solid fa-chevron-up subir-arriba" style="font-size: 22px;"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        function moverScroll(id) {
+            const element = document.getElementById(id);
+            const y = element.getBoundingClientRect().top;
+
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

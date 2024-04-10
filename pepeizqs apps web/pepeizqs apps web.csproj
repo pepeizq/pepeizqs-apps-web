@@ -5,7 +5,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>pepeizqs_apps_web</RootNamespace>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\apps\pepeizqdeals.cshtml" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="8.0.3" />
@@ -13,6 +20,18 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.3" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\apps\pepeizqdeals.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\apps\pepeizqdeals.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\apps\pepeizqdeals.cshtml" />
   </ItemGroup>
 
 </Project>

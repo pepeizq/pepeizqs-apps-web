@@ -8,6 +8,10 @@
     "Valor": "Website with all the apps, websites and games that i have developed"
   },
   {
+    "Id": "Index.SourceCode",
+    "Valor": "Source Code"
+  },
+  {
     "Id": "Timer0.String0",
     "Valor": "1 second ago"
   },
@@ -278,5 +282,69 @@
   {
     "Id": "Month.12",
     "Valor": "December"
+  },
+  {
+    "Id": "pepeizqdeals.String1",
+    "Valor": "Website of PC video game deals from official stores"
+  },
+  {
+    "Id": "pepeizqdeals.String2",
+    "Valor": "I created this website as a PC video game player who likes to pay their creators for their games, but since i am not a millionaire i needed to be aware of the best deals with a detailed record of each game."
+  },
+  {
+    "Id": "pepeizqdeals.String3",
+    "Valor": "Below i detail the technical capabilities of the website:"
+  },
+  {
+    "Id": "pepeizqdeals.String4",
+    "Valor": "Automated Update"
+  },
+  {
+    "Id": "pepeizqdeals.String5",
+    "Valor": "The website is automated to always be looking for video game deals, approximately every 4 hours it completes each cycle of looking at deals in all the stores that i have access to."
+  },
+  {
+    "Id": "pepeizqdeals.String6",
+    "Valor": "Manual Update"
+  },
+  {
+    "Id": "pepeizqdeals.String7",
+    "Valor": "When a special event occurs, i can generate news on the web. Generally, these news are to inform visitors about temporarily free games, bundles of several games, or new additions to subscription services."
+  },
+  {
+    "Id": "pepeizqdeals.String8",
+    "Valor": "Profile for each game"
+  },
+  {
+    "Id": "pepeizqdeals.String9",
+    "Valor": "The website is capable of managing individual profiles for tens of thousands of games, within each profile I can edit any game data without having to open the database manually."
+  },
+  {
+    "Id": "pepeizqdeals.String10",
+    "Valor": "Email notifications"
+  },
+  {
+    "Id": "pepeizqdeals.String11",
+    "Valor": "I developed this feature for those users who like to receive email notifications of games whose games reach a new minimum price, it also works for new news notifications."
+  },
+  {
+    "Id": "pepeizqdeals.String12",
+    "Valor": "Integration with Steam"
+  },
+  {
+    "Id": "pepeizqdeals.String13",
+    "Valor": "To make it easier to manage a list of desired games, i developed an integration with Steam to import the user's list from there. It also helps me to show the user if they already have the game in various sections of the website."
+  },
+  {
+    "Id": "pepeizqdeals.String14",
+    "Valor": "Giveaways for users"
+  },
+  {
+    "Id": "pepeizqdeals.String15",
+    "Valor": "To reward those users who have helped me with the website at some point i developed this feature, hopefully one day i can do real game giveaways."
+  },
+  {
+    "Id": "pepeizqdeals2.String1",
+    "Valor": "App to help manage the website pepeizqdeals.com"
   }
 ]

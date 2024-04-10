@@ -1,0 +1,11 @@
+﻿@page
+@model pepeizqs_apps_web.Pages.apps.pepeizqdealsModel
+
+@{
+    string id = "pepeizqdeals2";
+
+    ViewData["Title"] = Proyectos.Listado.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.CogerCadena(Model.idioma, Proyectos.Listado.DevolverProyecto(id).Id + ".String1");
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+@(await Html.RenderComponentAsync<Componentes.Apps.Pepeizqdeals>(RenderMode.ServerPrerendered, new { idioma = @Model.idioma }))

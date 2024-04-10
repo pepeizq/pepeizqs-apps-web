@@ -37,14 +37,8 @@
 .cuerpo-ancho {
     max-width: 1320px;
     width: 100%;
-    padding-right: var(--bs-gutter-x,.75rem);
-    padding-left: var(--bs-gutter-x,.75rem);
     margin-right: auto;
     margin-left: auto;
-}
-
-.cuerpo-espacio {
-    padding: 40px 10px 60px 10px;
 }
 
 .pie {
@@ -70,4 +64,12 @@
 
     .texto-pie:visited {
         color: var(--colorTextoVisitado);
+    }
+
+.expandir {
+    transition: transform .2s;
+}
+
+    .expandir:hover {
+        transform: scale(1.02);
     }

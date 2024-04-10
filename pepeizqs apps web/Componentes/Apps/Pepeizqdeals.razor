@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Components.Web;
+@using Proyectos
+
+
+
+@code {
+
+	#nullable disable
+
+	[Parameter]
+	public string idioma { get; set; }
+
+	private Proyecto proyecto = new Proyecto();
+
+	protected override void OnInitialized()
+	{
+		proyecto = Proyectos.Listado.DevolverProyecto("pepeizqdeals2");
+	}
+}

@@ -8,6 +8,10 @@
     "Valor": "Web con todas las apps, webs y juegos que he creado"
   },
   {
+    "Id": "Index.SourceCode",
+    "Valor": "Código Fuente"
+  },
+  {
     "Id": "Timer0.String0",
     "Valor": "hace 1 segundo"
   },
@@ -278,5 +282,69 @@
   {
     "Id": "Month.12",
     "Valor": "Diciembre"
+  },
+  {
+    "Id": "pepeizqdeals.String1",
+    "Valor": "Web de ofertas de videojuegos para PC procedentes de tiendas oficiales"
+  },
+  {
+    "Id": "pepeizqdeals.String2",
+    "Valor": "Cree esta pagina web como jugador de videojuegos para PC que le gusta pagar por sus juegos a sus creadores, pero como no soy millonario necesitaba estar al corriente de las mejores ofertas con un registro detallado de cada juego."
+  },
+  {
+    "Id": "pepeizqdeals.String3",
+    "Valor": "A continuación os detallo las capacidades técnicas de la web:"
+  },
+  {
+    "Id": "pepeizqdeals.String4",
+    "Valor": "Actualización Automatizada"
+  },
+  {
+    "Id": "pepeizqdeals.String5",
+    "Valor": "La web está automatizada para estar buscando siempre ofertas de videojuegos, aproximadamente cada 4 horas completa cada ciclo de mirar ofertas en todas las tiendas las que tengo acceso."
+  },
+  {
+    "Id": "pepeizqdeals.String6",
+    "Valor": "Actualización Manual"
+  },
+  {
+    "Id": "pepeizqdeals.String7",
+    "Valor": "Para cuando se da un evento especial puedo generar una noticia en la web, generalmente estas noticias son para informar a los visitantes de juegos temporalmente gratis, bundles de varios juegos o nuevos juegos añadidos a los servicios de suscripción."
+  },
+  {
+    "Id": "pepeizqdeals.String8",
+    "Valor": "Ficha para cada juego"
+  },
+  {
+    "Id": "pepeizqdeals.String9",
+    "Valor": "La web es capaz de gestionar fichas individuales para decenas de miles de juegos, dentro de cada ficha puedo editar cualquier dato del juego sin tener que abrir la base de datos manualmente."
+  },
+  {
+    "Id": "pepeizqdeals.String10",
+    "Valor": "Notificaciones por correo"
+  },
+  {
+    "Id": "pepeizqdeals.String11",
+    "Valor": "Desarrollé esta característica para aquellos usuarios que les gusta recibir notificaciones por correo de juegos cuyos alcanzan un nuevo precio mínimo, también funciona para las notificaciones de nuevas noticias."
+  },
+  {
+    "Id": "pepeizqdeals.String12",
+    "Valor": "Integración con Steam"
+  },
+  {
+    "Id": "pepeizqdeals.String13",
+    "Valor": "Para facilitar la gestión de una lista de juegos deseados, desarrollé una integración con Steam para importar la lista del usuario desde allí. Además me sirve para enseñar al usuario si ya posee el juego en varias secciones de la web."
+  },
+  {
+    "Id": "pepeizqdeals.String14",
+    "Valor": "Sorteos para los usuarios"
+  },
+  {
+    "Id": "pepeizqdeals.String15",
+    "Valor": "Para recompensar a aquellos usuarios que me han ayudado con la web en algún momento desarrollé esta característica, ojala algún día pueda hacer sorteos de juegos de verdad."
+  },
+  {
+    "Id": "pepeizqdeals2.String1",
+    "Valor": "App para ayudar a la gestión de la web pepeizqdeals.com"
   }
 ]
