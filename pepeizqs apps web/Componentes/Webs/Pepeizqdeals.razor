@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Components.Web;
-@using Proyectos
+@using Listados
 
 <div style="background-color: @proyecto.Color1; display: flex; align-items: center;">
 	<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
@@ -140,6 +140,6 @@
 
 	protected override void OnInitialized()
 	{
-		proyecto = Proyectos.Listado.DevolverProyecto("pepeizqdeals");
+            proyecto = global::Listados.Proyectos.DevolverProyecto("pepeizqdeals");
 	}
 }

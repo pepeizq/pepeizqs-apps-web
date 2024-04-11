@@ -1,8 +1,8 @@
 ﻿#nullable disable
 
-namespace Proyectos
+namespace Listados
 {
-    public static class Listado
+    public static class Proyectos
     {
         public static Proyecto DevolverProyecto(string id)
         {
@@ -17,7 +17,25 @@ namespace Proyectos
             return null;
         }
 
-        public static List<Proyecto> Generar()
+		public static List<Proyecto> DevolverProyectos(TecnologiaTipo tipo)
+		{
+			List<Proyecto> proyectos = new List<Proyecto>();
+
+			foreach (var proyecto in Generar())
+			{
+                foreach (var tecnologia in proyecto.Tecnologias)
+                {
+					if (tecnologia == tipo)
+					{
+						proyectos.Add(proyecto);
+					}
+				}
+			}
+
+			return proyectos;
+		}
+
+		public static List<Proyecto> Generar()
         {
             List<Proyecto> proyectos = new List<Proyecto>();
 
@@ -31,7 +49,7 @@ namespace Proyectos
                 Color2 = "#1b2838",
                 Enlace = "https://pepeizqdeals.com/",
                 Tipo = ProyectoTipo.Web,
-				Tecnologias = new List<string>() { "ASP NET Core", "Blazor", ".NET 8" }
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore }
 			};
 
             proyectos.Add(proyecto1);
@@ -45,7 +63,7 @@ namespace Proyectos
 				Color1 = "#171a21",
 				Color2 = "#2f3544",
 				Tipo = ProyectoTipo.App,
-                Tecnologias = new List<string>() { "WinUI 3", ".NET 7" }
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI }
 			};
 
 			proyectos.Add(proyecto2);
@@ -64,7 +82,7 @@ namespace Proyectos
 		public string Color2;
         public string Enlace;
         public ProyectoTipo Tipo;
-        public List<string> Tecnologias;
+        public List<TecnologiaTipo> Tecnologias;
 	}
 
 	public enum ProyectoTipo
@@ -73,5 +91,4 @@ namespace Proyectos
         Web,
         Juego
 	}
-
 }

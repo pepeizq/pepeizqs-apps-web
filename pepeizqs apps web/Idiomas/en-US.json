@@ -12,6 +12,14 @@
     "Valor": "Source Code"
   },
   {
+    "Id": "Index.All",
+    "Valor": "All"
+  },
+  {
+    "Id": "Index.Presentation",
+    "Valor": "Below you have all the work that i have done in my free time, you can browse through apps, webs or even games. Keep in mind that i am not a multi-million dollar company, i am a single person who has developed absolutely everything (including this web you are on)."
+  },
+  {
     "Id": "Timer0.String0",
     "Valor": "1 second ago"
   },
@@ -346,5 +354,29 @@
   {
     "Id": "pepeizqdeals2.String1",
     "Valor": "App to help manage the website pepeizqdeals.com"
+  },
+  {
+    "Id": "pepeizqdeals2.String2",
+    "Valor": "I developed this application to automate some functions of the pepeizqdeals.com website that were impossible for me to develop within the website."
+  },
+  {
+    "Id": "pepeizqdeals2.String3",
+    "Valor": "Below i explain the functions that the application has:"
+  },
+  {
+    "Id": "pepeizqdeals2.String4",
+    "Valor": "Social media automation"
+  },
+  {
+    "Id": "pepeizqdeals2.String5",
+    "Valor": "Given how complicated some social networks can be to announce news on the web, I developed a web browser integrated into the app that would automate the process."
+  },
+  {
+    "Id": "pepeizqdeals2.String6",
+    "Valor": "Integration with Humble Store"
+  },
+  {
+    "Id": "pepeizqdeals2.String7",
+    "Valor": "Given the store's security measures and its lack of technical support, it was impossible for me to look at the store's deals on the website, so i had to create an 'ips jumper' to look at the deals."
   }
 ]

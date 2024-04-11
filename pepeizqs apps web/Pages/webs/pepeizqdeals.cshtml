@@ -4,7 +4,7 @@
 @{
     string id = "pepeizqdeals";
 
-    ViewData["Title"] = Proyectos.Listado.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.CogerCadena(Model.idioma, Proyectos.Listado.DevolverProyecto(id).Id + ".String1");
+    ViewData["Title"] = Listados.Proyectos.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.CogerCadena(Model.idioma, Listados.Proyectos.DevolverProyecto(id).Id + ".String1");
     Layout = "/Pages/Shared/_Layout.cshtml";
 }
 

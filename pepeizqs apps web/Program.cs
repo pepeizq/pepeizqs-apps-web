@@ -40,6 +40,12 @@ builder.Services.AddSingleton<IDecompiladores, Decompiladores2>();
 
 #endregion
 
+#region Blazor
+
+builder.Services.AddServerSideBlazor();
+
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -58,5 +64,11 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+#region Blazor
+
+app.MapBlazorHub();
+
+#endregion
 
 app.Run();

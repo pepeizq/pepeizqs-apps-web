@@ -12,6 +12,14 @@
     "Valor": "Código Fuente"
   },
   {
+    "Id": "Index.All",
+    "Valor": "Todos"
+  },
+  {
+    "Id": "Index.Presentation",
+    "Valor": "A continuación tenéis todo el trabajo que he hecho mi tiempo libre, podéis ojear entre apps, webs o incluso juegos. Tener en cuenta que no soy ninguna empresa multimillonaria, soy una única persona que ha desarrollado absolutamente todo (incluso esta web en la que estás). "
+  },
+  {
     "Id": "Timer0.String0",
     "Valor": "hace 1 segundo"
   },
@@ -346,5 +354,29 @@
   {
     "Id": "pepeizqdeals2.String1",
     "Valor": "App para ayudar a la gestión de la web pepeizqdeals.com"
+  },
+  {
+    "Id": "pepeizqdeals2.String2",
+    "Valor": "Desarrollé esta aplicación para automatizar algunas funciones de la web pepeizqdeals.com que me resultaban imposibles de crear dentro de la web."
+  },
+  {
+    "Id": "pepeizqdeals2.String3",
+    "Valor": "A continuación os explico las funciones que tiene la aplicación:"
+  },
+  {
+    "Id": "pepeizqdeals2.String4",
+    "Valor": "Automatización de redes sociales"
+  },
+  {
+    "Id": "pepeizqdeals2.String5",
+    "Valor": "Dado lo complicado que pueden llegar a ser algunas redes sociales para anunciar las novedades de la web, desarrollé un navegador web integrado en la app que me automatizara el proceso."
+  },
+  {
+    "Id": "pepeizqdeals2.String6",
+    "Valor": "Integración con Humble Store"
+  },
+  {
+    "Id": "pepeizqdeals2.String7",
+    "Valor": "Dadas las medidas de seguridad de la tienda y su nulo soporte técnico me resultaba imposible mirar las ofertas de la tienda dentro de la web, así que tuve que crear un 'saltador de ips' para mirar las ofertas."
   }
 ]

@@ -36,7 +36,7 @@ namespace Tareas
 
                         try
                         {
-							foreach (var proyecto in Proyectos.Listado.Generar())
+							foreach (var proyecto in Listados.Proyectos.Generar())
 							{
                                 string fecha = await Github.UltimaModificacion(proyecto.Github);
 

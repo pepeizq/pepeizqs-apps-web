@@ -37,6 +37,8 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007272">
     <meta name="msapplication-TileColor" content="#007272">
     <meta name="theme-color" content="#007272">
+
+    <base href="~/" />
 </head>
 
 <body class="cuerpo">
@@ -45,10 +47,8 @@
             <div class="cabecera-poner cuerpo-ancho">
                 <a class="texto-logo" asp-page="/Index">pepeizq's apps</a>
 
-                <div class="">
-                    <div style="display: flex; align-items: center; justify-content: center; font-size: 20px; text-align: center;">
-                        <div style="margin-left: 6px; margin-right: 6px;"><a href="@github" target="_blank"><i class="fa-brands fa-github"></i></a></div>
-                    </div>
+                <div style="display: flex; align-items: center; justify-content: center; font-size: 25px; text-align: center;">
+                    <div style="margin-left: 6px; margin-right: 6px;"><a href="@github" target="_blank"><i class="fa-brands fa-github"></i></a></div>
                 </div>
             </div>
         </nav>
@@ -66,7 +66,7 @@
                 </div>
 
                 <div style="font-size: 16px; margin-top: 30px;">
-                   @*  <a href="https://github.com/pepeizq/pepeizqs-deals-web/" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-github" style="font-size: 20px; margin-right: 10px;"></i>@Herramientas.Idiomas.CogerCadena(idioma, "Layout.SourceCode")</a> • <a href="/Contact" style="text-decoration: none;">@Herramientas.Idiomas.CogerCadena(idioma, "Layout.Contact")</a> • <a href="/Privacy" style="text-decoration: none;">@Herramientas.Idiomas.CogerCadena(idioma, "Layout.Privacy")</a> *@
+                    <a href="https://github.com/pepeizq/pepeizqs-apps-web/" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-github" style="font-size: 20px; margin-right: 10px;"></i>@Herramientas.Idiomas.CogerCadena(idioma, "Index.SourceCode")</a> @*• <a href="/Contact" style="text-decoration: none;">@Herramientas.Idiomas.CogerCadena(idioma, "Layout.Contact")</a> • <a href="/Privacy" style="text-decoration: none;">@Herramientas.Idiomas.CogerCadena(idioma, "Layout.Privacy")</a> *@
                 </div>
             </div>
 
@@ -87,6 +87,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="_framework/blazor.server.js"></script>
 
     <script>
         function moverScroll(id) {
