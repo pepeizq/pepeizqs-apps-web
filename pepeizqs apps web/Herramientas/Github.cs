@@ -29,7 +29,7 @@ namespace Herramientas
 		[JsonProperty("id")]
 		public string Id { get; set; }
 
-		[JsonProperty("updated_at")]
+		[JsonProperty("pushed_at")]
 		public string UltimaModificacion { get; set; }
 	}
 }

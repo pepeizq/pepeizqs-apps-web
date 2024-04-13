@@ -44,8 +44,17 @@
 <body class="cuerpo">
     <header class="cabecera">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm" style="padding: 0px;">
-            <div class="cabecera-poner cuerpo-ancho">
-                <a class="texto-logo" asp-page="/Index">pepeizq's apps</a>
+            <div class="cabecera-poner cuerpo-ancho" style="justify-content: start;">
+                <div class="menu-dropdown">
+                    <button class="texto-cabecera" style="border: 0px; margin-left: 0px; margin-right: 30px;"><i class="fa-solid fa-bars" style="font-size: 20px; line-height: 40px;"></i></button>
+                    <div class="menu-dropdown-contenido">
+                        <a class="texto-cabecera menu-dropdown-item" asp-page="/LastUpdates">
+                            @Herramientas.Idiomas.CogerCadena(idioma, "LastUpdates.Title")
+                        </a>
+                    </div>
+                </div>
+
+                <a class="texto-logo" style="width: 100%;" asp-page="/Index">pepeizq's apps</a>
 
                 <div style="display: flex; align-items: center; justify-content: center; font-size: 25px; text-align: center;">
                     <div style="margin-left: 6px; margin-right: 6px;"><a href="@github" target="_blank"><i class="fa-brands fa-github"></i></a></div>

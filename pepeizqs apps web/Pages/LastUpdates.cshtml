@@ -1,0 +1,9 @@
+﻿@page
+@model pepeizqs_apps_web.Pages.LastUpdatesModel
+
+@{
+    ViewData["Title"] = Herramientas.Idiomas.CogerCadena(Model.idioma, "LastUpdates.Title");
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+@(await Html.RenderComponentAsync<Componentes.UltimasActualizaciones>(RenderMode.ServerPrerendered, new { idioma = @Model.idioma }))

@@ -49,7 +49,8 @@ namespace Listados
                 Color2 = "#1b2838",
                 Enlace = "https://pepeizqdeals.com/",
                 Tipo = ProyectoTipo.Web,
-				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore }
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore },
+                MostrarPortada = true
 			};
 
             proyectos.Add(proyecto1);
@@ -63,10 +64,23 @@ namespace Listados
 				Color1 = "#171a21",
 				Color2 = "#2f3544",
 				Tipo = ProyectoTipo.App,
-                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI }
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+                MostrarPortada = true
 			};
 
 			proyectos.Add(proyecto2);
+
+			Proyecto proyecto3 = new Proyecto
+			{
+				Id = "pepeizqapps",
+				Nombre = "pepeizq's apps",
+				Github = "pepeizqs-apps-web",
+				Tipo = ProyectoTipo.Web,
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore },
+				MostrarPortada = false
+			};
+
+			proyectos.Add(proyecto3);
 
 			return proyectos;
         }
@@ -83,6 +97,7 @@ namespace Listados
         public string Enlace;
         public ProyectoTipo Tipo;
         public List<TecnologiaTipo> Tecnologias;
+        public bool MostrarPortada;
 	}
 
 	public enum ProyectoTipo
@@ -91,4 +106,10 @@ namespace Listados
         Web,
         Juego
 	}
+
+    public class ProyectoGithub
+    {
+        public Proyecto Proyecto;
+        public string FechaGithub;
+    }
 }

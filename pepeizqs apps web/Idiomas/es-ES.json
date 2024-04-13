@@ -20,6 +20,14 @@
     "Valor": "A continuación tenéis todo el trabajo que he hecho mi tiempo libre, podéis ojear entre apps, webs o incluso juegos. Tener en cuenta que no soy ninguna empresa multimillonaria, soy una única persona que ha desarrollado absolutamente todo (incluso esta web en la que estás). "
   },
   {
+    "Id": "LastUpdates.Title",
+    "Valor": "Últimas Actualizaciones"
+  },
+  {
+    "Id": "LastUpdates.String1",
+    "Valor": "A continuación podéis ver en que últimos proyectos de código libre he trabajado, dado el volumen de código que manejo no dispongo de tiempo para hacer unas 'notas de parche' pero si podéis ver cada linea de código."
+  },
+  {
     "Id": "Timer0.String0",
     "Valor": "hace 1 segundo"
   },
@@ -378,5 +386,9 @@
   {
     "Id": "pepeizqdeals2.String7",
     "Valor": "Dadas las medidas de seguridad de la tienda y su nulo soporte técnico me resultaba imposible mirar las ofertas de la tienda dentro de la web, así que tuve que crear un 'saltador de ips' para mirar las ofertas."
+  },
+  {
+    "Id": "pepeizqapps.String1",
+    "Valor": "Código fuente de esta web"
   }
 ]

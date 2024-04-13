@@ -24,6 +24,11 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Pages\apps\pepeizqdeals.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\LastUpdates.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\LastUpdates.cshtml" />
   </ItemGroup>
 
 </Project>

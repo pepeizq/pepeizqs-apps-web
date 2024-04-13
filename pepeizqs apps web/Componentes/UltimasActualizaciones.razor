@@ -1,0 +1,86 @@
+﻿@using Listados
+@using Microsoft.AspNetCore.Components.Web;
+@using Microsoft.Data.SqlClient
+
+<div style="background-color: var(--fondoEntrada); padding: 50px;">
+	<div style="font-size: 22px;">
+		@Herramientas.Idiomas.CogerCadena(idioma, "LastUpdates.Title")
+	</div>
+
+	<hr/>
+
+	<div style="margin-bottom: 40px;">
+		@Herramientas.Idiomas.CogerCadena(idioma, "LastUpdates.String1")
+	</div>
+
+	@foreach (var proyecto in proyectos)
+	{
+		<div class="expandir" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
+			<a href="https://github.com/pepeizq/@proyecto.Proyecto.Github" style="text-decoration: none; color: var(--colorTexto);" target="_blank">
+				<div style="display: flex; align-items: center; border: 1px solid var(--colorEnlace); background-color: var(--fondoBoton); padding: 15px 20px;">
+					<div style="width: 100%;">
+						<div style="font-size: 20px;">
+							@proyecto.Proyecto.Nombre
+						</div>
+
+						<div style="margin-top: 5px;">
+							@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Proyecto.Id + ".String1")
+						</div>
+					</div>
+
+					<div style="min-width: 250px; text-align: right;">
+						@if (string.IsNullOrEmpty(proyecto.FechaGithub) == false)
+						{
+							if (proyecto.FechaGithub != "0")
+							{
+								@Herramientas.Calculadora.DiferenciaTiempo(DateTime.Parse(proyecto.FechaGithub), idioma)
+							}
+						}						
+					</div>
+				</div>
+			</a>
+		</div>	
+	}
+</div>
+
+@code {
+
+	#nullable disable
+
+	[Parameter]
+	public string idioma { get; set; }
+
+	SqlConnection conexion = new SqlConnection();
+
+	private List<ProyectoGithub> proyectos = new List<ProyectoGithub>();
+
+	protected override void OnInitialized()
+	{
+		if (conexion.State != System.Data.ConnectionState.Open)
+		{
+			conexion = Herramientas.BaseDatos.Conectar();
+		}
+
+		using (conexion)
+		{
+			List<Proyecto> proyectosTemporal = Listados.Proyectos.Generar();
+
+			foreach (var proyectoTemporal in proyectosTemporal)
+			{
+				string ultimaFecha = BaseDatos.Github.SacarFecha(conexion, proyectoTemporal.Github);
+
+				ProyectoGithub nuevoProyecto = new ProyectoGithub();
+				nuevoProyecto.Proyecto = proyectoTemporal;
+				nuevoProyecto.FechaGithub = ultimaFecha;
+
+				proyectos.Add(nuevoProyecto);
+			}
+
+			if (proyectos.Count > 0)
+			{
+				proyectos = proyectos.OrderBy(x => x.FechaGithub).Reverse().ToList();
+			}
+		}	
+	}
+
+}

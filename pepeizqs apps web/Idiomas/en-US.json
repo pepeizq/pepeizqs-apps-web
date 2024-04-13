@@ -17,7 +17,15 @@
   },
   {
     "Id": "Index.Presentation",
-    "Valor": "Below you have all the work that i have done in my free time, you can browse through apps, webs or even games. Keep in mind that i am not a multi-million dollar company, i am a single person who has developed absolutely everything (including this web you are on)."
+    "Valor": "Below you have all the work that i have done in my free time, you can browse through apps, webs or even games. Keep in mind that I am not a multi-million dollar company, I am a single person who has developed absolutely everything (including this web you are on)."
+  },
+  {
+    "Id": "LastUpdates.Title",
+    "Valor": "Last Updates"
+  },
+  {
+    "Id": "LastUpdates.String1",
+    "Valor": "Below you can see the latest free source projects I have worked on, given the volume of code I handle I don't have time to make some 'patch notes' but you can see each line of code."
   },
   {
     "Id": "Timer0.String0",
@@ -378,5 +386,9 @@
   {
     "Id": "pepeizqdeals2.String7",
     "Valor": "Given the store's security measures and its lack of technical support, it was impossible for me to look at the store's deals on the website, so i had to create an 'ips jumper' to look at the deals."
+  },
+  {
+    "Id": "pepeizqapps.String1",
+    "Valor": "Source code of this website"
   }
 ]
