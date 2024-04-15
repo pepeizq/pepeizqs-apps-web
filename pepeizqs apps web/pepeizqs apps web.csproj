@@ -11,6 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\apps\tilesgames.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="8.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.3" />
@@ -24,11 +28,20 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Pages\apps\pepeizqdeals.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\apps\tilesgames.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\LastUpdates.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <UpToDateCheckInput Remove="Pages\LastUpdates.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\apps\tilesgames.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\apps\tilesgames.cshtml" />
   </ItemGroup>
 
 </Project>
