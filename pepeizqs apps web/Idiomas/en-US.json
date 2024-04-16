@@ -5,11 +5,15 @@
   },
   {
     "Id": "Index.Subtitle",
-    "Valor": "Website with all the apps, websites and games that i have developed"
+    "Valor": "Website with all the apps, websites and games that I have developed"
   },
   {
     "Id": "Index.SourceCode",
     "Valor": "Source Code"
+  },
+  {
+    "Id": "Index.StoreLink",
+    "Valor": "Link to Store"
   },
   {
     "Id": "Index.All",
@@ -17,7 +21,7 @@
   },
   {
     "Id": "Index.Presentation",
-    "Valor": "Below you have all the work that i have done in my free time, you can browse through apps, webs or even games. Keep in mind that I am not a multi-million dollar company, I am a single person who has developed absolutely everything (including this web you are on)."
+    "Valor": "Below you have all the work that I have done in my free time, you can browse through apps, webs or even games. Keep in mind that I am not a multi-million dollar company, I am a single person who has developed absolutely everything (including this web you are on)."
   },
   {
     "Id": "LastUpdates.Title",
@@ -305,11 +309,11 @@
   },
   {
     "Id": "pepeizqdeals.String2",
-    "Valor": "I created this website as a PC video game player who likes to pay their creators for their games, but since i am not a millionaire i needed to be aware of the best deals with a detailed record of each game."
+    "Valor": "I created this website as a PC video game player who likes to pay their creators for their games, but since I am not a millionaire i needed to be aware of the best deals with a detailed record of each game."
   },
   {
     "Id": "pepeizqdeals.String3",
-    "Valor": "Below i detail the technical capabilities of the website:"
+    "Valor": "Below I detail the technical capabilities of the website:"
   },
   {
     "Id": "pepeizqdeals.String4",
@@ -325,7 +329,7 @@
   },
   {
     "Id": "pepeizqdeals.String7",
-    "Valor": "When a special event occurs, i can generate news on the web. Generally, these news are to inform visitors about temporarily free games, bundles of several games, or new additions to subscription services."
+    "Valor": "When a special event occurs, I can generate news on the web. Generally, these news are to inform visitors about temporarily free games, bundles of several games, or new additions to subscription services."
   },
   {
     "Id": "pepeizqdeals.String8",
@@ -349,7 +353,7 @@
   },
   {
     "Id": "pepeizqdeals.String13",
-    "Valor": "To make it easier to manage a list of desired games, i developed an integration with Steam to import the user's list from there. It also helps me to show the user if they already have the game in various sections of the website."
+    "Valor": "To make it easier to manage a list of desired games, I developed an integration with Steam to import the user's list from there. It also helps me to show the user if they already have the game in various sections of the website."
   },
   {
     "Id": "pepeizqdeals.String14",
@@ -357,7 +361,7 @@
   },
   {
     "Id": "pepeizqdeals.String15",
-    "Valor": "To reward those users who have helped me with the website at some point i developed this feature, hopefully one day i can do real game giveaways."
+    "Valor": "To reward those users who have helped me with the website at some point I developed this feature, hopefully one day I can do real game giveaways."
   },
   {
     "Id": "pepeizqdeals2.String1",
@@ -369,7 +373,7 @@
   },
   {
     "Id": "pepeizqdeals2.String3",
-    "Valor": "Below i explain the functions that the application has:"
+    "Valor": "Below I explain the functions that the application has:"
   },
   {
     "Id": "pepeizqdeals2.String4",
@@ -390,5 +394,41 @@
   {
     "Id": "pepeizqapps.String1",
     "Valor": "Source code of this website"
+  },
+  {
+    "Id": "tilesgames.String1",
+    "Valor": "App to add game Tiles for Windows 10"
+  },
+  {
+    "Id": "tilesgames.String2",
+    "Valor": "I developed this application years ago when Windows 10 had Tiles, for those of you who use that version of the operating system the app will still work for you."
+  },
+  {
+    "Id": "tilesgames.String3",
+    "Valor": "Below I detail how it works:"
+  },
+  {
+    "Id": "tilesgames.String4",
+    "Valor": "Autodetection of Installed Games"
+  },
+  {
+    "Id": "tilesgames.String5",
+    "Valor": "Before adding a Tile to the Start menu, the app can automatically detect what games you have installed on your computer without having to do anything yourself."
+  },
+  {
+    "Id": "tilesgames.String6",
+    "Valor": "Tiles Customization"
+  },
+  {
+    "Id": "tilesgames.String7",
+    "Valor": "Although the app will load default images to the game's Tile, the user can change them to their liking or even modify which game the Tile will run."
+  },
+  {
+    "Id": "tilesgames.String8",
+    "Valor": "Also Compatible with Windows 11"
+  },
+  {
+    "Id": "tilesgames.String9",
+    "Valor": "The app also works on Windows 11, but it is only capable of adding an icon to the Start menu unfortunately."
   }
 ]

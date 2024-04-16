@@ -12,6 +12,10 @@
     "Valor": "Código Fuente"
   },
   {
+    "Id": "Index.StoreLink",
+    "Valor": "Enlace a la Tienda"
+  },
+  {
     "Id": "Index.All",
     "Valor": "Todos"
   },
@@ -390,5 +394,41 @@
   {
     "Id": "pepeizqapps.String1",
     "Valor": "Código fuente de esta web"
+  },
+  {
+    "Id": "tilesgames.String1",
+    "Valor": "App para añadir Tiles de videojuegos en Windows 10"
+  },
+  {
+    "Id": "tilesgames.String2",
+    "Valor": "Esta aplicación la desarrollé hace años cuando Windows 10 disponía de Tiles, para aquellos que uséis esa versión del sistema operativo todavía os funcionará la app."
+  },
+  {
+    "Id": "tilesgames.String3",
+    "Valor": "A continuación os detallo como funciona:"
+  },
+  {
+    "Id": "tilesgames.String4",
+    "Valor": "Autodetección de Juegos Instalados"
+  },
+  {
+    "Id": "tilesgames.String5",
+    "Valor": "Antes de añadir una Tile al menú de Inicio la app puede detectar automáticamente que juegos tienes instalados en tu ordenador sin que tengas que hacer nada."
+  },
+  {
+    "Id": "tilesgames.String6",
+    "Valor": "Personalización de las Tiles"
+  },
+  {
+    "Id": "tilesgames.String7",
+    "Valor": "Aunque la app cargará unas imágenes por defecto a la Tile del juego, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará la Tile."
+  },
+  {
+    "Id": "tilesgames.String8",
+    "Valor": "También compatible con Windows 11"
+  },
+  {
+    "Id": "tilesgames.String9",
+    "Valor": "La app funciona también en Windows 11, pero solo es capaz de añadir un icono al menú de Inicio."
   }
 ]

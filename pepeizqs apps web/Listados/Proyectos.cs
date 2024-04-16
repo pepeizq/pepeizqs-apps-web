@@ -32,10 +32,15 @@ namespace Listados
 				}
 			}
 
+            if (proyectos.Count > 0)
+            {
+                proyectos = proyectos.OrderBy(p => p.Nombre).ToList();
+            }
+
 			return proyectos;
 		}
 
-		public static List<Proyecto> Generar()
+		public static List<Proyecto> Generar(bool azar = false)
         {
             List<Proyecto> proyectos = new List<Proyecto>();
 
@@ -82,7 +87,35 @@ namespace Listados
 
 			proyectos.Add(proyecto3);
 
-			return proyectos;
+            Proyecto proyecto4 = new Proyecto
+            {
+                Id = "tilesgames",
+                Nombre = "pepeizq's Tiles for Games",
+                Github = "Tiles-Games",
+                Ubicacion = "/apps/tilesgames",
+                Enlace = "https://apps.microsoft.com/detail/9MXKL17J89JN",
+				Color1 = "#171a21",
+				Color2 = "#2f3544",
+				Tipo = ProyectoTipo.App,
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+                MostrarPortada = true
+            };
+
+            proyectos.Add(proyecto4);
+
+            if (proyectos.Count > 0)
+            {
+				if (azar == false)
+                {
+					proyectos = proyectos.OrderBy(p => p.Nombre).ToList();
+				}
+				else
+                {
+					proyectos = proyectos.OrderBy(p => Guid.NewGuid()).ToList();
+				}
+			}
+            
+            return proyectos;
         }
     }
 
