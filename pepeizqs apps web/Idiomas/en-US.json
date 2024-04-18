@@ -401,7 +401,7 @@
   },
   {
     "Id": "tilesgames.String2",
-    "Valor": "I developed this application years ago when Windows 10 had Tiles, for those of you who use that version of the operating system the app will still work for you."
+    "Valor": "I developed this application years ago when Windows 10 had Tiles, for those of you who use that version of the operating system the app will still work for you. Although the app is paid, you can use the app for free by downloading the source code and with Visual Studio installed."
   },
   {
     "Id": "tilesgames.String3",
@@ -430,5 +430,21 @@
   {
     "Id": "tilesgames.String9",
     "Valor": "The app also works on Windows 11, but it is only capable of adding an icon to the Start menu unfortunately."
+  },
+  {
+    "Id": "databasegames.String1",
+    "Valor": "App to manage a database that I use in other apps"
+  },
+  {
+    "Id": "databasegames.String2",
+    "Valor": "This application only has a single purpose, to manage a database that uses other applications that I have developed. It was more comfortable for me to update the database externally with this app than to update 3 apps manually."
+  },
+  {
+    "Id": "databasegames.String3",
+    "Valor": "Database Monitoring"
+  },
+  {
+    "Id": "databasegames.String4",
+    "Valor": "I created a basic interface to see that the different database tables are loaded properly and can be read by other apps."
   }
 ]

@@ -401,7 +401,7 @@
   },
   {
     "Id": "tilesgames.String2",
-    "Valor": "Esta aplicación la desarrollé hace años cuando Windows 10 disponía de Tiles, para aquellos que uséis esa versión del sistema operativo todavía os funcionará la app."
+    "Valor": "Esta aplicación la desarrollé hace años cuando Windows 10 disponía de Tiles, para aquellos que uséis esa versión del sistema operativo todavía os funcionará la app. Aunque la app es de pago podéis usar gratuitamente la app descargando el código fuente y con el Visual Studio instalado."
   },
   {
     "Id": "tilesgames.String3",
@@ -430,5 +430,21 @@
   {
     "Id": "tilesgames.String9",
     "Valor": "La app funciona también en Windows 11, pero solo es capaz de añadir un icono al menú de Inicio."
+  },
+  {
+    "Id": "databasegames.String1",
+    "Valor": "App para gestionar una base de datos que utilizo en otras apps"
+  },
+  {
+    "Id": "databasegames.String2",
+    "Valor": "Esta aplicación solo tiene un único cometido, gestionar una base de datos que utiliza otras aplicaciones que he desarrollado. Me resultaba más cómodo actualizar la base de datos de manera extera con esta app, que actualizar 3 apps manualmente."
+  },
+  {
+    "Id": "databasegames.String3",
+    "Valor": "Monitorización de la Base de Datos"
+  },
+  {
+    "Id": "databasegames.String4",
+    "Valor": "Creé una interfaz básica para ver que las diferentes tablas de la base de datos se carguen adecuamente y puedan ser leidas por otras apps."
   }
 ]

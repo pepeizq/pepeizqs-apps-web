@@ -1,0 +1,51 @@
+﻿@using Listados
+
+<div style="background-color: @proyecto.Color1; display: flex; align-items: center;">
+	<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+
+	<div style="padding: 20px 30px;">
+		<div style="font-size: 22px;">@proyecto.Nombre</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
+		<div style="margin-top: 10px;"><a href="https://github.com/pepeizq/@proyecto.Github" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-github"></i> @Herramientas.Idiomas.CogerCadena(idioma, "Index.SourceCode")</a></div>
+	</div>
+</div>
+
+<div style="background-color: @proyecto.Color2; padding: 50px;">
+	<div>
+		@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String2")
+	</div>
+</div>
+
+<div style="background-color: @proyecto.Color1; padding: 50px; display: flex; align-items: center;">
+	<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
+		<a href="/imagenes/@proyecto.Id/captura1.webp" target="_blank" style="margin-right: 20px;">
+			<img src="/imagenes/@proyecto.Id/captura1.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+		</a>
+
+		<a href="/imagenes/@proyecto.Id/captura2.webp" target="_blank">
+			<img src="/imagenes/@proyecto.Id/captura2.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+		</a>
+	</div>
+
+	<div style="width: 55%;">
+		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String3")</div>
+
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String4")</div>
+	</div>
+</div>
+
+@code {
+
+	#nullable disable
+
+	[Parameter]
+	public string idioma { get; set; }
+
+	private Proyecto proyecto = new Proyecto();
+
+	protected override void OnInitialized()
+	{
+		proyecto = global::Listados.Proyectos.DevolverProyecto("databasegames");
+	}
+
+}
