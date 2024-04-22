@@ -32,6 +32,34 @@
     "Valor": "A continuación podéis ver en que últimos proyectos de código libre he trabajado, dado el volumen de código que manejo no dispongo de tiempo para hacer unas 'notas de parche' pero si podéis ver cada linea de código."
   },
   {
+    "Id": "Privacy.Title",
+    "Valor": "Política de Privacidad"
+  },
+  {
+    "Id": "Privacy.String1",
+    "Valor": "Podría hacer como la mayoría de webs y poner un texto enorme solo comprensible para abogados e IAs, pero os intentaré resumir la política de privacidad que llevo en esta web, apps que desarrollo o hasta incluso juegos:"
+  },
+  {
+    "Id": "Privacy.String2",
+    "Valor": "Por mi parte no recopilo dato alguno que hacéis uso de algo de mi trabajo, de hecho podéis ver el código fuente en caso de que tengáis dudas."
+  },
+  {
+    "Id": "Privacy.String3",
+    "Valor": "Pero no puedo evitar que terceras partes recopilen datos, por ejemplo, si subo un juego a Steam, Valve recopilará datos del juego y vuestro uso de él."
+  },
+  {
+    "Id": "Privacy.String4",
+    "Valor": "En el caso de pepeizqdeals.com solo almaceno los usuarios que se logean. Cada usuario puede consultar dentro de su cuenta los datos almacenados y puede borrar su cuenta si lo considera necesario."
+  },
+  {
+    "Id": "Privacy.String5",
+    "Valor": "En todos mis proyectos no uso Google Analytics o servicios similares, ni siquiera uso publicidad para modelo de financiación."
+  },
+  {
+    "Id": "Privacy.String6",
+    "Valor": "Personalmente creo que la recolección de datos en Internet se ha salido de madre gracias a la impunidad de la que disfrutan las grandes compañías, soy consciente de que un único desarrollador no va a cambiar las cosas pero al menos intento ser honesto con mi trabajo."
+  },
+  {
     "Id": "Timer0.String0",
     "Valor": "hace 1 segundo"
   },

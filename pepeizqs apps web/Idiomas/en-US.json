@@ -32,6 +32,34 @@
     "Valor": "Below you can see the latest free source projects I have worked on, given the volume of code I handle I don't have time to make some 'patch notes' but you can see each line of code."
   },
   {
+    "Id": "Privacy.Title",
+    "Valor": "Privacy Policy"
+  },
+  {
+    "Id": "Privacy.String1",
+    "Valor": "I could do like most websites and put a huge text only understandable for lawyers and AIs, but I will try to summarize the privacy policy that I have on this website, apps that I develop or even games:"
+  },
+  {
+    "Id": "Privacy.String2",
+    "Valor": "For my part, I do not collect any data that you make use of any of my work, in fact you can see the source code in case you have questions."
+  },
+  {
+    "Id": "Privacy.String3",
+    "Valor": "But I can't prevent third parties from collecting data, for example, if I upload a game to Steam, Valve will collect data about the game and your use of it."
+  },
+  {
+    "Id": "Privacy.String4",
+    "Valor": "In the case of pepeizqdeals.com I only store the users who log in. Each user can consult the stored data within their account and can delete their account if they consider it necessary."
+  },
+  {
+    "Id": "Privacy.String5",
+    "Valor": "In all my projects I do not use Google Analytics or similar services, I do not even use ads for a financing model."
+  },
+  {
+    "Id": "Privacy.String6",
+    "Valor": "Personally, I think that data collection on the Internet has gotten out of hand thanks to the impunity that large companies enjoy. I am aware that a single developer is not going to change things, but at least I try to be honest with my work."
+  },
+  {
     "Id": "Timer0.String0",
     "Valor": "1 second ago"
   },

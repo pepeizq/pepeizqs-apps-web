@@ -1,8 +1,26 @@
 ﻿@page
 @model PrivacyModel
-@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+@{
+    ViewData["Title"] = Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.Title");
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+<div style="background-color: var(--fondoEntrada); padding: 50px;">
+    <div style="font-size: 22px;">
+        @Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.Title")
+    </div>
+
+    <hr />
+
+    <div>@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String1")</div>
+
+    <ul style="margin-top: 20px;">
+        <li>@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String2")</li>
+        <li style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String3")</li>
+        <li style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String4")</li>
+        <li style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String5")</li>
+    </ul>
+
+    <div>@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String6")</div>
+</div>
