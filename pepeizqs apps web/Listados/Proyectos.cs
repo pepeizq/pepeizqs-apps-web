@@ -118,9 +118,25 @@ namespace Listados
 
 			proyectos.Add(proyecto5);
 
-			//-----------------------------------------
+            Proyecto proyecto6 = new Proyecto
+            {
+                Id = "tilesmedia",
+                Nombre = "pepeizq's Tiles for Streaming",
+                Github = "Tiles-Media",
+                Ubicacion = "/apps/tilesmedia",
+				Enlace = "https://apps.microsoft.com/detail/9PNFN1QNMZR9",
+				Color1 = "#1a0303",
+                Color2 = "#3d0707",
+                Tipo = ProyectoTipo.App,
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+                MostrarPortada = true
+            };
 
-			if (proyectos.Count > 0)
+            proyectos.Add(proyecto6);
+
+            //-----------------------------------------
+
+            if (proyectos.Count > 0)
             {
 				if (azar == false)
                 {

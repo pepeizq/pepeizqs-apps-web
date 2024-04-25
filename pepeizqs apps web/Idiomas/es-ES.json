@@ -441,7 +441,7 @@
   },
   {
     "Id": "tilesgames.String5",
-    "Valor": "Antes de añadir una Tile al menú de Inicio la app puede detectar automáticamente que juegos tienes instalados en tu ordenador sin que tengas que hacer nada."
+    "Valor": "Antes de añadir una Tile al menú de Inicio, la app puede detectar automáticamente que juegos tienes instalados en tu ordenador sin que tengas que hacer nada."
   },
   {
     "Id": "tilesgames.String6",
@@ -449,7 +449,7 @@
   },
   {
     "Id": "tilesgames.String7",
-    "Valor": "Aunque la app cargará unas imágenes por defecto a la Tile del juego, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará la Tile."
+    "Valor": "Aunque la app cargará unas imágenes por defecto del juego para la Tile, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará la Tile."
   },
   {
     "Id": "tilesgames.String8",
@@ -474,5 +474,41 @@
   {
     "Id": "databasegames.String4",
     "Valor": "Creé una interfaz básica para ver que las diferentes tablas de la base de datos se carguen adecuamente y puedan ser leidas por otras apps."
+  },
+  {
+    "Id": "tilesmedia.String1",
+    "Valor": "App para añadir Tiles de series y películas de streaming en Windows 10"
+  },
+  {
+    "Id": "tilesmedia.String2",
+    "Valor": "Esta aplicación la desarrollé hace años cuando Windows 10 disponía de Tiles, para aquellos que uséis esa versión del sistema operativo todavía os funcionará la app. Aunque la app es de pago podéis usar gratuitamente la app descargando el código fuente y con el Visual Studio instalado. Aparte señalo que la app sólo funciona en Estados Unidos, Canada y los países de la Unión Europea por una norma absurda de la tienda de Microsoft."
+  },
+  {
+    "Id": "tilesmedia.String3",
+    "Valor": "A continuación os detallo como funciona:"
+  },
+  {
+    "Id": "tilesmedia.String4",
+    "Valor": "Búsqueda por Plataforma"
+  },
+  {
+    "Id": "tilesmedia.String5",
+    "Valor": "Antes de añadir una Tile al menú de Inicio, la app puede buscar una serie o película de la que disponga la plataforma seleccionada."
+  },
+  {
+    "Id": "tilesmedia.String6",
+    "Valor": "Personalización de las Tiles"
+  },
+  {
+    "Id": "tilesmedia.String7",
+    "Valor": "Aunque la app cargará unas imágenes por defecto de la serie o película para la Tile, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará la Tile."
+  },
+  {
+    "Id": "tilesmedia.String8",
+    "Valor": "También compatible con Windows 11"
+  },
+  {
+    "Id": "tilesmedia.String9",
+    "Valor": "La app funciona también en Windows 11, pero solo es capaz de añadir un icono al menú de Inicio."
   }
 ]
