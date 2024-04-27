@@ -134,9 +134,25 @@ namespace Listados
 
             proyectos.Add(proyecto6);
 
-            //-----------------------------------------
+			Proyecto proyecto7 = new Proyecto
+			{
+				Id = "widgetgames",
+				Nombre = "pepeizq's Widgets for Games",
+				Github = "Widgets-Games",
+				Ubicacion = "/apps/widgetgames",
+				Enlace = "https://apps.microsoft.com/detail/9N6RH8C536LS",
+				Color1 = "#193748",
+				Color2 = "#234d65",
+				Tipo = ProyectoTipo.App,
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+				MostrarPortada = true
+			};
 
-            if (proyectos.Count > 0)
+			proyectos.Add(proyecto7);
+
+			//-----------------------------------------
+
+			if (proyectos.Count > 0)
             {
 				if (azar == false)
                 {

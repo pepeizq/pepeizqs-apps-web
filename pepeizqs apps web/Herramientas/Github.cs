@@ -31,5 +31,11 @@ namespace Herramientas
 
 		[JsonProperty("pushed_at")]
 		public string UltimaModificacion { get; set; }
+
+		[JsonProperty("stargazers_count")]
+		public string Estrellas { get; set; }
+
+		[JsonProperty("forks_count")]
+		public string Forks { get; set; }
 	}
 }

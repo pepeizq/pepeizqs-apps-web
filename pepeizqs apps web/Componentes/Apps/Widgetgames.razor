@@ -1,0 +1,21 @@
+﻿@using Listados
+@using Microsoft.AspNetCore.Components.Web;
+
+
+
+
+@code {
+
+	#nullable disable
+
+	[Parameter]
+	public string idioma { get; set; }
+
+	private Proyecto proyecto = new Proyecto();
+
+	protected override void OnInitialized()
+	{
+		proyecto = global::Listados.Proyectos.DevolverProyecto("widgetgames");
+	}
+
+}
