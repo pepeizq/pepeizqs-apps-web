@@ -449,7 +449,7 @@
   },
   {
     "Id": "tilesgames.String7",
-    "Valor": "Although the app will load default images of the game for the Tile, the user can change them to their liking or even modify which game the Tile will run."
+    "Valor": "Although the app will load default images of the game for the Tile, the user can change them at will or even modify which game the Tile will run."
   },
   {
     "Id": "tilesgames.String8",
@@ -501,7 +501,7 @@
   },
   {
     "Id": "tilesmedia.String7",
-    "Valor": "Although the app will load default images of the series or movie for the Tile, the user can change them to their liking or even modify which game the Tile will run."
+    "Valor": "Although the app will load default images of the series or movie for the Tile, the user can change them at will or even modify which game the Tile will run."
   },
   {
     "Id": "tilesmedia.String8",
@@ -529,22 +529,22 @@
   },
   {
     "Id": "widgetgames.String5",
-    "Valor": "Before adding a Tile to the Start menu, the app can automatically detect what games you have installed on your computer without having to do anything yourself."
+    "Valor": "Before adding a Widget, the app can automatically detect what games you have installed on your computer without having to do anything yourself."
   },
   {
     "Id": "widgetgames.String6",
-    "Valor": "Tiles Customization"
+    "Valor": "Widgets Customization"
   },
   {
     "Id": "widgetgames.String7",
-    "Valor": "Although the app will load default images of the game for the Tile, the user can change them to their liking or even modify which game the Tile will run."
+    "Valor": "Although the app will load default images of the game for the Widget, the user can change them to their liking or even modify which game the Widget will run."
   },
   {
     "Id": "widgetgames.String8",
-    "Valor": "Also Compatible with Windows 11"
+    "Valor": "How to Add the Widget"
   },
   {
     "Id": "widgetgames.String9",
-    "Valor": "The app also works on Windows 11, but it is only capable of adding an icon to the Start menu unfortunately."
+    "Valor": "Due to the little flexibility that Microsoft allows with Widgets, you have to make 2 last clicks to finally add the widget, in the images you can see where."
   }
 ]

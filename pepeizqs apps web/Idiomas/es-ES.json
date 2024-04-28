@@ -521,30 +521,30 @@
   },
   {
     "Id": "widgetgames.String3",
-    "Valor": "Below I detail how it works:"
+    "Valor": "A continuación os detallo como funciona:"
   },
   {
     "Id": "widgetgames.String4",
-    "Valor": "Autodetection of Installed Games"
+    "Valor": "Autodetección de Juegos Instalados"
   },
   {
     "Id": "widgetgames.String5",
-    "Valor": "Before adding a Tile to the Start menu, the app can automatically detect what games you have installed on your computer without having to do anything yourself."
+    "Valor": "Antes de añadir el Widget, la app puede detectar automáticamente que juegos tienes instalados en tu ordenador sin que tengas que hacer nada."
   },
   {
     "Id": "widgetgames.String6",
-    "Valor": "Tiles Customization"
+    "Valor": "Personalización de los Widgets"
   },
   {
     "Id": "widgetgames.String7",
-    "Valor": "Although the app will load default images of the game for the Tile, the user can change them to their liking or even modify which game the Tile will run."
-  },  
+    "Valor": "Aunque la app cargará unas imágenes por defecto del juego para el Widget, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará el Widget."
+  },
   {
     "Id": "widgetgames.String8",
-    "Valor": "Also Compatible with Windows 11"
+    "Valor": "Como Añadir el Widget"
   },
   {
     "Id": "widgetgames.String9",
-    "Valor": "The app also works on Windows 11, but it is only capable of adding an icon to the Start menu unfortunately."
+    "Valor": "Debido a la poca flexibilidad que permite Microsoft con las Widgets tenéis que hacer 2 últimos clicks para finalmente añadir el widget, en las imágenes podéis ver donde."
   }
 ]
