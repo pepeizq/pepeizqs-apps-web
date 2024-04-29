@@ -6,7 +6,7 @@ namespace BaseDatos
 {
     public static class Github
     {
-        public static string SacarFecha(SqlConnection conexion, string id)
+        public static GithubBaseDatos Buscar(SqlConnection conexion, string id)
         {
             string seleccionarDato = "SELECT * FROM proyectosGithub WHERE id=@id";
 
@@ -18,7 +18,14 @@ namespace BaseDatos
                 {
                     if (lector.Read() == true)
                     {
-                        return lector.GetString(1);
+						GithubBaseDatos datos = new GithubBaseDatos
+						{
+							Fecha = lector.GetString(1),
+							Estrellas = int.Parse(lector.GetString(2)),
+							Forks = int.Parse(lector.GetString(3))
+						};
+
+						return datos;
                     }
                 }
             }
@@ -26,10 +33,10 @@ namespace BaseDatos
             return null;
         }
 
-        public static void ActualizarFecha(SqlConnection conexion, string id, string fecha)
+        public static void Actualizar(SqlConnection conexion, string id, string fecha, string estrellas, string forks)
         {
             string sqlActualizar = "UPDATE proyectosGithub " +
-                        "SET fecha=@fecha WHERE id=@id";
+                        "SET fecha=@fecha, estrellas=@estrellas, forks=@forks WHERE id=@id";
 
             SqlCommand comando = new SqlCommand(sqlActualizar, conexion);
 
@@ -37,6 +44,8 @@ namespace BaseDatos
             {
                 comando.Parameters.AddWithValue("@id", id);
                 comando.Parameters.AddWithValue("@fecha", fecha);
+                comando.Parameters.AddWithValue("@estrellas", estrellas);
+                comando.Parameters.AddWithValue("@forks", forks);
 
                 SqlDataReader lector = comando.ExecuteReader();
 
@@ -51,4 +60,11 @@ namespace BaseDatos
             }
         }
     }
+
+	public class GithubBaseDatos
+	{
+		public string Fecha { get; set; }
+		public int Estrellas { get; set; }
+		public int Forks { get; set; }
+	}
 }

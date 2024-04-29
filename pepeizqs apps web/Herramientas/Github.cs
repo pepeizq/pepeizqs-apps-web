@@ -6,7 +6,7 @@ namespace Herramientas
 {
 	public static class Github
 	{
-		public static async Task<string> UltimaModificacion(string proyecto)
+		public static async Task<GithubAPI> CargarAPI(string proyecto)
 		{
 			string html = await Decompiladores.Estandar("https://api.github.com/repos/pepeizq/" + proyecto);
 
@@ -16,7 +16,7 @@ namespace Herramientas
 
 				if (api != null) 
 				{
-					return api.UltimaModificacion;
+					return api;
 				}
 			}
 

@@ -1,17 +1,81 @@
-﻿@using Microsoft.AspNetCore.Components.Web;
+﻿@using BaseDatos
+@using Microsoft.AspNetCore.Components.Web;
 @using Listados
+@using Microsoft.Data.SqlClient
 
 <div style="background-color: @proyecto.Color1; display: flex; align-items: center;">
-	<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
+	{
+		<a href="@proyecto.Enlace" target="_blank">
+			<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px; border: 1px solid var(--colorEnlace);" />
+		</a>
+	}
+	else
+	{
+		<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+	}
 
 	<div style="padding: 20px 30px;">
 		<div style="font-size: 22px;">@proyecto.Nombre</div>
 		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
-		<div style="margin-top: 10px;"><a href="@proyecto.Enlace" target="_blank" style="text-decoration: none; margin-right: 30px;">@proyecto.Enlace</a> <a href="https://github.com/pepeizq/@proyecto.Github" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-github"></i> @Herramientas.Idiomas.CogerCadena(idioma, "Index.SourceCode")</a></div>
+		<div style="margin-top: 10px;"><a href="@proyecto.Enlace" target="_blank" style="text-decoration: none; ">@proyecto.Enlace</a></div>
 	</div>
 </div>
 
-<div style="background-color: @proyecto.Color2; padding: 50px;">
+<div style="background-color: @proyecto.Color2; padding: 30px 50px;">
+	<a href="https://github.com/pepeizq/@proyecto.Github" target="_blank" style="text-decoration: none;">
+		<div style="background-color: #24292e; color: var(--colorTexto); display: flex; align-items: center; padding: 20px 30px; border: 1px solid var(--colorEnlace);" class="expandir" title="@Herramientas.Idiomas.CogerCadena(idioma, "Github.String7")">
+			<i class="fa-brands fa-github" style="font-size: 32px;"></i>
+
+			<div style="padding-left: 30px;">
+				<div>
+					@Herramientas.Idiomas.CogerCadena(idioma, "Github.String1")
+				</div>
+
+				<div style="margin-top: 10px; display: flex; align-items: center;">
+					@if (github.Estrellas == 0)
+					{
+						<i class="fa-solid fa-star"></i>
+
+						<div style="padding-left: 10px;">
+							@Herramientas.Idiomas.CogerCadena(idioma, "Github.String2")
+						</div>
+					}
+					else
+					{
+						<i class="fa-solid fa-star"></i>
+
+						<div style="padding-left: 10px; padding-right: 20px;">
+							@if (github.Estrellas == 1)
+							{
+								@string.Format("{0} {1}", github.Estrellas, Herramientas.Idiomas.CogerCadena(idioma, "Github.String4"))
+							}
+							else
+							{
+								@string.Format("{0} {1}", github.Estrellas, Herramientas.Idiomas.CogerCadena(idioma, "Github.String3"))
+							}
+						</div>
+
+						<i class="fa-solid fa-code-fork"></i>
+
+						<div style="padding-left: 10px; padding-right: 20px;">
+							@if (github.Forks == 1)
+							{
+								@string.Format("{0} {1}", github.Forks, Herramientas.Idiomas.CogerCadena(idioma, "Github.String6"))
+							}
+							else
+							{
+								@string.Format("{0} {1}", github.Forks, Herramientas.Idiomas.CogerCadena(idioma, "Github.String5"))
+							}
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</a>
+</div>
+
+<div style="background-color: @proyecto.Color1; padding: 50px;">
 	<div>
 		@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String2")
 	</div>
@@ -21,7 +85,7 @@
 	</div>
 </div>
 
-<div style="background-color: @proyecto.Color1; padding: 50px; display: flex; align-items: center;">
+<div style="background-color: @proyecto.Color2; padding: 50px; display: flex; align-items: center;">
 	<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 		<a href="/imagenes/@proyecto.Id/captura1.webp" target="_blank" style="margin-right: 20px;">
 			<img src="/imagenes/@proyecto.Id/captura1.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
@@ -39,7 +103,7 @@
 	</div>
 </div>
 
-<div style="background-color: @proyecto.Color2; padding: 50px; display: flex; align-items: center;">
+<div style="background-color: @proyecto.Color1; padding: 50px; display: flex; align-items: center;">
 	<div style="width: 45%;">
 		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String6")</div>
 
@@ -57,7 +121,7 @@
 	</div>
 </div>
 
-<div style="background-color: @proyecto.Color1; padding: 50px; display: flex; align-items: center;">
+<div style="background-color: @proyecto.Color2; padding: 50px; display: flex; align-items: center;">
 	<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 		<a href="/imagenes/@proyecto.Id/captura5.webp" target="_blank" style="margin-right: 20px;">
 			<img src="/imagenes/@proyecto.Id/captura5.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
@@ -75,7 +139,7 @@
 	</div>
 </div>
 
-<div style="background-color: @proyecto.Color2; padding: 50px; display: flex; align-items: center;">
+<div style="background-color: @proyecto.Color1; padding: 50px; display: flex; align-items: center;">
 	<div style="width: 45%;">
 		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String10")</div>
 
@@ -93,7 +157,7 @@
 	</div>
 </div>
 
-<div style="background-color: @proyecto.Color1; padding: 50px; display: flex; align-items: center;">
+<div style="background-color: @proyecto.Color2; padding: 50px; display: flex; align-items: center;">
 	<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 		<a href="/imagenes/@proyecto.Id/captura9.webp" target="_blank" style="margin-right: 20px;">
 			<img src="/imagenes/@proyecto.Id/captura9.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
@@ -111,7 +175,7 @@
 	</div>
 </div>
 
-<div style="background-color: @proyecto.Color2; padding: 50px; display: flex; align-items: center;">
+<div style="background-color: @proyecto.Color1; padding: 50px; display: flex; align-items: center;">
 	<div style="width: 45%;">
 		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String14")</div>
 
@@ -136,10 +200,25 @@
 	[Parameter]
 	public string idioma { get; set; }
 
+	private string id = "pepeizqdeals";
+
+	SqlConnection conexion = new SqlConnection();
+
 	private Proyecto proyecto = new Proyecto();
+	private GithubBaseDatos github = new GithubBaseDatos();
 
 	protected override void OnInitialized()
 	{
-            proyecto = global::Listados.Proyectos.DevolverProyecto("pepeizqdeals");
+		proyecto = global::Listados.Proyectos.DevolverProyecto(id);
+
+		if (conexion.State != System.Data.ConnectionState.Open)
+		{
+			conexion = Herramientas.BaseDatos.Conectar();
+		}
+
+		using (conexion)
+		{
+			github = BaseDatos.Github.Buscar(conexion, proyecto.Github);
+		}		
 	}
 }

@@ -332,6 +332,34 @@
     "Valor": "December"
   },
   {
+    "Id": "Github.String1",
+    "Valor": "This project is open source on Github, that means you can take it and do whatever you want with it as long as you respect the license."
+  },
+  {
+    "Id": "Github.String2",
+    "Valor": "It has 0 stars on Github, if you have an account there you can help me professionally by giving me a star."
+  },
+  {
+    "Id": "Github.String3",
+    "Valor": "Stars"
+  },
+  {
+    "Id": "Github.String4",
+    "Valor": "Star"
+  },
+  {
+    "Id": "Github.String5",
+    "Valor": "Forks"
+  },
+  {
+    "Id": "Github.String6",
+    "Valor": "Fork"
+  },
+  {
+    "Id": "Github.String7",
+    "Valor": "Open Source Code"
+  },
+  {
     "Id": "pepeizqdeals.String1",
     "Valor": "Website of PC video game deals from official stores"
   },

@@ -45,33 +45,33 @@
 
 @code {
 
-	#nullable disable
+    #nullable disable
 
-	[Parameter]
-	public string idioma { get; set; }
+    [Parameter]
+    public string idioma { get; set; }
 
-	SqlConnection conexion = new SqlConnection();
+    SqlConnection conexion = new SqlConnection();
 
-	private List<ProyectoGithub> proyectos = new List<ProyectoGithub>();
+    private List<ProyectoGithub> proyectos = new List<ProyectoGithub>();
 
-	protected override void OnInitialized()
-	{
-		if (conexion.State != System.Data.ConnectionState.Open)
-		{
-			conexion = Herramientas.BaseDatos.Conectar();
-		}
+    protected override void OnInitialized()
+    {
+        if (conexion.State != System.Data.ConnectionState.Open)
+        {
+            conexion = Herramientas.BaseDatos.Conectar();
+        }
 
-		using (conexion)
-		{
-			List<Proyecto> proyectosTemporal = Listados.Proyectos.Generar();
+        using (conexion)
+        {
+            List<Proyecto> proyectosTemporal = Listados.Proyectos.Generar();
 
-			foreach (var proyectoTemporal in proyectosTemporal)
-			{
-				string ultimaFecha = BaseDatos.Github.SacarFecha(conexion, proyectoTemporal.Github);
+            foreach (var proyectoTemporal in proyectosTemporal)
+            {
+                BaseDatos.GithubBaseDatos api = BaseDatos.Github.Buscar(conexion, proyectoTemporal.Github);
 
 				ProyectoGithub nuevoProyecto = new ProyectoGithub();
 				nuevoProyecto.Proyecto = proyectoTemporal;
-				nuevoProyecto.FechaGithub = ultimaFecha;
+				nuevoProyecto.FechaGithub = api.Fecha;
 
 				proyectos.Add(nuevoProyecto);
 			}
@@ -82,5 +82,4 @@
 			}
 		}	
 	}
-
 }

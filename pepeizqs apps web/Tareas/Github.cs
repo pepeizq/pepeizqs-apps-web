@@ -37,16 +37,16 @@ namespace Tareas
                         try
                         {
 							foreach (var proyecto in Listados.Proyectos.Generar())
-							{
-                                string fecha = await Github.UltimaModificacion(proyecto.Github);
+							{ 
+								GithubAPI api = await Github.CargarAPI(proyecto.Github);
 
-                                if (string.IsNullOrEmpty(fecha) == false)
+                                if (string.IsNullOrEmpty(api.UltimaModificacion) == false && int.Parse(api.Estrellas) > -1 && int.Parse(api.Forks) > -1)
                                 {
-                                    BaseDatos.Github.ActualizarFecha(conexion, proyecto.Github, fecha);
+                                    BaseDatos.Github.Actualizar(conexion, proyecto.Github, api.UltimaModificacion, api.Estrellas, api.Forks);
                                 }
                                 else
                                 {
-                                    BaseDatos.Github.ActualizarFecha(conexion, proyecto.Github, "0");
+                                    BaseDatos.Github.Actualizar(conexion, proyecto.Github, "0", "0", "0");
                                 }
                             }                          
                         }

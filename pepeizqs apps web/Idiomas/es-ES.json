@@ -332,6 +332,34 @@
     "Valor": "Diciembre"
   },
   {
+    "Id": "Github.String1",
+    "Valor": "Este proyecto es de código abierto en Github, eso quiere decir que puedes cogerlo y hacer lo que quieras con él mientras respetes la licencia."
+  },
+  {
+    "Id": "Github.String2",
+    "Valor": "Tiene 0 estrellas en Github, si tienes cuenta allí puedes ayudarme profesionalmente dándome una estrella."
+  },
+  {
+    "Id": "Github.String3",
+    "Valor": "Estrellas"
+  },
+  {
+    "Id": "Github.String4",
+    "Valor": "Estrella"
+  },
+  {
+    "Id": "Github.String5",
+    "Valor": "Forks"
+  },
+  {
+    "Id": "Github.String6",
+    "Valor": "Fork"
+  },
+  {
+    "Id": "Github.String7",
+    "Valor": "Abrir Código Fuente"
+  },
+  {
     "Id": "pepeizqdeals.String1",
     "Valor": "Web de ofertas de videojuegos para PC procedentes de tiendas oficiales"
   },
