@@ -136,10 +136,10 @@ namespace Listados
 
 			Proyecto proyecto7 = new Proyecto
 			{
-				Id = "widgetgames",
+				Id = "widgetsgames",
 				Nombre = "pepeizq's Widgets for Games",
 				Github = "Widgets-Games",
-				Ubicacion = "/apps/widgetgames",
+				Ubicacion = "/apps/widgetsgames",
 				Enlace = "https://apps.microsoft.com/detail/9N6RH8C536LS",
 				Color1 = "#193748",
 				Color2 = "#234d65",
@@ -150,9 +150,25 @@ namespace Listados
 
 			proyectos.Add(proyecto7);
 
-			//-----------------------------------------
+            Proyecto proyecto8 = new Proyecto
+            {
+                Id = "widgetsmedia",
+                Nombre = "pepeizq's Widgets for Streaming",
+                Github = "Widgets-Media",
+                Ubicacion = "/apps/widgetsmedia",
+                Enlace = "https://apps.microsoft.com/detail/9NTHP669WBDD",
+                Color1 = "#083116",
+                Color2 = "#0e5325",
+                Tipo = ProyectoTipo.App,
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+                MostrarPortada = true
+            };
 
-			if (proyectos.Count > 0)
+            proyectos.Add(proyecto8);
+
+            //-----------------------------------------
+
+            if (proyectos.Count > 0)
             {
 				if (azar == false)
                 {

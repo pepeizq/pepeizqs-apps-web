@@ -29,7 +29,7 @@
   },
   {
     "Id": "LastUpdates.String1",
-    "Valor": "Below you can see the latest free source projects I have worked on, given the volume of code I handle I don't have time to make some 'patch notes' but you can see each line of code."
+    "Valor": "Here you can see the list of all my free source projects on Github ordered by the date of the last update I have made. Given the volume of code I handle, I'm sorry for not having time to make some proper 'patch notes'."
   },
   {
     "Id": "Privacy.Title",
@@ -540,39 +540,75 @@
     "Valor": "The app also works on Windows 11, but it is only capable of adding an icon to the Start menu unfortunately."
   },
   {
-    "Id": "widgetgames.String1",
+    "Id": "widgetsgames.String1",
     "Valor": "App to add Widgets to your games in Windows 11"
   },
   {
-    "Id": "widgetgames.String2",
+    "Id": "widgetsgames.String2",
     "Valor": "With the release of Windows 11, a new feature called Widgets appeared. Personally, I don't see it as very useful, but I still developed an app similar to the one I made for the Windows 10 Tiles."
   },
   {
-    "Id": "widgetgames.String3",
+    "Id": "widgetsgames.String3",
     "Valor": "Below I detail how it works:"
   },
   {
-    "Id": "widgetgames.String4",
+    "Id": "widgetsgames.String4",
     "Valor": "Autodetection of Installed Games"
   },
   {
-    "Id": "widgetgames.String5",
+    "Id": "widgetsgames.String5",
     "Valor": "Before adding a Widget, the app can automatically detect what games you have installed on your computer without having to do anything yourself."
   },
   {
-    "Id": "widgetgames.String6",
+    "Id": "widgetsgames.String6",
     "Valor": "Widgets Customization"
   },
   {
-    "Id": "widgetgames.String7",
+    "Id": "widgetsgames.String7",
     "Valor": "Although the app will load default images of the game for the Widget, the user can change them to their liking or even modify which game the Widget will run."
   },
   {
-    "Id": "widgetgames.String8",
+    "Id": "widgetsgames.String8",
     "Valor": "How to Add the Widget"
   },
   {
-    "Id": "widgetgames.String9",
+    "Id": "widgetsgames.String9",
+    "Valor": "Due to the little flexibility that Microsoft allows with Widgets, you have to make 2 last clicks to finally add the widget, in the images you can see where."
+  },
+  {
+    "Id": "widgetsmedia.String1",
+    "Valor": "App to add Widgets to your streaming tv shows and movies in Windows 11"
+  },
+  {
+    "Id": "widgetsmedia.String2",
+    "Valor": "With the release of Windows 11, a new feature called Widgets appeared. Personally, I don't see it as very useful, but I still developed an app similar to the one I made for the Windows 10 Tiles."
+  },
+  {
+    "Id": "widgetsmedia.String3",
+    "Valor": "Below I detail how it works:"
+  },
+  {
+    "Id": "widgetsmedia.String4",
+    "Valor": "Search by Platform"
+  },
+  {
+    "Id": "widgetsmedia.String5",
+    "Valor": "Before adding a Widget, the app can automatically detect what games you have installed on your computer without having to do anything yourself."
+  },
+  {
+    "Id": "widgetsmedia.String6",
+    "Valor": "Widgets Customization"
+  },
+  {
+    "Id": "widgetsmedia.String7",
+    "Valor": "Although the app will load default images of the series or movie for the Widget, the user can change them at will or even modify which streaming will run."
+  },
+  {
+    "Id": "widgetsmedia.String8",
+    "Valor": "How to Add the Widget"
+  },
+  {
+    "Id": "widgetsmedia.String9",
     "Valor": "Due to the little flexibility that Microsoft allows with Widgets, you have to make 2 last clicks to finally add the widget, in the images you can see where."
   }
 ]

@@ -1,11 +1,11 @@
 ﻿@page
-@model pepeizqs_apps_web.Pages.apps.widgetgamesModel
+@model pepeizqs_apps_web.Pages.apps.widgetsgamesModel
 
 @{
-    string id = "widgetgames";
+    string id = "widgetsgames";
 
     ViewData["Title"] = Listados.Proyectos.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.CogerCadena(Model.idioma, Listados.Proyectos.DevolverProyecto(id).Id + ".String1");
     Layout = "/Pages/Shared/_Layout.cshtml";
 }
 
-@(await Html.RenderComponentAsync<Componentes.Apps.Widgetgames>(RenderMode.ServerPrerendered, new { idioma = @Model.idioma }))
+@(await Html.RenderComponentAsync<Componentes.Apps.Widgetsgames>(RenderMode.ServerPrerendered, new { idioma = @Model.idioma }))

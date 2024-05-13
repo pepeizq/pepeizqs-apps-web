@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace pepeizqs_apps_web.Pages.apps
 {
-    public class widgetgamesModel : PageModel
+    public class widgetsgamesModel : PageModel
     {
 		public string idioma = string.Empty;
 
-		private readonly ILogger<widgetgamesModel> _logger;
+		private readonly ILogger<widgetsgamesModel> _logger;
 
-		public widgetgamesModel(ILogger<widgetgamesModel> logger)
+		public widgetsgamesModel(ILogger<widgetsgamesModel> logger)
 		{
 			_logger = logger;
 		}

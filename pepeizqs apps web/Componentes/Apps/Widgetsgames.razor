@@ -1,5 +1,6 @@
 ﻿@using BaseDatos
 @using Listados
+@using Microsoft.AspNetCore.Components.Web;
 @using Microsoft.Data.SqlClient
 
 <div style="background-color: @proyecto.Color1; display: flex; align-items: center;">
@@ -82,6 +83,10 @@
 	<div>
 		@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String2")
 	</div>
+
+	<div style="margin-top: 20px;">
+		@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String3")
+	</div>
 </div>
 
 <div style="background-color: @proyecto.Color2; padding: 50px; display: flex; align-items: center;">
@@ -96,9 +101,45 @@
 	</div>
 
 	<div style="width: 55%;">
-		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String3")</div>
+		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String4")</div>
 
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String4")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String5")</div>
+	</div>
+</div>
+
+<div style="background-color: @proyecto.Color1; padding: 50px; display: flex; align-items: center;">
+	<div style="width: 45%;">
+		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String6")</div>
+
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String7")</div>
+	</div>
+
+	<div style="display: flex; align-items: center; width: 55%; padding-left: 50px;">
+		<a href="/imagenes/@proyecto.Id/captura2.webp" target="_blank" style="margin-right: 20px;">
+			<img src="/imagenes/@proyecto.Id/captura3.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+		</a>
+
+		<a href="/imagenes/@proyecto.Id/captura3.webp" target="_blank">
+			<img src="/imagenes/@proyecto.Id/captura4.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+		</a>
+	</div>
+</div>
+
+<div style="background-color: @proyecto.Color2; padding: 50px; display: flex; align-items: center;">
+	<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
+		<a href="/imagenes/@proyecto.Id/captura5.webp" target="_blank" style="margin-right: 20px;">
+			<img src="/imagenes/@proyecto.Id/captura5.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+		</a>
+
+		<a href="/imagenes/@proyecto.Id/captura6.webp" target="_blank">
+			<img src="/imagenes/@proyecto.Id/captura6.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+		</a>
+	</div>
+
+	<div style="width: 55%;">
+		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String8")</div>
+
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String9")</div>
 	</div>
 </div>
 
@@ -109,7 +150,7 @@
 	[Parameter]
 	public string idioma { get; set; }
 
-	private string id = "databasegames";
+	private string id = "widgetsgames";
 
 	SqlConnection conexion = new SqlConnection();
 

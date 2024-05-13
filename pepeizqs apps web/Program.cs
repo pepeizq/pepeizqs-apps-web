@@ -42,7 +42,7 @@ builder.Services.AddSingleton<IDecompiladores, Decompiladores2>();
 
 #region Blazor
 
-builder.Services.AddServerSideBlazor();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
 #endregion
 

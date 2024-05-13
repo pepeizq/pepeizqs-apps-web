@@ -29,7 +29,7 @@
   },
   {
     "Id": "LastUpdates.String1",
-    "Valor": "A continuación podéis ver en que últimos proyectos de código libre he trabajado, dado el volumen de código que manejo no dispongo de tiempo para hacer unas 'notas de parche' pero si podéis ver cada linea de código."
+    "Valor": "Aquí puedes ver el listado de todos mis proyectos de código libre en Github ordenados por la fecha de la última actualización que he hecho. Dado el volumen de código que manejo, perdonar por no disponer de tiempo para hacer unas 'notas de parche' en condiciones."
   },
   {
     "Id": "Privacy.Title",
@@ -540,39 +540,39 @@
     "Valor": "La app funciona también en Windows 11, pero solo es capaz de añadir un icono al menú de Inicio."
   },
   {
-    "Id": "widgetgames.String1",
-    "Valor": "App para añadir Widgets de tus juegos en Windows 11"
+    "Id": "widgetsmedia.String1",
+    "Valor": "App para añadir Widgets de series y películas de streaming en Windows 11"
   },
   {
-    "Id": "widgetgames.String2",
+    "Id": "widgetsmedia.String2",
     "Valor": "Con la salida de Windows 11 apareció una nueva característica llamada Widgets, personalmente no lo veo muy útil pero aun así desarrolle una app similar a la que hice para las Tiles de Windows 10."
   },
   {
-    "Id": "widgetgames.String3",
+    "Id": "widgetsmedia.String3",
     "Valor": "A continuación os detallo como funciona:"
   },
   {
-    "Id": "widgetgames.String4",
-    "Valor": "Autodetección de Juegos Instalados"
+    "Id": "widgetsmedia.String4",
+    "Valor": "Búsqueda por Plataforma"
   },
   {
-    "Id": "widgetgames.String5",
-    "Valor": "Antes de añadir el Widget, la app puede detectar automáticamente que juegos tienes instalados en tu ordenador sin que tengas que hacer nada."
+    "Id": "widgetsmedia.String5",
+    "Valor": "Antes de añadirel Widget, la app puede buscar una serie o película de la que disponga la plataforma seleccionada."
   },
   {
-    "Id": "widgetgames.String6",
+    "Id": "widgetsmedia.String6",
     "Valor": "Personalización de los Widgets"
   },
   {
-    "Id": "widgetgames.String7",
-    "Valor": "Aunque la app cargará unas imágenes por defecto del juego para el Widget, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará el Widget."
+    "Id": "widgetsmedia.String7",
+    "Valor": "Aunque la app cargará unas imágenes por defecto de la serie o película para el Widget, el usuario puede cambiarlas a su gusto o incluso modificar que streaming ejecutará el Widget."
   },
   {
-    "Id": "widgetgames.String8",
+    "Id": "widgetsmedia.String8",
     "Valor": "Como Añadir el Widget"
   },
   {
-    "Id": "widgetgames.String9",
+    "Id": "widgetsmedia.String9",
     "Valor": "Debido a la poca flexibilidad que permite Microsoft con las Widgets tenéis que hacer 2 últimos clicks para finalmente añadir el widget, en las imágenes podéis ver donde."
   }
 ]
