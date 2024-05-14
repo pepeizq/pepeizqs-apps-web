@@ -168,6 +168,24 @@ namespace Listados
 
             //-----------------------------------------
 
+            Proyecto proyecto9 = new Proyecto
+            {
+                Id = "steamconnect",
+                Nombre = "pepeizq's Steam Connect",
+                Github = "Steam-Connect",
+                Ubicacion = "/apps/steamconnect",
+                Enlace = "https://github.com/pepeizq/Steam-Connect/",
+                Color1 = "#00003c",
+                Color2 = "#000063",
+                Tipo = ProyectoTipo.App,
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+                MostrarPortada = true
+            };
+
+            proyectos.Add(proyecto9);
+
+            //-----------------------------------------
+
             if (proyectos.Count > 0)
             {
 				if (azar == false)

@@ -610,5 +610,33 @@
   {
     "Id": "widgetsmedia.String9",
     "Valor": "Due to the little flexibility that Microsoft allows with Widgets, you have to make 2 last clicks to finally add the widget, in the images you can see where."
+  },
+  {
+    "Id": "steamconnect.String1",
+    "Valor": "App to connect other gaming platforms to Steam"
+  },
+  {
+    "Id": "steamconnect.String2",
+    "Valor": "I started developing this app because Playnite seemed absurdly complicated to use, I made it with the sole purpose of 'connecting' to Steam the games that the user had on platforms like GOG or Epic Games in the simplest way possible (nothing more)."
+  },
+  {
+    "Id": "steamconnect.String3",
+    "Valor": "It cannot be in the Microsoft Store because they imposed a rule that an app cannot 'need' another app (then they will wonder about the low use of the store by users). So you have the app to download from Github and below I will explain its use:"
+  },
+  {
+    "Id": "steamconnect.String4",
+    "Valor": "Autodetection of Installed Games"
+  },
+  {
+    "Id": "steamconnect.String5",
+    "Valor": "The app can automatically detect what games you have installed on your computer on various platforms, it is up to you which games you want to add to Steam."
+  },
+  {
+    "Id": "steamconnect.String6",
+    "Valor": "Games added automatically on Steam"
+  },
+  {
+    "Id": "steamconnect.String7",
+    "Valor": "In Steam you will not have to do anything at all, the app already takes care of adding the shortcut of the game you have selected in addition to the corresponding image."
   }
 ]
