@@ -13,7 +13,11 @@ var builder = WebApplication.CreateBuilder(args);
 //	// By default, all incoming requests will be authorized according to the default policy.
 //	options.FallbackPolicy = options.DefaultPolicy;
 //});
-builder.Services.AddRazorPages();
+
+builder.Services.AddRazorPages(opciones =>
+{
+	opciones.Conventions.AddPageRoute("/Sitemap", "Sitemap.xml");
+});
 
 #region Tareas
 
