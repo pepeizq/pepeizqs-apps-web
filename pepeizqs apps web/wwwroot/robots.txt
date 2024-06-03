@@ -1,4 +1,4 @@
 ﻿User-agent: *
-Disallow: /
+Allow: /
 
 Sitemap: https://pepeizqapps.com/sitemap.xml

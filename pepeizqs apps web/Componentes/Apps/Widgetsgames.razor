@@ -3,6 +3,19 @@
 @using Microsoft.AspNetCore.Components.Web;
 @using Microsoft.Data.SqlClient
 
+<!-- #region Cabecera -->
+
+@{
+	string descripcion = Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1");
+	string titulo = proyecto.Nombre + " • " + descripcion;
+	string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
+	string icono = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+}
+
+<Seo idioma="@idioma" titulo="@titulo" descripcion="@descripcion" enlace="@enlace" icono="@icono" />
+
+<!-- #endregion -->
+
 <div style="background-color: @proyecto.Color1; display: flex; align-items: center;">
 	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
 	{

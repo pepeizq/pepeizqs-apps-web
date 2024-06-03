@@ -1,0 +1,67 @@
+﻿@using Toolbelt.Blazor.HeadElement
+
+@if (string.IsNullOrEmpty(titulo) == false)
+{
+    <Title>
+        @titulo • pepeizq's apps
+    </Title>
+
+    <Meta Property="og:title" Content="@titulo" />
+}
+
+@if (string.IsNullOrEmpty(descripcion) == false)
+{
+    <Meta Property="description" Content="@descripcion" />
+    <Meta Property="og:description" Content="@descripcion" />
+}
+
+@if (string.IsNullOrEmpty(enlace) == false)
+{
+    <Meta Property="og:url" Content="@enlace" />
+}
+else
+{
+    <Meta Property="og:url" Content="https://pepeizqapps.com" />
+}
+
+@if (string.IsNullOrEmpty(icono) == false)
+{
+    <Link Rel="icon" Href="@icono" />
+    <Meta Property="og:image" Content="@icono" />
+}
+else
+{
+    <Meta Property="og:image" Content="https://pepeizqapps.com/logo/logo6.png" />
+}
+
+@if (string.IsNullOrEmpty(video) == false)
+{
+    <Meta Property="og:video" Content="@video" />
+}
+
+<Meta Property="og:type" Content="website" />
+<Meta Property="robots" Content="index, follow, noimageindex" />
+<Meta Property="keywords" Content="apps, games, source code" />
+
+@code {
+
+#nullable disable
+
+    [Parameter]
+    public string idioma { get; set; }
+
+    [Parameter]
+    public string titulo { get; set; }
+
+    [Parameter]
+    public string descripcion { get; set; }
+
+    [Parameter]
+    public string enlace { get; set; }
+
+    [Parameter]
+    public string icono { get; set; }
+
+    [Parameter]
+    public string video { get; set; }
+}

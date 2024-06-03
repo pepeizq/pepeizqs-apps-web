@@ -16,24 +16,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.4" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\apps\pepeizqdeals.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\apps\pepeizqdeals.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\apps\tilesgames.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\LastUpdates.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\LastUpdates.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\apps\tilesgames.cshtml" />
+    <PackageReference Include="Toolbelt.Blazor.HeadElement" Version="7.3.1" />
+    <PackageReference Include="Toolbelt.Blazor.HeadElement.Abstractions" Version="7.1.0" />
+    <PackageReference Include="Toolbelt.Blazor.HeadElement.ServerPrerendering" Version="7.3.1" />
+    <PackageReference Include="Toolbelt.Blazor.HeadElement.Services" Version="7.3.1" />
   </ItemGroup>
 
 </Project>

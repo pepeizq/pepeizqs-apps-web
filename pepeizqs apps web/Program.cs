@@ -1,5 +1,5 @@
 using Herramientas;
-using Microsoft.AspNetCore.Authentication.Negotiate;
+using Toolbelt.Blazor.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,10 +14,19 @@ var builder = WebApplication.CreateBuilder(args);
 //	options.FallbackPolicy = options.DefaultPolicy;
 //});
 
-builder.Services.AddRazorPages(opciones =>
-{
-	opciones.Conventions.AddPageRoute("/Sitemap", "Sitemap.xml");
-});
+builder.Services.AddRazorPages();
+
+#region Redireccionador
+
+builder.Services.AddControllersWithViews();
+
+#endregion
+
+#region Seo
+
+builder.Services.AddHeadElementHelper();
+
+#endregion
 
 #region Tareas
 
@@ -30,7 +39,9 @@ builder.Services.AddSingleton<Tareas.TareaGithub>();
 
 builder.Services.AddHostedService(provider => provider.GetRequiredService<Tareas.TareaGithub>());
 
+#endregion
 
+#region Decompilador
 
 builder.Services.AddHttpClient<IDecompiladores, Decompiladores2>()
     .ConfigurePrimaryHttpMessageHandler(() =>
@@ -60,8 +71,20 @@ var app = builder.Build();
     app.UseHsts();
 //}
 
+#region Seo
+
+app.UseHeadElementServerPrerendering();
+
+#endregion
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+#region Redireccionador
+
+app.MapControllers();
+
+#endregion
 
 app.UseRouting();
 
