@@ -18,10 +18,12 @@
 @if (string.IsNullOrEmpty(enlace) == false)
 {
     <Meta Property="og:url" Content="@enlace" />
+    <Link rel="canonical" href="@enlace" />
 }
 else
 {
     <Meta Property="og:url" Content="https://pepeizqapps.com" />
+    <Link rel="canonical" href="https://pepeizqapps.com" />
 }
 
 @if (string.IsNullOrEmpty(icono) == false)
@@ -39,13 +41,14 @@ else
     <Meta Property="og:video" Content="@video" />
 }
 
+<Meta Property="og:site_name" Content="pepeizq's apps" />
 <Meta Property="og:type" Content="website" />
 <Meta Property="robots" Content="index, follow, noimageindex" />
 <Meta Property="keywords" Content="apps, games, source code" />
 
 @code {
 
-#nullable disable
+    #nullable disable
 
     [Parameter]
     public string idioma { get; set; }

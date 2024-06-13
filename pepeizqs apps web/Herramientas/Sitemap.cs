@@ -7,7 +7,7 @@ namespace Herramientas
 {
 	public class Sitemap : Controller
 	{
-		[HttpGet("sitemap2.xml")]
+		[HttpGet("sitemap.xml")]
 		public IActionResult Generar()
 		{
 			StringBuilder sb = new StringBuilder();
