@@ -602,5 +602,49 @@
   {
     "Id": "steamconnect.String7",
     "Valor": "En Steam no vas a tener que hacer absolutamente nada, la app ya se encarga de añadir el acceso directo del juego que has seleccionado además de la correspondiente imagen."
+  },
+  {
+    "Id": "achievements.String1",
+    "Valor": "App para comprobar y buscar vídeos de logros de juegos en Steam"
+  },
+  {
+    "Id": "achievements.String2",
+    "Valor": "Con esta app pretendía tener un seguimiento de los logros en mis juegos de Steam y ver videos en Youtube sobre los logros que me faltaban con solo dar un click de ratón."
+  },
+  {
+    "Id": "achievements.String3",
+    "Valor": "A continuación os detallo como funciona:"
+  },
+  {
+    "Id": "achievements.String4",
+    "Valor": "Soporte para varias cuentas"
+  },
+  {
+    "Id": "achievements.String5",
+    "Valor": "Puedes añadir todas las cuentas de Steam que quieras mientras tengan los permisos en público para poder leer los datos de los juegos."
+  },
+  {
+    "Id": "achievements.String6",
+    "Valor": "Selecciona el juego"
+  },
+  {
+    "Id": "achievements.String7",
+    "Valor": "La app cargará todos los juegos que dispongan de logros en la cuenta de Steam seleccionada, aparte incluye un buscador por si tienes una gran cantidad de juegos."
+  },
+  {
+    "Id": "achievements.String8",
+    "Valor": "Ficha para cada juego"
+  },
+  {
+    "Id": "achievements.String9",
+    "Valor": "Para cada juego la app genera un listado de los logros conseguidos y de los que no."
+  },
+  {
+    "Id": "achievements.String10",
+    "Valor": "Vídeo del logro"
+  },
+  {
+    "Id": "achievements.String11",
+    "Valor": "Al clickear en el logro la app cargará directamente un video sobre como obtener el logro, si lo hay disponible en Youtube."
   }
 ]

@@ -49,7 +49,7 @@ namespace Listados
                 Id = "pepeizqdeals",
                 Nombre = "pepeizq's deals",
                 Github = "pepeizqs-deals-web",
-                Ubicacion = "/webs/pepeizq-deals",
+                Ubicacion = "/webs/pepeizqs-deals",
                 Color1 = "#002033",
                 Color2 = "#1b2838",
                 Enlace = "https://pepeizqdeals.com/",
@@ -65,7 +65,7 @@ namespace Listados
 				Id = "pepeizqdeals2",
 				Nombre = "pepeizq's deals",
 				Github = "pepeizqs-deals-app",
-				Ubicacion = "/apps/pepeizq-deals",
+				Ubicacion = "/apps/pepeizqs-deals",
 				Color1 = "#171a21",
 				Color2 = "#2f3544",
 				Tipo = ProyectoTipo.App,
@@ -166,8 +166,6 @@ namespace Listados
 
             proyectos.Add(proyecto8);
 
-            //-----------------------------------------
-
             Proyecto proyecto9 = new Proyecto
             {
                 Id = "steamconnect",
@@ -184,9 +182,25 @@ namespace Listados
 
             proyectos.Add(proyecto9);
 
-            //-----------------------------------------
+			Proyecto proyecto10 = new Proyecto
+			{
+				Id = "achievements",
+				Nombre = "pepeizq's Achievements for Games",
+				Github = "Steam-Achievements",
+				Ubicacion = "/apps/achievements-for-games",
+				Enlace = "https://apps.microsoft.com/detail/9MZZX81TDT20",
+				Color1 = "#161616",
+				Color2 = "#333333",
+				Tipo = ProyectoTipo.App,
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+				MostrarPortada = true
+			};
 
-            if (proyectos.Count > 0)
+			proyectos.Add(proyecto10);
+
+			//-----------------------------------------
+
+			if (proyectos.Count > 0)
             {
 				if (azar == false)
                 {

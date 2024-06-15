@@ -638,5 +638,49 @@
   {
     "Id": "steamconnect.String7",
     "Valor": "In Steam you will not have to do anything at all, the app already takes care of adding the shortcut of the game you have selected in addition to the corresponding image."
+  },
+  {
+    "Id": "achievements.String1",
+    "Valor": "App to check and search game achievement videos on Steam"
+  },
+  {
+    "Id": "achievements.String2",
+    "Valor": "With this app I intended to keep track of the achievements in my Steam games and watch videos on YouTube about the achievements that I was missing with just a click of the mouse."
+  },
+  {
+    "Id": "achievements.String3",
+    "Valor": "Below I detail how it works:"
+  },
+  {
+    "Id": "achievements.String4",
+    "Valor": "Support for multiple accounts"
+  },
+  {
+    "Id": "achievements.String5",
+    "Valor": "You can add as many Steam accounts as you want as long as they have public permissions to read game data."
+  },
+  {
+    "Id": "achievements.String6",
+    "Valor": "Select the game"
+  },
+  {
+    "Id": "achievements.String7",
+    "Valor": "The app will load all the games that have achievements in the selected Steam account, and also includes a search engine in case you have a large number of games."
+  },
+  {
+    "Id": "achievements.String8",
+    "Valor": "Sheet for each game"
+  },
+  {
+    "Id": "achievements.String9",
+    "Valor": "For each game the app generates a list of achievements achieved and those not achieved."
+  },
+  {
+    "Id": "achievements.String10",
+    "Valor": "Achievement video"
+  },
+  {
+    "Id": "achievements.String11",
+    "Valor": "When you click on the achievement, the app will directly load a video on how to obtain the achievement, if it is available on YouTube."
   }
 ]

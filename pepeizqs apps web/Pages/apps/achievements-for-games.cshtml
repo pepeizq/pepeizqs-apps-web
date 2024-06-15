@@ -1,0 +1,44 @@
+﻿@page
+@model pepeizqs_apps_web.Pages.apps.achievements_for_gamesModel
+
+@{
+    string id = "achievements";
+
+    ViewData["Title"] = Listados.Proyectos.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.CogerCadena(Model.idioma, Listados.Proyectos.DevolverProyecto(id).Id + ".String1");
+    Layout = "/Pages/Shared/_Layout.cshtml";
+
+    List<Modulos.Modulo> modulos = new List<Modulos.Modulo>()
+    {
+        new Modulos.Modulo()
+        {
+            Captura = "1",
+            Texto1 = "4",
+            Texto2 = "5"
+        },
+        new Modulos.Modulo()
+        {
+            Captura = "2",
+            Texto1 = "6",
+            Texto2 = "7"
+        },
+        new Modulos.Modulo()
+        {
+            Captura = "3",
+            Texto1 = "8",
+            Texto2 = "9"
+        },
+        new Modulos.Modulo()
+        {
+            Captura = "4",
+            Texto1 = "10",
+            Texto2 = "11"
+        }
+    };
+}
+
+@(await Html.RenderComponentAsync<Componentes.Plantillas.App>(RenderMode.ServerPrerendered, new { 
+    idioma = Model.idioma,
+    id = id,
+    intro = true,
+    modulos = modulos
+}))
