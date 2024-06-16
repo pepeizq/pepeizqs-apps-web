@@ -2,8 +2,20 @@
 @model IndexModel
 
 @{
-    ViewData["Title"] = Herramientas.Idiomas.CogerCadena(Model.idioma, "Index.Title");
+    string titulo = "pepeizq's apps • " + Herramientas.Idiomas.CogerCadena(Model.idioma, "Index.Subtitle");
+    string descripcion = Herramientas.Idiomas.CogerCadena(Model.idioma, "Index.Subtitle");
+
+    ViewData["Title"] = titulo;
     Layout = "/Pages/Shared/_Layout.cshtml";
 }
 
-@(await Html.RenderComponentAsync<Componentes.Portada>(RenderMode.Server, new { idioma = @Model.idioma}))
+@(await Html.RenderComponentAsync<Componentes.Seo>(RenderMode.ServerPrerendered, new
+{
+    idioma = Model.idioma,
+    titulo = titulo,
+    descripcion = descripcion
+}))
+
+@(await Html.RenderComponentAsync<Componentes.Portada>(RenderMode.Server, new { 
+    idioma = Model.idioma
+}))

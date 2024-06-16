@@ -504,6 +504,14 @@
     "Valor": "Creé una interfaz básica para ver que las diferentes tablas de la base de datos se carguen adecuamente y puedan ser leidas por otras apps."
   },
   {
+    "Id": "databasegames.String5",
+    "Valor": "Soporte para ficheros JSON"
+  },
+  {
+    "Id": "databasegames.String6",
+    "Valor": "Con el objetivo de poder trabajar desde cualquier app o web, la app genera ficheros .json para las diversas bases de datos."
+  },
+  {
     "Id": "tilesmedia.String1",
     "Valor": "App para añadir Tiles de series y películas de streaming en Windows 10"
   },

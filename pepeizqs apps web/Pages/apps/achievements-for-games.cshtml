@@ -7,27 +7,33 @@
     ViewData["Title"] = Listados.Proyectos.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.CogerCadena(Model.idioma, Listados.Proyectos.DevolverProyecto(id).Id + ".String1");
     Layout = "/Pages/Shared/_Layout.cshtml";
 
-    List<Modulos.Modulo> modulos = new List<Modulos.Modulo>()
+    Modulos.Intro intro = new Modulos.Intro()
     {
-        new Modulos.Modulo()
+        Texto1 = "2",
+        Texto2 = "3"
+    };
+
+    List<Modulos.Seccion> secciones = new List<Modulos.Seccion>()
+    {
+        new Modulos.Seccion()
         {
             Captura = "1",
             Texto1 = "4",
             Texto2 = "5"
         },
-        new Modulos.Modulo()
+        new Modulos.Seccion()
         {
             Captura = "2",
             Texto1 = "6",
             Texto2 = "7"
         },
-        new Modulos.Modulo()
+        new Modulos.Seccion()
         {
             Captura = "3",
             Texto1 = "8",
             Texto2 = "9"
         },
-        new Modulos.Modulo()
+        new Modulos.Seccion()
         {
             Captura = "4",
             Texto1 = "10",
@@ -39,6 +45,6 @@
 @(await Html.RenderComponentAsync<Componentes.Plantillas.App>(RenderMode.ServerPrerendered, new { 
     idioma = Model.idioma,
     id = id,
-    intro = true,
-    modulos = modulos
+    intro = intro,
+    secciones = secciones
 }))

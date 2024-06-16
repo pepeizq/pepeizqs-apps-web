@@ -29,7 +29,7 @@
 	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
 	{
 		<a href="@proyecto.Enlace" target="_blank">
-			<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px; border: 1px solid var(--colorEnlace);" />
+			<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
 		</a>
 	}
 	else
@@ -57,33 +57,38 @@
 				@Herramientas.Idiomas.CogerCadena(idioma, "Github.String1")
 			</div>
 
-			<div style="width: 100px; text-align: right;">
-				<i class="fa-solid fa-star"></i> @github.Estrellas
+			<div style="text-align: right; display: flex; align-items: center; font-size: 15px;">
+				<div><i class="fa-solid fa-star"></i></div>
+				<div style="padding-left: 10px;">@github.Estrellas</div>
 
-				<i class="fa-solid fa-code-fork" style="padding-left: 15px;"></i> @github.Forks
+				<div style="padding-left: 20px;"><i class="fa-solid fa-code-fork"></i></div>
+				<div style="padding-left: 10px;">@github.Forks</div>
 			</div>
 		</div>
 	</a>
 </div>
 
-@if (intro == true)
+@if (intro != null)
 {
 	<div style="background-color: @proyecto.Color1; padding: 50px;">
 		<div>
-			@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String2")
+			@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String" + intro.Texto1)
 		</div>
 
-		<div style="margin-top: 20px;">
-			@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String3")
-		</div>
+		@if (string.IsNullOrEmpty(intro.Texto2) == false)
+		{
+			<div style="margin-top: 20px;">
+				@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String" + intro.Texto2)
+			</div>
+		}
 	</div>
 }
 
-@if (modulos != null)
+@if (secciones != null)
 {
 	int i = 0;
 
-	foreach (var modulo in modulos)
+	foreach (var modulo in secciones)
 	{
 		string fondo = "background-color: " + proyecto.Color2;
 
@@ -135,10 +140,10 @@
 	public string id { get; set; }
 
 	[Parameter]
-	public bool intro { get; set; }
+	public Modulos.Intro intro { get; set; }
 
 	[Parameter]
-	public List<Modulos.Modulo> modulos { get; set; }
+	public List<Modulos.Seccion> secciones { get; set; }
 
 	private string imagenAbierta = string.Empty;
 

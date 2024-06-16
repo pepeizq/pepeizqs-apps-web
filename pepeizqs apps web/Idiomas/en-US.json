@@ -504,6 +504,14 @@
     "Valor": "I created a basic interface to see that the different database tables are loaded properly and can be read by other apps."
   },
   {
+    "Id": "databasegames.String5",
+    "Valor": "Support for JSON files"
+  },
+  {
+    "Id": "databasegames.String6",
+    "Valor": "In order to be able to work from any app or website, the app generates .json files for the various databases."
+  },
+  {
     "Id": "tilesmedia.String1",
     "Valor": "App to add streaming tv shows and movies Tiles for Windows 10"
   },

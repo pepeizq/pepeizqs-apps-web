@@ -2,11 +2,18 @@
 
 @if (string.IsNullOrEmpty(titulo) == false)
 {
+    string tituloFinal = titulo;
+
+    if (tituloFinal.Contains("pepeizq's apps") == false)
+    {
+        tituloFinal = tituloFinal + " • pepeizq's apps";
+    }
+
     <Title>
-        @titulo • pepeizq's apps
+        @tituloFinal
     </Title>
 
-    <Meta Property="og:title" Content="@titulo" />
+    <Meta Property="og:title" Content="@tituloFinal" />
 }
 
 @if (string.IsNullOrEmpty(descripcion) == false)
