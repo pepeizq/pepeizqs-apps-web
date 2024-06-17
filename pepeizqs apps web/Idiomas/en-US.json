@@ -437,15 +437,23 @@
   },
   {
     "Id": "pepeizqdeals2.String5",
-    "Valor": "Given how complicated some social networks can be to announce news on the web, I developed a web browser integrated into the app that would automate the process."
+    "Valor": "Given how complicated some social networks can be to announce news on the web, I outsourced the process with this app."
   },
   {
     "Id": "pepeizqdeals2.String6",
-    "Valor": "Integration with Humble Store"
+    "Valor": "Auto publishing in Steam Groups"
   },
   {
     "Id": "pepeizqdeals2.String7",
-    "Valor": "Given the store's security measures and its lack of technical support, it was impossible for me to look at the store's deals on the website, so i had to create an 'ips jumper' to look at the deals."
+    "Valor": "Steam does not offer any tools to automate the process of adding new news to Steam groups, so develop a web browser that automates the process of adding news in multiple languages."
+  },
+  {
+    "Id": "pepeizqdeals2.String8",
+    "Valor": "Integration with Humble Store"
+  },
+  {
+    "Id": "pepeizqdeals2.String9",
+    "Valor": "Given the store's security measures and its lack of technical support, it was impossible for me to look at the store's deals on the website, so I had to create an 'ips jumper' to look at the deals."
   },
   {
     "Id": "pepeizqapps.String1",

@@ -437,14 +437,22 @@
   },
   {
     "Id": "pepeizqdeals2.String5",
-    "Valor": "Dado lo complicado que pueden llegar a ser algunas redes sociales para anunciar las novedades de la web, desarrollé un navegador web integrado en la app que me automatizara el proceso."
+    "Valor": "Dado lo complicado que pueden llegar a ser algunas redes sociales para anunciar las novedades de la web, externalice el proceso con esta app."
   },
   {
     "Id": "pepeizqdeals2.String6",
-    "Valor": "Integración con Humble Store"
+    "Valor": "Auto publicación en Grupos de Steam"
   },
   {
     "Id": "pepeizqdeals2.String7",
+    "Valor": "Steam no ofrece ninguna herramienta para automatizar el proceso de añadir nuevas noticias a los grupos de Steam, así que desarrolle un navegador web que automatiza el proceso de añadir noticias en varios idiomas."
+  },
+  {
+    "Id": "pepeizqdeals2.String8",
+    "Valor": "Integración con Humble Store"
+  },
+  {
+    "Id": "pepeizqdeals2.String9",
     "Valor": "Dadas las medidas de seguridad de la tienda y su nulo soporte técnico me resultaba imposible mirar las ofertas de la tienda dentro de la web, así que tuve que crear un 'saltador de ips' para mirar las ofertas."
   },
   {
