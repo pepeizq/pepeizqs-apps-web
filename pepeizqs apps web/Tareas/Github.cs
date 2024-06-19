@@ -42,11 +42,11 @@ namespace Tareas
 
                                 if (string.IsNullOrEmpty(api.UltimaModificacion) == false && int.Parse(api.Estrellas) > -1 && int.Parse(api.Forks) > -1)
                                 {
-                                    BaseDatos.Github.Actualizar(conexion, proyecto.Github, api.UltimaModificacion, api.Estrellas, api.Forks);
+                                    BaseDatos.Github.Actualizar(conexion, proyecto.Github, api.UltimaModificacion, api.Estrellas, api.Forks, api.Suscriptores);
                                 }
                                 else
                                 {
-                                    BaseDatos.Github.Actualizar(conexion, proyecto.Github, "0", "0", "0");
+                                    BaseDatos.Github.Actualizar(conexion, proyecto.Github, "0", "0", "0", "0");
                                 }
                             }                          
                         }

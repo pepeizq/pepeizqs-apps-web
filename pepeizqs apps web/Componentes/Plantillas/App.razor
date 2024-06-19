@@ -38,12 +38,14 @@
 	}
 
 	<div style="padding: 20px 30px;">
-		<div style="font-size: 22px;">@proyecto.Nombre</div>
+		<h1 style="font-size: 22px;">@proyecto.Nombre</h1>
 		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
 
 		@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
 		{
-			<div style="margin-top: 10px;"><a href="@proyecto.Enlace" target="_blank" style="text-decoration: none; ">@proyecto.Enlace</a></div>
+			<div style="margin-top: 10px;">
+				<a href="@proyecto.Enlace" target="_blank" style="text-decoration: none;">@proyecto.Enlace</a>
+			</div>
 		}
 	</div>
 </div>
@@ -57,12 +59,15 @@
 				@Herramientas.Idiomas.CogerCadena(idioma, "Github.String1")
 			</div>
 
-			<div style="text-align: right; display: flex; align-items: center; font-size: 15px;">
+			<div style="text-align: right; display: flex; align-items: center; font-size: 14px;">
 				<div><i class="fa-solid fa-star"></i></div>
 				<div style="padding-left: 10px;">@github.Estrellas</div>
 
 				<div style="padding-left: 20px;"><i class="fa-solid fa-code-fork"></i></div>
 				<div style="padding-left: 10px;">@github.Forks</div>
+
+				<div style="padding-left: 20px;"><i class="fa-solid fa-eye"></i></div>
+				<div style="padding-left: 10px;">@github.Suscriptores</div>
 			</div>
 		</div>
 	</a>
@@ -105,7 +110,7 @@
 		<div style="@fondo; padding: 50px; display: flex; align-items: center; gap: 50px;">
 			<div style="display: flex; align-items: center; width: 40%; margin-left: auto; margin-right: auto;">
 				<a @onclick="(e => CargarImagen(e, captura))" target="_self" style="text-align: center;">
-					<img src="@captura" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+					<img src="@captura" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace); cursor: pointer;" alt="image"/>
 				</a>
 			</div>
 
@@ -125,7 +130,7 @@
 			<i class="fa-solid fa-xmark" style="font-size: 30px;"></i>
 		</button>
 		
-		<img src="@imagenAbierta" style="width: 100%; height: 100%; margin-top: 20px;"/>
+		<img src="@imagenAbierta" style="width: 100%; height: 100%; margin-top: 20px;" alt="image"/>
 	</div>
 }
 

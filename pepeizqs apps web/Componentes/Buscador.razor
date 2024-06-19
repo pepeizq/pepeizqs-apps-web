@@ -1,0 +1,98 @@
+﻿@using Listados
+@using Microsoft.AspNetCore.Components.Web;
+
+<style>
+    .buscador-panel {
+        height: calc(100% - var(--alturaCabecera));
+        width: 100%;
+        left: 0;
+        top: 0;
+        overflow-x: auto;
+        position: fixed;
+        z-index: 1000;
+        margin-top: var(--alturaCabecera);
+        padding: 10px;
+        backdrop-filter: blur(20px);
+    }
+</style>
+
+<div style="display: flex; flex-direction: row; align-items: center; margin-left: 20px;">
+    <i class="fa-solid fa-magnifying-glass" style="margin-right: 15px;"></i>
+    <input type="text" @oninput="TextoCambiaBuscador" style="padding: 5px 10px; background-color: var(--fondoEntrada); border: 0px; color: var(--colorTexto); display: block;" />
+    
+    @if (resultados != null)
+    {
+        if (resultados.Count > 0)
+        {
+            <div class="buscador-panel" style="display: flex; align-items: start; flex-direction: column;">
+                @foreach (var resultado in resultados)
+                {
+                    <div class="expandir" style="width: 100%; padding: 10px;">
+                        <a href="@resultado.Ubicacion" style="text-decoration: none; color: var(--colorTexto);">
+                            <div style="display: flex; align-items: center; border: 1px solid var(--colorEnlace); background-color: @resultado.Color1;">
+                                <div>
+                                    <img src="/imagenes/@resultado.Id/logo.webp" style="width: 100px; height: 100px;" />
+                                </div>
+
+                                <div style="width: 100%; padding-left: 15px; padding-right: 15px;">
+                                    <div style="font-size: 19px;">@resultado.Nombre</div>
+                                    <div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, resultado.Id + ".String1")</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+    }
+    </div>
+
+@code {
+
+    #nullable disable
+
+    [Parameter]
+    public string idioma { get; set; }
+
+    private List<Proyecto> resultados = new List<Proyecto>();
+
+    private void TextoCambiaBuscador(ChangeEventArgs texto)
+    {
+        resultados.Clear();
+
+        if (texto.Value.ToString().Trim().Length > 1)
+        {
+            string buscar = texto.Value.ToString().ToLower().Trim();
+
+            List<Proyecto> proyectos = Proyectos.Generar();
+
+            if (proyectos != null)
+            {
+                foreach (var proyecto in proyectos)
+                {
+                    if (proyecto.Nombre.ToLower().Contains(buscar) == true)
+                    {
+                        resultados.Add(proyecto);
+                    }
+                    else
+                    {
+                        if (proyecto.Buscador != null)
+                        {
+                            if (proyecto.Buscador.Count > 0)
+                            {
+                                foreach (var buscador in proyecto.Buscador)
+                                {
+                                    if (buscador.ToLower().Contains(buscar) == true)
+                                    {
+                                        resultados.Add(proyecto);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }     
+    }
+
+}

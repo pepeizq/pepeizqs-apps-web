@@ -98,7 +98,8 @@ namespace Listados
 				Color2 = "#2f3544",
 				Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true
+                MostrarPortada = true,
+                Buscador = new List<string>() { "steam", "gog", "ea play", "origin", "ubisoft", "uplay", "battlenet", "amazon", "epic games" }
             };
 
             proyectos.Add(proyecto4);
@@ -129,7 +130,8 @@ namespace Listados
                 Color2 = "#3d0707",
                 Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true
+                MostrarPortada = true,
+                Buscador = new List<string>() { "netflix", "disney", "prime", "amazon", "spotify" }
             };
 
             proyectos.Add(proyecto6);
@@ -145,8 +147,9 @@ namespace Listados
 				Color2 = "#234d65",
 				Tipo = ProyectoTipo.App,
 				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-				MostrarPortada = true
-			};
+				MostrarPortada = true,
+                Buscador = new List<string>() { "steam", "gog", "ea play", "origin", "ubisoft", "uplay", "battlenet", "amazon", "epic games" }
+            };
 
 			proyectos.Add(proyecto7);
 
@@ -161,7 +164,8 @@ namespace Listados
                 Color2 = "#0e5325",
                 Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true
+                MostrarPortada = true,
+                Buscador = new List<string>() { "netflix", "disney", "prime", "amazon", "spotify" }
             };
 
             proyectos.Add(proyecto8);
@@ -177,7 +181,8 @@ namespace Listados
                 Color2 = "#000063",
                 Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true
+                MostrarPortada = true,
+                Buscador = new List<string>() { "gog", "ea play", "origin", "ubisoft", "uplay", "battlenet", "amazon", "epic games" }
             };
 
             proyectos.Add(proyecto9);
@@ -193,7 +198,8 @@ namespace Listados
 				Color2 = "#333333",
 				Tipo = ProyectoTipo.App,
 				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-				MostrarPortada = true
+				MostrarPortada = true,
+                Buscador = new List<string>() { "steam" }
 			};
 
 			proyectos.Add(proyecto10);
@@ -228,6 +234,7 @@ namespace Listados
         public ProyectoTipo Tipo;
         public List<TecnologiaTipo> Tecnologias;
         public bool MostrarPortada;
+        public List<string> Buscador; 
 	}
 
 	public enum ProyectoTipo

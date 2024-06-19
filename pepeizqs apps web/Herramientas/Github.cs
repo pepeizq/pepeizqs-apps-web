@@ -37,5 +37,8 @@ namespace Herramientas
 
 		[JsonProperty("forks_count")]
 		public string Forks { get; set; }
-	}
+
+        [JsonProperty("subscribers_count")]
+        public string Suscriptores { get; set; }
+    }
 }

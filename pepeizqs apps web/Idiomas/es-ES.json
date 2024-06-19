@@ -577,19 +577,43 @@
   },
   {
     "Id": "widgetsmedia.String6",
-    "Valor": "Personalización de los Widgets"
+    "Valor": "Selección de película/serie"
   },
   {
     "Id": "widgetsmedia.String7",
-    "Valor": "Aunque la app cargará unas imágenes por defecto de la serie o película para el Widget, el usuario puede cambiarlas a su gusto o incluso modificar que streaming ejecutará el Widget."
+    "Valor": "Debido a que muchas películas y series son partes de grandes franquicias la app también muestra resultados relacionados con tu búsqueda."
   },
   {
     "Id": "widgetsmedia.String8",
-    "Valor": "Como Añadir el Widget"
+    "Valor": "Personalización de los Widgets"
   },
   {
     "Id": "widgetsmedia.String9",
-    "Valor": "Debido a la poca flexibilidad que permite Microsoft con las Widgets tenéis que hacer 2 últimos clicks para finalmente añadir el widget, en las imágenes podéis ver donde."
+    "Valor": "Aunque la app cargará unas imágenes por defecto de la serie o película para el Widget, el usuario puede cambiarlas a su gusto o incluso modificar que streaming ejecutará el Widget."
+  },
+  {
+    "Id": "widgetsmedia.String10",
+    "Valor": "Como Añadir el Widget (1)"
+  },
+  {
+    "Id": "widgetsmedia.String11",
+    "Valor": "Debido a la poca flexibilidad que permite Microsoft con las Widgets tenéis que hacer unos últimos clicks para finalmente añadir el widget, en primer lugar tendréis que añadir el Widget desde la app."
+  },
+  {
+    "Id": "widgetsmedia.String12",
+    "Valor": "Como Añadir el Widget (2)"
+  },
+  {
+    "Id": "widgetsmedia.String13",
+    "Valor": "En segundo lugar tendréis que abrir la app de Widgets y añadir el Widget, suena raro pero gracias a Microsoft hay que hacerlo así."
+  },
+  {
+    "Id": "widgetsmedia.String14",
+    "Valor": "Como Añadir el Widget (3)"
+  },
+  {
+    "Id": "widgetsmedia.String15",
+    "Valor": "Y por último selecciona mi app."
   },
   {
     "Id": "steamconnect.String1",
@@ -605,19 +629,35 @@
   },
   {
     "Id": "steamconnect.String4",
-    "Valor": "Autodetección de Juegos Instalados"
+    "Valor": "Soporte para varias plataformas"
   },
   {
     "Id": "steamconnect.String5",
-    "Valor": "La app puede detectar automáticamente que juegos tienes instalados en tu ordenador en varias plataformas, depende de ti que juegos quieres añadir a Steam."
+    "Valor": "Dado que en Windows hay varias plataformas de juegos, la app tiene soporte para poder conectar a Steam otras 6 plataformas."
   },
   {
     "Id": "steamconnect.String6",
-    "Valor": "Juegos añadidos automáticamente en Steam"
+    "Valor": "Autodetección de juegos instalados"
   },
   {
     "Id": "steamconnect.String7",
+    "Valor": "La app puede detectar automáticamente que juegos tienes instalados en tu ordenador en varias plataformas, depende de ti que juegos quieres añadir a Steam."
+  },
+  {
+    "Id": "steamconnect.String8",
+    "Valor": "Juegos añadidos automáticamente en Steam"
+  },
+  {
+    "Id": "steamconnect.String9",
     "Valor": "En Steam no vas a tener que hacer absolutamente nada, la app ya se encarga de añadir el acceso directo del juego que has seleccionado además de la correspondiente imagen."
+  },
+  {
+    "Id": "steamconnect.String10",
+    "Valor": "Modificación en Steam"
+  },
+  {
+    "Id": "steamconnect.String11",
+    "Valor": "Siempre podrás modificar en Steam el acceso directo al juego que hayas conectado."
   },
   {
     "Id": "achievements.String1",

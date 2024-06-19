@@ -22,7 +22,8 @@ namespace BaseDatos
 						{
 							Fecha = lector.GetString(1),
 							Estrellas = int.Parse(lector.GetString(2)),
-							Forks = int.Parse(lector.GetString(3))
+							Forks = int.Parse(lector.GetString(3)),
+                            Suscriptores = int.Parse(lector.GetString(4))
 						};
 
 						return datos;
@@ -33,10 +34,10 @@ namespace BaseDatos
             return null;
         }
 
-        public static void Actualizar(SqlConnection conexion, string id, string fecha, string estrellas, string forks)
+        public static void Actualizar(SqlConnection conexion, string id, string fecha, string estrellas, string forks, string suscriptores)
         {
             string sqlActualizar = "UPDATE proyectosGithub " +
-                        "SET fecha=@fecha, estrellas=@estrellas, forks=@forks WHERE id=@id";
+                        "SET fecha=@fecha, estrellas=@estrellas, forks=@forks, suscriptores=@suscriptores WHERE id=@id";
 
             SqlCommand comando = new SqlCommand(sqlActualizar, conexion);
 
@@ -46,6 +47,7 @@ namespace BaseDatos
                 comando.Parameters.AddWithValue("@fecha", fecha);
                 comando.Parameters.AddWithValue("@estrellas", estrellas);
                 comando.Parameters.AddWithValue("@forks", forks);
+                comando.Parameters.AddWithValue("@suscriptores", suscriptores);
 
                 SqlDataReader lector = comando.ExecuteReader();
 
@@ -66,5 +68,6 @@ namespace BaseDatos
 		public string Fecha { get; set; }
 		public int Estrellas { get; set; }
 		public int Forks { get; set; }
+        public int Suscriptores { get; set; }
 	}
 }

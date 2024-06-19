@@ -613,19 +613,43 @@
   },
   {
     "Id": "widgetsmedia.String6",
-    "Valor": "Widgets Customization"
+    "Valor": "Movie/series selection"
   },
   {
     "Id": "widgetsmedia.String7",
-    "Valor": "Although the app will load default images of the series or movie for the Widget, the user can change them at will or even modify which streaming will run."
+    "Valor": "Because many movies and series are parts of large franchises, the app also shows results related to your search."
   },
   {
     "Id": "widgetsmedia.String8",
-    "Valor": "How to Add the Widget"
+    "Valor": "Widgets Customization"
   },
   {
     "Id": "widgetsmedia.String9",
-    "Valor": "Due to the little flexibility that Microsoft allows with Widgets, you have to make 2 last clicks to finally add the widget, in the images you can see where."
+    "Valor": "Although the app will load default images of the series or movie for the Widget, the user can change them at will or even modify which streaming will run."
+  },
+  {
+    "Id": "widgetsmedia.String10",
+    "Valor": "How to Add the Widget (1)"
+  },
+  {
+    "Id": "widgetsmedia.String11",
+    "Valor": "Due to the little flexibility that Microsoft allows with Widgets, you have to make a few last clicks to finally add the widget, first of all you will have to add the Widget from the app."
+  },
+  {
+    "Id": "widgetsmedia.String12",
+    "Valor": "How to Add the Widget (2)"
+  },
+  {
+    "Id": "widgetsmedia.String13",
+    "Valor": "Secondly, you will have to open the Widgets app and add the Widget, it sounds strange but thanks to Microsoft you have to do it that way."
+  },
+  {
+    "Id": "widgetsmedia.String14",
+    "Valor": "How to Add the Widget (3)"
+  },
+  {
+    "Id": "widgetsmedia.String15",
+    "Valor": "And finally select my app."
   },
   {
     "Id": "steamconnect.String1",
@@ -641,19 +665,35 @@
   },
   {
     "Id": "steamconnect.String4",
-    "Valor": "Autodetection of Installed Games"
+    "Valor": "Support for various platforms"
   },
   {
     "Id": "steamconnect.String5",
-    "Valor": "The app can automatically detect what games you have installed on your computer on various platforms, it is up to you which games you want to add to Steam."
+    "Valor": "Since there are several gaming platforms in Windows, the app has support for connecting 6 other platforms to Steam."
   },
   {
     "Id": "steamconnect.String6",
-    "Valor": "Games added automatically on Steam"
+    "Valor": "Autodetection of installed games"
   },
   {
     "Id": "steamconnect.String7",
+    "Valor": "The app can automatically detect what games you have installed on your computer on various platforms, it is up to you which games you want to add to Steam."
+  },
+  {
+    "Id": "steamconnect.String8",
+    "Valor": "Games added automatically on Steam"
+  },
+  {
+    "Id": "steamconnect.String9",
     "Valor": "In Steam you will not have to do anything at all, the app already takes care of adding the shortcut of the game you have selected in addition to the corresponding image."
+  },
+  {
+    "Id": "steamconnect.String10",
+    "Valor": "Modification on Steam"
+  },
+  {
+    "Id": "steamconnect.String11",
+    "Valor": "You can always modify the shortcut to the game you have connected on Steam."
   },
   {
     "Id": "achievements.String1",
