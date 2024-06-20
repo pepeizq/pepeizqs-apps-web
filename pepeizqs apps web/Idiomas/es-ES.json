@@ -556,6 +556,66 @@
     "Valor": "La app funciona también en Windows 11, pero solo es capaz de añadir un icono al menú de Inicio."
   },
   {
+    "Id": "widgetsgames.String1",
+    "Valor": "App para añadir Widgets de juegos en Windows 11"
+  },
+  {
+    "Id": "widgetsgames.String2",
+    "Valor": "Con la salida de Windows 11 apareció una nueva característica llamada Widgets, personalmente no lo veo muy útil pero aun así desarrolle una app similar a la que hice para las Tiles de Windows 10."
+  },
+  {
+    "Id": "widgetsgames.String3",
+    "Valor": "A continuación os detallo como funciona:"
+  },
+  {
+    "Id": "widgetsgames.String4",
+    "Valor": "Búsqueda por Plataforma"
+  },
+  {
+    "Id": "widgetsgames.String5",
+    "Valor": "Primero debes seleccionar la plataforma donde tienes el juego."
+  },
+  {
+    "Id": "widgetsgames.String6",
+    "Valor": "Autodetección de juegos instalados"
+  },
+  {
+    "Id": "widgetsgames.String7",
+    "Valor": "La app puede detectar automáticamente qué juegos tienes instalados en tu ordenador."
+  },
+  {
+    "Id": "widgetsgames.String8",
+    "Valor": "Personalización de los Widgets"
+  },
+  {
+    "Id": "widgetsgames.String9",
+    "Valor": "Aunque la app cargará unas imágenes por defecto del juego para el Widget, el usuario puede cambiarlas a su gusto o incluso modificar que streaming ejecutará el Widget."
+  },
+  {
+    "Id": "widgetsgames.String10",
+    "Valor": "Como Añadir el Widget (1)"
+  },
+  {
+    "Id": "widgetsgames.String11",
+    "Valor": "Debido a la poca flexibilidad que permite Microsoft con las Widgets tenéis que hacer unos últimos clicks para finalmente añadir el widget, en primer lugar tendréis que añadir el Widget desde la app."
+  },
+  {
+    "Id": "widgetsgames.String12",
+    "Valor": "Como Añadir el Widget (2)"
+  },
+  {
+    "Id": "widgetsgames.String13",
+    "Valor": "En segundo lugar tendréis que abrir la app de Widgets y añadir el Widget, suena raro pero gracias a Microsoft hay que hacerlo así."
+  },
+  {
+    "Id": "widgetsgames.String14",
+    "Valor": "Como Añadir el Widget (3)"
+  },
+  {
+    "Id": "widgetsgames.String15",
+    "Valor": "Y por último selecciona mi app."
+  },
+  {
     "Id": "widgetsmedia.String1",
     "Valor": "App para añadir Widgets de series y películas de streaming en Windows 11"
   },

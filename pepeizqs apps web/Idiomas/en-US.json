@@ -569,27 +569,51 @@
   },
   {
     "Id": "widgetsgames.String4",
-    "Valor": "Autodetection of Installed Games"
+    "Valor": "Search by Platform"
   },
   {
     "Id": "widgetsgames.String5",
-    "Valor": "Before adding a Widget, the app can automatically detect what games you have installed on your computer without having to do anything yourself."
+    "Valor": "First you must select the platform where you have the game."
   },
   {
     "Id": "widgetsgames.String6",
-    "Valor": "Widgets Customization"
+    "Valor": "Autodetection of installed games"
   },
   {
     "Id": "widgetsgames.String7",
-    "Valor": "Although the app will load default images of the game for the Widget, the user can change them to their liking or even modify which game the Widget will run."
+    "Valor": "The app can automatically detect what games you have installed on your computer."
   },
   {
     "Id": "widgetsgames.String8",
-    "Valor": "How to Add the Widget"
+    "Valor": "Widgets Customization"
   },
   {
     "Id": "widgetsgames.String9",
-    "Valor": "Due to the little flexibility that Microsoft allows with Widgets, you have to make 2 last clicks to finally add the widget, in the images you can see where."
+    "Valor": "Although the app will load default images of the game for the Widget, the user can change them to their liking or even modify which game the Widget will run."
+  },
+  {
+    "Id": "widgetsgames.String10",
+    "Valor": "How to Add the Widget (1)"
+  },
+  {
+    "Id": "widgetsgames.String11",
+    "Valor": "Due to the little flexibility that Microsoft allows with Widgets, you have to make a few last clicks to finally add the widget, first of all you will have to add the Widget from the app."
+  },
+  {
+    "Id": "widgetsgames.String12",
+    "Valor": "How to Add the Widget (2)"
+  },
+  {
+    "Id": "widgetsgames.String13",
+    "Valor": "Secondly, you will have to open the Widgets app and add the Widget, it sounds strange but thanks to Microsoft you have to do it that way."
+  },
+  {
+    "Id": "widgetsgames.String14",
+    "Valor": "How to Add the Widget (3)"
+  },
+  {
+    "Id": "widgetsgames.String15",
+    "Valor": "And finally select my app."
   },
   {
     "Id": "widgetsmedia.String1",
@@ -609,7 +633,7 @@
   },
   {
     "Id": "widgetsmedia.String5",
-    "Valor": "Before adding a Widget, the app can automatically detect what games you have installed on your computer without having to do anything yourself."
+    "Valor": "Before adding a Widget, the app can search for a series or movie available on the selected platform."
   },
   {
     "Id": "widgetsmedia.String6",
