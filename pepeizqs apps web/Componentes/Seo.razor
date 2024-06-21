@@ -25,12 +25,12 @@
 @if (string.IsNullOrEmpty(enlace) == false)
 {
     <Meta Property="og:url" Content="@enlace" />
-    <Link rel="canonical" href="@enlace" />
+    <Link Rel="canonical" Href="@enlace" />
 }
 else
 {
     <Meta Property="og:url" Content="https://pepeizqapps.com" />
-    <Link rel="canonical" href="https://pepeizqapps.com" />
+    <Link Rel="canonical" Href="https://pepeizqapps.com" />
 }
 
 @if (string.IsNullOrEmpty(icono) == false)

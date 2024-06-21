@@ -541,18 +541,34 @@
   },
   {
     "Id": "tilesmedia.String6",
-    "Valor": "Personalización de las Tiles"
+    "Valor": "Selección de película/serie"
   },
   {
     "Id": "tilesmedia.String7",
-    "Valor": "Aunque la app cargará unas imágenes por defecto de la serie o película para la Tile, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará la Tile."
+    "Valor": "Debido a que muchas películas y series son partes de grandes franquicias la app también muestra resultados relacionados con tu búsqueda."
   },
   {
     "Id": "tilesmedia.String8",
-    "Valor": "También compatible con Windows 11"
+    "Valor": "Personalización de las Tiles"
   },
   {
     "Id": "tilesmedia.String9",
+    "Valor": "Aunque la app cargará unas imágenes por defecto de la serie o película para la Tile, el usuario puede cambiarlas a su gusto o incluso modificar que película ejecutará la Tile."
+  },
+  {
+    "Id": "tilesmedia.String10",
+    "Valor": "Como aparece en Windows 10"
+  },
+  {
+    "Id": "tilesmedia.String11",
+    "Valor": "Puedes añadir varias Tiles y depende de ti el resultado final."
+  },
+  {
+    "Id": "tilesmedia.String12",
+    "Valor": "También compatible con Windows 11"
+  },
+  {
+    "Id": "tilesmedia.String13",
     "Valor": "La app funciona también en Windows 11, pero solo es capaz de añadir un icono al menú de Inicio."
   },
   {
