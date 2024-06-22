@@ -473,26 +473,42 @@
   },
   {
     "Id": "tilesgames.String4",
-    "Valor": "Autodetección de Juegos Instalados"
+    "Valor": "Búsqueda por Plataforma"
   },
   {
     "Id": "tilesgames.String5",
-    "Valor": "Antes de añadir una Tile al menú de Inicio, la app puede detectar automáticamente que juegos tienes instalados en tu ordenador sin que tengas que hacer nada."
+    "Valor": "Antes de añadir una Tile al menú de Inicio, la app permite seleccionar diferentes plataformas que hay disponibles para juegos."
   },
   {
     "Id": "tilesgames.String6",
-    "Valor": "Personalización de las Tiles"
+    "Valor": "Autodetección de juegos instalados"
   },
   {
     "Id": "tilesgames.String7",
-    "Valor": "Aunque la app cargará unas imágenes por defecto del juego para la Tile, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará la Tile."
+    "Valor": "La app puede detectar automáticamente que juegos tienes instalados en tu ordenador sin que tengas que hacer nada."
   },
   {
     "Id": "tilesgames.String8",
-    "Valor": "También compatible con Windows 11"
+    "Valor": "Personalización de las Tiles"
   },
   {
     "Id": "tilesgames.String9",
+    "Valor": "Aunque la app cargará unas imágenes por defecto del juego para la Tile, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará la Tile."
+  },
+  {
+    "Id": "tilesgames.String10",
+    "Valor": "Como aparece en Windows 10"
+  },
+  {
+    "Id": "tilesgames.String11",
+    "Valor": "Puedes añadir varias Tiles y depende de ti el resultado final."
+  },
+  {
+    "Id": "tilesgames.String12",
+    "Valor": "También compatible con Windows 11"
+  },
+  {
+    "Id": "tilesgames.String13",
     "Valor": "La app funciona también en Windows 11, pero solo es capaz de añadir un icono al menú de Inicio."
   },
   {
