@@ -794,5 +794,57 @@
   {
     "Id": "achievements.String11",
     "Valor": "Al clickear en el logro la app cargará directamente un video sobre como obtener el logro, si lo hay disponible en Youtube."
+  },
+  {
+    "Id": "steamgrids.String1",
+    "Valor": "App para cambiar automáticamente las portadas de los juegos en Steam"
+  },
+  {
+    "Id": "steamgrids.String2",
+    "Valor": "La web Steamgriddb siempre me ha parecido perfecta para cambiar las carátulas de los juegos en Steam, pero peca de un gran defecto, es tedioso cambiar las caratulas a través de la web. Así que hice una mini app para simplificar el proceso."
+  },
+  {
+    "Id": "steamgrids.String3",
+    "Valor": "A continuación os detallo como funciona:"
+  },
+  {
+    "Id": "steamgrids.String4",
+    "Valor": "Integración con Steamgriddb (1)"
+  },
+  {
+    "Id": "steamgrids.String5",
+    "Valor": "Primero necesitáis crearos una cuenta en Steamgriddb y coger la clave de la API asignada a vuestra cuenta."
+  },
+  {
+    "Id": "steamgrids.String6",
+    "Valor": "Integración con Steamgriddb (2)"
+  },
+  {
+    "Id": "steamgrids.String7",
+    "Valor": "Después tenéis que añadir la clave de la API en la app."
+  },
+  {
+    "Id": "steamgrids.String8",
+    "Valor": "Integración con Steam"
+  },
+  {
+    "Id": "steamgrids.String9",
+    "Valor": "La app detectara automáticamente los juegos de Steam que estén instalados en el ordenador."
+  },
+  {
+    "Id": "steamgrids.String10",
+    "Valor": "Selección de carátulas (1)"
+  },
+  {
+    "Id": "steamgrids.String11",
+    "Valor": "Cuando seleccionas el juego la app cargará que carátulas hay disponibles para el juego, el ejemplo de la captura es el juego Wasteland 3."
+  },
+  {
+    "Id": "steamgrids.String12",
+    "Valor": "Selección de carátulas (2)"
+  },
+  {
+    "Id": "steamgrids.String13",
+    "Valor": "Y el último paso es seleccionar la carátula, la app se encargará automáticamente de hacer el cambio en Steam."
   }
 ]

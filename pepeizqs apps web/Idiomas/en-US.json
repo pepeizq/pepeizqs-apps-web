@@ -794,5 +794,57 @@
   {
     "Id": "achievements.String11",
     "Valor": "When you click on the achievement, the app will directly load a video on how to obtain the achievement, if it is available on YouTube."
+  },
+  {
+    "Id": "steamgrids.String1",
+    "Valor": "App to automatically change game covers on Steam"
+  },
+  {
+    "Id": "steamgrids.String2",
+    "Valor": "I've always found the Steamgriddb website to be perfect for changing game covers on Steam, but it has one major flaw, it's tedious to change covers via the website. So I made a mini app to simplify the process."
+  },
+  {
+    "Id": "steamgrids.String3",
+    "Valor": "Below I detail how it works:"
+  },
+  {
+    "Id": "steamgrids.String4",
+    "Valor": "Steamgriddb Integration (1)"
+  },
+  {
+    "Id": "steamgrids.String5",
+    "Valor": "First you need to create an account on Steamgriddb and get the API key assigned to your account."
+  },
+  {
+    "Id": "steamgrids.String6",
+    "Valor": "Steamgriddb Integration (2)"
+  },
+  {
+    "Id": "steamgrids.String7",
+    "Valor": "Then you have to add the API key in the app."
+  },
+  {
+    "Id": "steamgrids.String8",
+    "Valor": "Steam Integration"
+  },
+  {
+    "Id": "steamgrids.String9",
+    "Valor": "The app will automatically detect Steam games that are installed on your computer."
+  },
+  {
+    "Id": "steamgrids.String10",
+    "Valor": "Selection of covers (1)"
+  },
+  {
+    "Id": "steamgrids.String11",
+    "Valor": "When you select the game the app will load which covers are available for the game, the example in the screenshot is the game Wasteland 3."
+  },
+  {
+    "Id": "steamgrids.String12",
+    "Valor": "Selection of covers (2)"
+  },
+  {
+    "Id": "steamgrids.String13",
+    "Valor": "And the last step is to select the cover, the app will automatically take care of adding it to Steam."
   }
 ]

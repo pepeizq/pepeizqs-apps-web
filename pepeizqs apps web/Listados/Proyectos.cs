@@ -204,6 +204,23 @@ namespace Listados
 
 			proyectos.Add(proyecto10);
 
+			Proyecto proyecto11 = new Proyecto
+			{
+				Id = "steamgrids",
+				Nombre = "pepeizq's Steam Grids",
+				Github = "Steam-Grids",
+				Ubicacion = "/apps/steam-grids",
+				Enlace = "https://github.com/pepeizq/Steam-Grids/",
+				Color1 = "#32414c",
+				Color2 = "#222d34",
+				Tipo = ProyectoTipo.App,
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+				MostrarPortada = true,
+				Buscador = new List<string>() { "steam" }
+			};
+
+			proyectos.Add(proyecto11);
+
 			//-----------------------------------------
 
 			if (proyectos.Count > 0)
