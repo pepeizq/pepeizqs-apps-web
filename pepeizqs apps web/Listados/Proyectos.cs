@@ -221,9 +221,26 @@ namespace Listados
 
 			proyectos.Add(proyecto11);
 
-			//-----------------------------------------
+            Proyecto proyecto12 = new Proyecto
+            {
+                Id = "steamskins",
+                Nombre = "pepeizq's Steam Skins",
+                Github = "Steam-Grids",
+                Ubicacion = "/apps/steam-skins",
+                Enlace = "https://github.com/pepeizq/Steam-Skins-WinUI/",
+                Color1 = "#202b20",
+                Color2 = "#344131",
+                Tipo = ProyectoTipo.App,
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
+                MostrarPortada = true,
+                Buscador = new List<string>() { "steam" }
+            };
 
-			if (proyectos.Count > 0)
+            proyectos.Add(proyecto12);
+
+            //-----------------------------------------
+
+            if (proyectos.Count > 0)
             {
 				if (azar == false)
                 {
