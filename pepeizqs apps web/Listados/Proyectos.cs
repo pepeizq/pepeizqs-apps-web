@@ -225,7 +225,7 @@ namespace Listados
             {
                 Id = "steamskins",
                 Nombre = "pepeizq's Steam Skins",
-                Github = "Steam-Grids",
+                Github = "Steam-Skins-WinUI",
                 Ubicacion = "/apps/steam-skins",
                 Enlace = "https://github.com/pepeizq/Steam-Skins-WinUI/",
                 Color1 = "#202b20",

@@ -846,5 +846,41 @@
   {
     "Id": "steamgrids.String13",
     "Valor": "And the last step is to select the cover, the app will automatically take care of adding it to Steam."
+  },
+  {
+    "Id": "steamskins.String1",
+    "Valor": "App to change the appearance of Steam"
+  },
+  {
+    "Id": "steamskins.String2",
+    "Valor": "I developed this app years ago when Steam allowed changing skins with relative ease, although it still works today, the skins have problems working and I cannot guarantee that all the skins work."
+  },
+  {
+    "Id": "steamskins.String3",
+    "Valor": "Below I detail how it works:"
+  },
+  {
+    "Id": "steamskins.String4",
+    "Valor": "Selection of skins"
+  },
+  {
+    "Id": "steamskins.String5",
+    "Valor": "First of all, the app offers you a list of skins available to change Steam."
+  },
+  {
+    "Id": "steamskins.String6",
+    "Valor": "Downloading and installing skins"
+  },
+  {
+    "Id": "steamskins.String7",
+    "Valor": "In the selected skin, just click on the Download button for the skin to be downloaded and installed automatically in Steam."
+  },
+  {
+    "Id": "steamskins.String8",
+    "Valor": "How it looks on Steam"
+  },
+  {
+    "Id": "steamskins.String9",
+    "Valor": "This is how the new selected appearance appears on Steam."
   }
 ]

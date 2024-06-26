@@ -846,5 +846,41 @@
   {
     "Id": "steamgrids.String13",
     "Valor": "Y el último paso es seleccionar la carátula, la app se encargará automáticamente de hacer el cambio en Steam."
+  },
+  {
+    "Id": "steamskins.String1",
+    "Valor": "App para cambiar la apariencia de Steam"
+  },
+  {
+    "Id": "steamskins.String2",
+    "Valor": "Esta app la desarrollé hace años cuando en Steam permitía el cambio de apariencias con relativa facilidad, si bien hoy en día sigue funcionando, las apariencias tienen problemas para funcionar y no puedo garantizar que todas las apariencias funcionan."
+  },
+  {
+    "Id": "steamskins.String3",
+    "Valor": "A continuación os detallo como funciona:"
+  },
+  {
+    "Id": "steamskins.String4",
+    "Valor": "Selección de apariencias"
+  },
+  {
+    "Id": "steamskins.String5",
+    "Valor": "En primer lugar la app os ofrece un listado de apariencias disponibles para cambiar Steam."
+  },
+  {
+    "Id": "steamskins.String6",
+    "Valor": "Descarga e instalación de apariencias"
+  },
+  {
+    "Id": "steamskins.String7",
+    "Valor": "En la apariencia seleccionada basta con clickear en el botón de Descarga para que la apariencia se descargue e instale automáticamente en Steam."
+  },
+  {
+    "Id": "steamskins.String8",
+    "Valor": "Como aparece en Steam"
+  },
+  {
+    "Id": "steamskins.String9",
+    "Valor": "Así aparece en Steam la nueva apariencia seleccionada."
   }
 ]
