@@ -28,14 +28,25 @@ namespace Listados
 
 			tecnologias.Add(tecnologia2);
 
-			return tecnologias;
+            Tecnologia tecnologia3 = new Tecnologia
+            {
+                Id = TecnologiaTipo.Unity,
+                Nombre = "Unity",
+                Imagen = "unity.webp",
+                MostrarNombre = true
+            };
+
+            tecnologias.Add(tecnologia2);
+
+            return tecnologias;
 		}
 	}
 
 	public enum TecnologiaTipo
 	{
 		ASPNetCore,
-		WinUI
+		WinUI,
+		Unity
 	}
 
 	public class Tecnologia
