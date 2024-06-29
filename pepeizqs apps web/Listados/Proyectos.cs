@@ -238,6 +238,23 @@ namespace Listados
 
             proyectos.Add(proyecto12);
 
+            Proyecto proyecto13 = new Proyecto
+            {
+                Id = "cities",
+                Nombre = "pepeizq's Cities",
+                Github = "pepeizqs-cities",
+                Ubicacion = "/games/pepeizqs-cities",
+                Enlace = "https://store.steampowered.com/app/1039060/pepeizqs_Cities/",
+                Color1 = "#202b20",
+                Color2 = "#344131",
+                Tipo = ProyectoTipo.Juego,
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.Unity },
+                MostrarPortada = true,
+                Buscador = new List<string>() { "steam" }
+            };
+
+            proyectos.Add(proyecto13);
+
             //-----------------------------------------
 
             if (proyectos.Count > 0)
