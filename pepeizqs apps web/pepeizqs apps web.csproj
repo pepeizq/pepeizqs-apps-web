@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Componentes\Buscador.razor" />
+    <_ContentIncludedByDefault Remove="Componentes\Plantillas\Juego.razor" />
     <_ContentIncludedByDefault Remove="wwwroot\imagenes\achievements\captura1.png" />
   </ItemGroup>
 
@@ -29,6 +30,10 @@
 
   <ItemGroup>
     <UpToDateCheckInput Remove="Componentes\Buscador.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Componentes\Plantillas\Juego.razor" />
   </ItemGroup>
 
 </Project>
