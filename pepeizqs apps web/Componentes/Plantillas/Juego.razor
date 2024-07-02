@@ -1,5 +1,223 @@
-﻿<h3>Juego</h3>
+﻿@using BaseDatos
+@using Listados
+@using Microsoft.AspNetCore.Components.Web;
+@using Microsoft.Data.SqlClient
+
+<style>
+	.boton-github {
+		transition: transform .5s;
+	}
+
+		.boton-github:hover {
+			transform: scale(1.01);
+		}
+</style>
+
+<style>
+	.destacado-fondo {
+		display: block;
+	}
+
+	.destacado-video {
+		display: none;
+	}
+
+	.destacado-mostrar:hover .destacado-fondo {
+		display: none;
+	}
+
+	.destacado-mostrar:hover .destacado-video {
+		display: block;
+	}
+
+	.destacados-galeria-cursor {
+		cursor: pointer;
+	}
+
+	.destacados-galeria-fila {
+		display: flex;
+		overflow: auto;
+	}
+
+		.destacados-galeria-fila:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+	.destacados-galeria-columna {
+		float: left;
+		width: 16.66%;
+		flex: 0 0 auto;
+		padding: 3px 3px 0px 3px;
+		aspect-ratio: 92/43;
+	}
+
+	.destacados-galeria-captura {
+		opacity: 0.3;
+		object-fit: cover;
+		overflow: hidden;
+		transition: transform .2s;
+	}
+
+		.destacados-galeria-captura:hover {
+			opacity: 1;
+			transform: scale(1.01);
+		}
+</style>
+
+<!-- #region Cabecera -->
+
+@{
+	string descripcion = Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1");
+	string titulo = proyecto.Nombre + " • " + descripcion;
+	string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
+	string icono = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+}
+
+<Seo idioma="@idioma" titulo="@titulo" descripcion="@descripcion" enlace="@enlace" icono="@icono" />
+
+<!-- #endregion -->
+
+<div style="background-color: @proyecto.Color1; display: flex; align-items: center; background-size: cover; background-image: linear-gradient(to right, @proyecto.Color1 50%, transparent), url('/imagenes/@proyecto.Id/captura2.webp');">
+	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
+	{
+		<a href="@proyecto.Enlace" target="_blank">
+			<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 300px; height: 140px;" />
+		</a>
+	}
+	else
+	{
+		<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 300px; height: 140px;" />
+	}
+
+	<div style="padding: 20px 30px;">
+		<h1 style="font-size: 22px;">@proyecto.Nombre</h1>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
+
+		@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
+		{
+			<div style="margin-top: 10px;">
+				<a href="@proyecto.Enlace" target="_blank" style="text-decoration: none;">@proyecto.Enlace</a>
+			</div>
+		}
+	</div>
+</div>
+
+<div style="background-color: @proyecto.Color2; overflow: hidden;">
+	<a href="https://github.com/pepeizq/@proyecto.Github" target="_blank" style="text-decoration: none;">
+		<div class="boton-github" style="background-color: #24292e; color: var(--colorTexto); display: flex; align-items: center; padding: 15px 25px;" title="@Herramientas.Idiomas.CogerCadena(idioma, "Github.String7")">
+			<i class="fa-brands fa-github" style="font-size: 24px;"></i>
+
+			<div style="width: 100%; padding-left: 20px; padding-right: 20px; font-size: 15px;">
+				@Herramientas.Idiomas.CogerCadena(idioma, "Github.String1")
+			</div>
+
+			<div style="text-align: right; display: flex; align-items: center; font-size: 14px;">
+				<div><i class="fa-solid fa-star"></i></div>
+				<div style="padding-left: 10px;">@github.Estrellas</div>
+
+				<div style="padding-left: 20px;"><i class="fa-solid fa-code-fork"></i></div>
+				<div style="padding-left: 10px;">@github.Forks</div>
+
+				<div style="padding-left: 20px;"><i class="fa-solid fa-eye"></i></div>
+				<div style="padding-left: 10px;">@github.Suscriptores</div>
+			</div>
+		</div>
+	</a>
+</div>
+
+@if (intro != null)
+{
+	<div style="background-color: @proyecto.Color1; padding: 50px;">
+		<div>
+			@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String" + intro.Texto1)
+		</div>
+
+		@if (string.IsNullOrEmpty(intro.Texto2) == false)
+		{
+			<div style="margin-top: 20px;">
+				@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String" + intro.Texto2)
+			</div>
+		}
+	</div>
+}
+
+<div style="background-color: @proyecto.Color2; overflow: hidden; padding: 50px;">
+	<div class="destacado-mostrar">
+		@{
+			string capturaMostrar = "/imagenes/" + proyecto.Id + "/captura" + capturaSeleccionada.ToString() + ".webp";
+
+			<img src="@capturaMostrar" style="width: 100%; height: 100%;" />
+		}
+	</div>
+
+	<div class="destacados-galeria-fila" style="padding-bottom: 20px;">
+		@{
+			int i = 1;
+			while (i <= capturas)
+			{
+				string opacidad = string.Empty;
+
+				if (capturaSeleccionada == i)
+				{
+					opacidad = "opacity: 1;";
+				}
+
+				string captura = "/imagenes/" + proyecto.Id + "/captura" + i.ToString() + ".webp";
+				string posicion = i.ToString();
+
+				<div class="destacados-galeria-columna" @onclick="@(e => CambiarCaptura(e, posicion))" style="background-color: var(--fondoOscuro);">
+					<img class="destacados-galeria-captura destacados-galeria-cursor" src="@captura" style="width: 100%; @opacidad" alt="@proyecto.Nombre">
+				</div>
+
+				i += 1;
+			}
+		}
+	</div>
+</div>
+
 
 @code {
 
+	#nullable disable
+
+	[Parameter]
+	public string idioma { get; set; }
+
+	[Parameter]
+	public string id { get; set; }
+
+	[Parameter]
+	public Modulos.Intro intro { get; set; }
+
+	[Parameter]
+	public int capturas { get; set; }
+
+	SqlConnection conexion = new SqlConnection();
+
+	private Proyecto proyecto = new Proyecto();
+	private GithubBaseDatos github = new GithubBaseDatos();
+
+	protected override void OnInitialized()
+	{
+		proyecto = global::Listados.Proyectos.DevolverProyecto(id);
+
+		if (conexion.State != System.Data.ConnectionState.Open)
+		{
+			conexion = Herramientas.BaseDatos.Conectar();
+		}
+
+		using (conexion)
+		{
+			github = BaseDatos.Github.Buscar(conexion, proyecto.Github);
+		}
+	}
+
+	private int capturaSeleccionada = 1;
+
+	private void CambiarCaptura(MouseEventArgs args, string nuevaCaptura)
+	{
+		capturaSeleccionada = int.Parse(nuevaCaptura);
+	}
 }

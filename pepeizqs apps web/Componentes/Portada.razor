@@ -1,74 +1,235 @@
 ﻿@using Herramientas
 @using Microsoft.AspNetCore.Components.Web;
 @using Listados
+@using Microsoft.Data.SqlClient
 
-<div style="background-color: var(--fondoEntrada); padding: 50px;">
-	
-	<div style="margin-bottom: 40px;">
-		<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.Presentation")</span>
+<style>
+	.boton-github {
+		transition: transform .5s;
+	}
+
+		.boton-github:hover {
+			transform: scale(1.01);
+		}
+</style>
+
+<style>
+	.boton-lateral {
+		width: 100%;
+		border: 0px;
+		padding: 10px 15px;
+		height: 44px;
+	}
+</style>
+
+<div style="background-color: var(--fondoEntrada);">	
+	<div style="display: flex; align-items: center; backdrop-filter: brightness(80%);">
+		<div style="width: 60%; padding: 40px;">
+			<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.Presentation")</span>
+		</div>
+		
+		<div style="width: 40%; overflow: hidden;">
+			@{
+				int estrellas = 0;
+				int forks = 0;
+				int suscriptores = 0;
+
+				foreach (var entrada in bdGithub)
+				{
+					estrellas = estrellas + entrada.Estrellas;
+					forks = forks + entrada.Forks;
+					suscriptores = suscriptores + entrada.Suscriptores;
+				}
+			}
+
+			<a href="https://github.com/pepeizq/" target="_blank" style="text-decoration: none;">
+				<div class="boton-github" style="padding: 30px; background-color: rgba(36, 41, 46, 0.85); color: var(--colorTexto);">
+					<div style="display: flex; align-items: center;">
+						<i class="fa-brands fa-github" style="font-size: 32px;"></i>
+
+						<div style="width: 100%; padding-left: 30px; font-size: 15px;">
+							@Herramientas.Idiomas.CogerCadena(idioma, "Index.Github1")
+						</div>
+					</div>
+
+					<div style="display: flex; align-items: center; font-size: 14px; margin-left: 62px; margin-top: 15px;">
+						<div>@Herramientas.Idiomas.CogerCadena(idioma, "Index.Github2")</div>
+
+						<div style="margin-left: 15px;"><i class="fa-solid fa-star"></i></div>
+						<div style="padding-left: 10px;">@estrellas</div>
+
+						<div style="margin-left: 15px;"><i class="fa-solid fa-code-fork"></i></div>
+						<div style="padding-left: 10px;">@forks</div>
+
+						<div style="margin-left: 15px;"><i class="fa-solid fa-eye"></i></div>
+						<div style="padding-left: 10px;">@suscriptores</div>
+					</div>
+				</div>
+			</a>
+		</div>
 	</div>
 
-	<div style="display: flex; align-items: center; margin-bottom: 10px;">
-		<div style="margin-right: 20px;">
-			<button @onclick="@(e => CambiarProyectos(e))" style="background-color: transparent; border: 0px; padding: 10px; height: 44px;">
-				<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-					<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.All")</span>
-				</div>
-			</button>
+	<div style="display: flex; align-items: start; padding: 50px;">
+		<div style="width: 20%; padding-right: 40px;">
+			<div style="border-right: 3px solid var(--fondoOscuro);">
+				<div>
+					@{
+						string fondo = "background-color: transparent;";
 
-			@if (tecnologiaSeleccionada == "Todos")
-			{
-				<div style="background: var(--colorEnlace); padding: 1px;">
-				</div>
-			}
-		</div>
+						if (tipoSeleccionado == "Todos")
+						{
+							fondo = "background-color: var(--fondoOscuro);";
+						}
 
-		@foreach (var tecnologia in tecnologias)
-		{
-			<div style="margin-right: 20px;">
-				<button @onclick="@(e => CambiarProyectos(e, tecnologia.Id))" style="background-color: transparent; border: 0px; padding: 10px; height: 44px;">
-					@if (tecnologia.MostrarNombre == false)
+						<button @onclick="@(e => CambiarProyectos(e))" class="boton-lateral" style="@fondo">
+							<div style="display: flex; align-items: center; width: 100%; height: 100%;">
+								<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.All")</span>
+								<span style="color: var(--colorTexto); margin-left: 10px;">(@Listados.Proyectos.Generar().Count)</span>
+							</div>
+						</button>
+					}
+				</div>
+
+				<div style="margin-top: 15px;">
+					<div>
+						@{
+							string fondoApp = "background-color: transparent;";
+
+							if (tipoSeleccionado == ProyectoTipo.App.ToString())
+							{
+								fondoApp = "background-color: var(--fondoOscuro);";
+							}
+
+							<button @onclick="@(e => CambiarProyectos(e, ProyectoTipo.App))" class="boton-lateral" style="@fondoApp">
+								<div style="display: flex; align-items: center; width: 100%; height: 100%;">
+									<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.App")</span>
+									<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(ProyectoTipo.App))</span>
+								</div>
+							</button>
+						}
+					</div>
+
+					<div>
+						@{
+							string fondoWeb = "background-color: transparent;";
+
+							if (tipoSeleccionado == ProyectoTipo.Web.ToString())
+							{
+								fondoWeb = "background-color: var(--fondoOscuro);";
+							}
+
+							<button @onclick="@(e => CambiarProyectos(e, ProyectoTipo.Web))" class="boton-lateral" style="@fondoWeb">
+								<div style="display: flex; align-items: center; width: 100%; height: 100%;">
+									<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.Web")</span>
+									<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(ProyectoTipo.Web))</span>
+								</div>
+							</button>
+						}
+					</div>
+
+					<div>
+						@{
+							string fondoJuego = "background-color: transparent;";
+
+							if (tipoSeleccionado == ProyectoTipo.Juego.ToString())
+							{
+								fondoJuego = "background-color: var(--fondoOscuro);";
+							}
+
+							<button @onclick="@(e => CambiarProyectos(e, ProyectoTipo.Juego))" class="boton-lateral" style="@fondoJuego">
+								<div style="display: flex; align-items: center; width: 100%; height: 100%;">
+									<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.Game")</span>
+									<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(ProyectoTipo.Juego))</span>
+								</div>
+							</button>
+						}
+					</div>
+				</div>
+
+				<div style="margin-top: 15px;">
+					@foreach (var tecnologia in tecnologias)
 					{
-						<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-							<img src="/imagenes/tecnologias/@tecnologia.Imagen" style="max-height: 20px; object-fit: contain;" />
-						</div>						
+						<div>
+							@{
+								string fondoTecnologia = "background-color: transparent;";
+
+								if (tipoSeleccionado == tecnologia.Id.ToString())
+								{
+									fondoTecnologia = "background-color: var(--fondoOscuro);";
+								}
+
+								<button @onclick="@(e => CambiarProyectos(e, tecnologia.Id))" class="boton-lateral" style="@fondoTecnologia">
+									@if (tecnologia.MostrarNombre == false)
+									{
+										<div style="display: flex; align-items: center; width: 100%; height: 100%;">
+											<img src="/imagenes/tecnologias/@tecnologia.Imagen" style="max-height: 20px; object-fit: contain;" />
+											<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(tecnologia.Id))</span>
+										</div>
+									}
+									else
+									{
+										<div style="display: flex; align-items: center; width: 100%; height: 100%;">
+											<img src="/imagenes/tecnologias/@tecnologia.Imagen" style="max-height: 20px; object-fit: contain;" />
+											<span style="color: var(--colorTexto); margin-left: 10px;">@tecnologia.Nombre</span>
+											<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(tecnologia.Id))</span>
+										</div>
+									}
+								</button>
+							}
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+		
+		<div style="width: 80%;">
+			@{
+				int i = 0;
+				string espacios = string.Empty;
+				string enlace = string.Empty;
+
+				foreach (var proyecto in proyectos)
+				{
+					if (i == 0)
+					{
+						espacios = "margin-bottom: 20px;";
+					}
+					else if (i == proyectos.Count - 1)
+					{
+						espacios = "margin-top: 20px;";
 					}
 					else
 					{
-						<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-							<img src="/imagenes/tecnologias/@tecnologia.Imagen" style="max-height: 20px; object-fit: contain;" />
-							<span style="color: var(--colorTexto); margin-left: 10px;">@tecnologia.Nombre</span>
-						</div>
+						espacios = "margin-top: 20px; margin-bottom: 20px;";
 					}
-				</button>
 
-				@if (tecnologiaSeleccionada == tecnologia.Id.ToString())
-				{
-					<div style="background: var(--colorEnlace); padding: 1px;">
+					if (string.IsNullOrEmpty(proyecto.Ubicacion) == true && string.IsNullOrEmpty(proyecto.Github) == false)
+					{
+						enlace = "https://github.com/pepeizq/" + proyecto.Github + "/";
+					}
+					else
+					{
+						enlace = proyecto.Ubicacion;
+					}
+
+					<div class="expandir" style="width: 100%; @espacios">
+						<a href="@enlace" style="text-decoration: none; color: var(--colorTexto);">
+							<div style="display: flex; align-items: center; border: 1px solid var(--colorEnlace); background-color: @proyecto.Color1;">
+								<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 100px; height: 100px; object-fit: cover;" />
+							
+								<div style="padding: 15px 30px;">
+									<div style="font-size: 19px;">@proyecto.Nombre</div>
+									<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
+								</div>
+							</div>
+						</a>
 					</div>
+
+					i += 1;
 				}
-			</div>
-		}
+			}
+		</div>
 	</div>
-
-	@foreach (var proyecto in proyectos)
-	{
-		if (proyecto.MostrarPortada == true)
-		{
-			<div class="expandir" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
-				<a href="@proyecto.Ubicacion" style="text-decoration: none; color: var(--colorTexto);">
-					<div style="display: flex; align-items: center; border: 1px solid var(--colorEnlace); background-color: @proyecto.Color1;">
-						<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 100px; height: 100px;" />
-
-						<div style="padding: 20px 30px;">
-							<div style="font-size: 19px;">@proyecto.Nombre</div>
-							<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		}
-	}
 </div>
 
 @code {
@@ -78,27 +239,56 @@
 	[Parameter]
 	public string idioma { get; set; }
 
+	SqlConnection conexion = new SqlConnection();
+
 	private List<Tecnologia> tecnologias = new List<Tecnologia>();
 	private List<Proyecto> proyectos = new List<Proyecto>();
+	private List<global::BaseDatos.GithubBaseDatos> bdGithub = new List<global::BaseDatos.GithubBaseDatos>();
 
-	private string tecnologiaSeleccionada = string.Empty;
+	private string tipoSeleccionado = string.Empty;
 
 	protected override void OnInitialized()
 	{
-		tecnologiaSeleccionada = "Todos";
+		if (conexion.State != System.Data.ConnectionState.Open)
+		{
+			conexion = Herramientas.BaseDatos.Conectar();
+		}
+
+		using (conexion)
+		{
+			bdGithub = global::BaseDatos.Github.Todo(conexion);
+		}
+
+		tipoSeleccionado = "Todos";
 		tecnologias = Listados.Tecnologias.Generar();
 		proyectos = Listados.Proyectos.Generar(true);
 	}
 
 	private void CambiarProyectos(MouseEventArgs e)
 	{
-		tecnologiaSeleccionada = "Todos";
+		tipoSeleccionado = "Todos";
 		proyectos = Listados.Proyectos.Generar();
+	}
+
+	private void CambiarProyectos(MouseEventArgs e, ProyectoTipo tipo)
+	{
+		tipoSeleccionado = tipo.ToString();
+		proyectos = Listados.Proyectos.DevolverProyectos(tipo);
 	}
 
 	private void CambiarProyectos(MouseEventArgs e, TecnologiaTipo tipo)
 	{
-		tecnologiaSeleccionada = tipo.ToString();
+		tipoSeleccionado = tipo.ToString();
 		proyectos = Listados.Proyectos.DevolverProyectos(tipo);
+	}
+
+	private int LeerProyectos(ProyectoTipo tipo)
+	{
+		return Listados.Proyectos.DevolverProyectos(tipo).Count;
+	}
+
+	private int LeerProyectos(TecnologiaTipo tipo)
+	{
+		return Listados.Proyectos.DevolverProyectos(tipo).Count;
 	}
 }

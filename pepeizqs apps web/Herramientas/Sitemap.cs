@@ -31,13 +31,16 @@ namespace Herramientas
 
 			foreach (var proyecto in Listados.Proyectos.Generar())
 			{
-				string textoProyecto = "<url>" + Environment.NewLine +
-					"<loc>https://pepeizqapps.com" + proyecto.Ubicacion + "/</loc>" + Environment.NewLine +
-					"<changefreq>daily</changefreq>" + Environment.NewLine +
-					"<priority>0.7</priority> " + Environment.NewLine +
-					"</url>";
+				if (string.IsNullOrEmpty(proyecto.Ubicacion) == false)
+				{
+					string textoProyecto = "<url>" + Environment.NewLine +
+						"<loc>https://pepeizqapps.com" + proyecto.Ubicacion + "/</loc>" + Environment.NewLine +
+						"<changefreq>daily</changefreq>" + Environment.NewLine +
+						"<priority>0.7</priority> " + Environment.NewLine +
+						"</url>";
 
-				sb.Append(textoProyecto);
+					sb.Append(textoProyecto);
+				}
 			}
 
 			sb.Append("</urlset>");

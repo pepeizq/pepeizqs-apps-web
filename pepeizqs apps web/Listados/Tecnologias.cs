@@ -33,10 +33,10 @@ namespace Listados
                 Id = TecnologiaTipo.Unity,
                 Nombre = "Unity",
                 Imagen = "unity.webp",
-                MostrarNombre = true
+                MostrarNombre = false
             };
 
-            tecnologias.Add(tecnologia2);
+            tecnologias.Add(tecnologia3);
 
             return tecnologias;
 		}

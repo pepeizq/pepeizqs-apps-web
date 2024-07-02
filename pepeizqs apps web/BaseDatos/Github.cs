@@ -34,7 +34,35 @@ namespace BaseDatos
             return null;
         }
 
-        public static void Actualizar(SqlConnection conexion, string id, string fecha, string estrellas, string forks, string suscriptores)
+		public static List<GithubBaseDatos> Todo(SqlConnection conexion)
+		{
+            List<GithubBaseDatos> listaDatos = new List<GithubBaseDatos>();
+
+			string seleccionarDato = "SELECT * FROM proyectosGithub";
+
+			using (SqlCommand comando = new SqlCommand(seleccionarDato, conexion))
+			{
+				using (SqlDataReader lector = comando.ExecuteReader())
+				{
+					while (lector.Read())
+					{
+						GithubBaseDatos datos = new GithubBaseDatos
+						{
+							Fecha = lector.GetString(1),
+							Estrellas = int.Parse(lector.GetString(2)),
+							Forks = int.Parse(lector.GetString(3)),
+							Suscriptores = int.Parse(lector.GetString(4))
+						};
+
+						listaDatos.Add(datos);
+					}
+				}
+			}
+
+			return listaDatos;
+		}
+
+		public static void Actualizar(SqlConnection conexion, string id, string fecha, string estrellas, string forks, string suscriptores)
         {
             string sqlActualizar = "UPDATE proyectosGithub " +
                         "SET fecha=@fecha, estrellas=@estrellas, forks=@forks, suscriptores=@suscriptores WHERE id=@id";

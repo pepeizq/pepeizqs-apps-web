@@ -40,6 +40,26 @@ namespace Listados
 			return proyectos;
 		}
 
+		public static List<Proyecto> DevolverProyectos(ProyectoTipo tipo)
+		{
+			List<Proyecto> proyectos = new List<Proyecto>();
+
+			foreach (var proyecto in Generar())
+			{
+                if (proyecto.Tipo == tipo)
+                {
+					proyectos.Add(proyecto);
+				}
+			}
+
+			if (proyectos.Count > 0)
+			{
+				proyectos = proyectos.OrderBy(p => p.Nombre).ToList();
+			}
+
+			return proyectos;
+		}
+
 		public static List<Proyecto> Generar(bool azar = false)
         {
             List<Proyecto> proyectos = new List<Proyecto>();
@@ -49,13 +69,12 @@ namespace Listados
                 Id = "pepeizqdeals",
                 Nombre = "pepeizq's deals",
                 Github = "pepeizqs-deals-web",
-                Ubicacion = "/webs/pepeizqs-deals",
+                Ubicacion = "/web/pepeizqs-deals",
                 Color1 = "#002033",
                 Color2 = "#1b2838",
                 Enlace = "https://pepeizqdeals.com/",
                 Tipo = ProyectoTipo.Web,
-				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore },
-                MostrarPortada = true
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore }
 			};
 
             proyectos.Add(proyecto1);
@@ -65,12 +84,11 @@ namespace Listados
 				Id = "pepeizqdeals2",
 				Nombre = "pepeizq's deals",
 				Github = "pepeizqs-deals-app",
-				Ubicacion = "/apps/pepeizqs-deals",
+				Ubicacion = "/app/pepeizqs-deals",
 				Color1 = "#171a21",
 				Color2 = "#2f3544",
 				Tipo = ProyectoTipo.App,
-                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true
+                Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI }
 			};
 
 			proyectos.Add(proyecto2);
@@ -80,9 +98,9 @@ namespace Listados
 				Id = "pepeizqapps",
 				Nombre = "pepeizq's apps",
 				Github = "pepeizqs-apps-web",
+                Color1 = "#003f3f",
 				Tipo = ProyectoTipo.Web,
-				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore },
-				MostrarPortada = false
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore }
 			};
 
 			proyectos.Add(proyecto3);
@@ -92,13 +110,12 @@ namespace Listados
                 Id = "tilesgames",
                 Nombre = "pepeizq's Tiles for Games",
                 Github = "Tiles-Games",
-                Ubicacion = "/apps/tiles-games",
+                Ubicacion = "/app/tiles-games",
                 Enlace = "https://apps.microsoft.com/detail/9MXKL17J89JN",
 				Color1 = "#171a21",
 				Color2 = "#2f3544",
 				Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true,
                 Buscador = new List<string>() { "steam", "gog", "ea play", "origin", "ubisoft", "uplay", "battlenet", "amazon", "epic games" }
             };
 
@@ -109,12 +126,11 @@ namespace Listados
 				Id = "databasegames",
 				Nombre = "Database Games",
 				Github = "Database-Games",
-				Ubicacion = "/apps/database-games",
+				Ubicacion = "/app/database-games",
 				Color1 = "#171a21",
 				Color2 = "#2f3544",
 				Tipo = ProyectoTipo.App,
-				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-				MostrarPortada = true
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI }
 			};
 
 			proyectos.Add(proyecto5);
@@ -124,13 +140,12 @@ namespace Listados
                 Id = "tilesmedia",
                 Nombre = "pepeizq's Tiles for Streaming",
                 Github = "Tiles-Media",
-                Ubicacion = "/apps/tiles-media",
+                Ubicacion = "/app/tiles-media",
 				Enlace = "https://apps.microsoft.com/detail/9PNFN1QNMZR9",
 				Color1 = "#1a0303",
                 Color2 = "#3d0707",
                 Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true,
                 Buscador = new List<string>() { "netflix", "disney", "prime", "amazon", "spotify" }
             };
 
@@ -141,13 +156,12 @@ namespace Listados
 				Id = "widgetsgames",
 				Nombre = "pepeizq's Widgets for Games",
 				Github = "Widgets-Games",
-				Ubicacion = "/apps/widgets-games",
+				Ubicacion = "/app/widgets-games",
 				Enlace = "https://apps.microsoft.com/detail/9N6RH8C536LS",
 				Color1 = "#193748",
 				Color2 = "#234d65",
 				Tipo = ProyectoTipo.App,
 				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-				MostrarPortada = true,
                 Buscador = new List<string>() { "steam", "gog", "ea play", "origin", "ubisoft", "uplay", "battlenet", "amazon", "epic games" }
             };
 
@@ -158,13 +172,12 @@ namespace Listados
                 Id = "widgetsmedia",
                 Nombre = "pepeizq's Widgets for Streaming",
                 Github = "Widgets-Media",
-                Ubicacion = "/apps/widgets-media",
+                Ubicacion = "/app/widgets-media",
                 Enlace = "https://apps.microsoft.com/detail/9NTHP669WBDD",
                 Color1 = "#083116",
                 Color2 = "#0e5325",
                 Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true,
                 Buscador = new List<string>() { "netflix", "disney", "prime", "amazon", "spotify" }
             };
 
@@ -175,13 +188,12 @@ namespace Listados
                 Id = "steamconnect",
                 Nombre = "pepeizq's Steam Connect",
                 Github = "Steam-Connect",
-                Ubicacion = "/apps/steam-connect",
+                Ubicacion = "/app/steam-connect",
                 Enlace = "https://github.com/pepeizq/Steam-Connect/",
                 Color1 = "#00003c",
                 Color2 = "#000063",
                 Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true,
                 Buscador = new List<string>() { "gog", "ea play", "origin", "ubisoft", "uplay", "battlenet", "amazon", "epic games" }
             };
 
@@ -192,13 +204,12 @@ namespace Listados
 				Id = "achievements",
 				Nombre = "pepeizq's Achievements for Games",
 				Github = "Steam-Achievements",
-				Ubicacion = "/apps/achievements-for-games",
+				Ubicacion = "/app/achievements-for-games",
 				Enlace = "https://apps.microsoft.com/detail/9MZZX81TDT20",
 				Color1 = "#161616",
 				Color2 = "#333333",
 				Tipo = ProyectoTipo.App,
 				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-				MostrarPortada = true,
                 Buscador = new List<string>() { "steam" }
 			};
 
@@ -209,13 +220,12 @@ namespace Listados
 				Id = "steamgrids",
 				Nombre = "pepeizq's Steam Grids",
 				Github = "Steam-Grids",
-				Ubicacion = "/apps/steam-grids",
+				Ubicacion = "/app/steam-grids",
 				Enlace = "https://github.com/pepeizq/Steam-Grids/",
 				Color1 = "#32414c",
 				Color2 = "#222d34",
 				Tipo = ProyectoTipo.App,
 				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-				MostrarPortada = true,
 				Buscador = new List<string>() { "steam" }
 			};
 
@@ -226,13 +236,12 @@ namespace Listados
                 Id = "steamskins",
                 Nombre = "pepeizq's Steam Skins",
                 Github = "Steam-Skins-WinUI",
-                Ubicacion = "/apps/steam-skins",
+                Ubicacion = "/app/steam-skins",
                 Enlace = "https://github.com/pepeizq/Steam-Skins-WinUI/",
                 Color1 = "#202b20",
                 Color2 = "#344131",
                 Tipo = ProyectoTipo.App,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
-                MostrarPortada = true,
                 Buscador = new List<string>() { "steam" }
             };
 
@@ -243,13 +252,12 @@ namespace Listados
                 Id = "cities",
                 Nombre = "pepeizq's Cities",
                 Github = "pepeizqs-cities",
-                Ubicacion = "/games/pepeizqs-cities",
+                Ubicacion = "/game/pepeizqs-cities",
                 Enlace = "https://store.steampowered.com/app/1039060/pepeizqs_Cities/",
-                Color1 = "#202b20",
-                Color2 = "#344131",
+                Color1 = "#001c33",
+                Color2 = "#002c47",
                 Tipo = ProyectoTipo.Juego,
                 Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.Unity },
-                MostrarPortada = true,
                 Buscador = new List<string>() { "steam" }
             };
 
@@ -284,7 +292,6 @@ namespace Listados
         public string Enlace;
         public ProyectoTipo Tipo;
         public List<TecnologiaTipo> Tecnologias;
-        public bool MostrarPortada;
         public List<string> Buscador; 
 	}
 

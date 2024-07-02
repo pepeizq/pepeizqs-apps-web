@@ -20,8 +20,28 @@
     "Valor": "Todos"
   },
   {
+    "Id": "Index.App",
+    "Valor": "App"
+  },
+  {
+    "Id": "Index.Web",
+    "Valor": "Web"
+  },
+  {
+    "Id": "Index.Game",
+    "Valor": "Juego"
+  },
+  {
     "Id": "Index.Presentation",
     "Valor": "A continuación tenéis todo el trabajo que he hecho mi tiempo libre, podéis ojear entre apps, webs o incluso juegos. Tener en cuenta que no soy ninguna empresa multimillonaria, soy una única persona que ha desarrollado absolutamente todo (incluso esta web en la que estás). "
+  },
+  {
+    "Id": "Index.Github1",
+    "Valor": "Personalmente creo que en el código abierto y siguiendo esa filosofía todo proyecto en el que he trabajado esta disponible en mi perfil de Github."
+  },
+  {
+    "Id": "Index.Github2",
+    "Valor": "Mi perfil:"
   },
   {
     "Id": "LastUpdates.Title",
@@ -882,5 +902,13 @@
   {
     "Id": "steamskins.String9",
     "Valor": "Así aparece en Steam la nueva apariencia seleccionada."
+  },
+  {
+    "Id": "cities.String1",
+    "Valor": "Juego funcional de gestión de ciudades inspirado en Cities Skylines"
+  },
+  {
+    "Id": "cities.String2",
+    "Valor": "Me propuse hacer un juego que no fuera el típico plataformas que venia en todos los tutoriales de Unity y termine haciendo un juego mínimamente funcional incluso con logros para Steam. Me habría gustado profundizar el desarrollo con él, pero el rumbo que ha tomado Unity en los últimos años me ha obligado a dejar aparcado este juego."
   }
 ]

@@ -20,8 +20,28 @@
     "Valor": "All"
   },
   {
+    "Id": "Index.App",
+    "Valor": "App"
+  },
+  {
+    "Id": "Index.Web",
+    "Valor": "Web"
+  },
+  {
+    "Id": "Index.Game",
+    "Valor": "Game"
+  },
+  {
     "Id": "Index.Presentation",
     "Valor": "Below you have all the work that I have done in my free time, you can browse through apps, webs or even games. Keep in mind that I am not a multi-million dollar company, I am a single person who has developed absolutely everything (including this web you are on)."
+  },
+  {
+    "Id": "Index.Github1",
+    "Valor": "Personally, I believe that in open source and following that philosophy, every project I have worked on is available on my Github profile."
+  },
+  {
+    "Id": "Index.Github2",
+    "Valor": "My profile:"
   },
   {
     "Id": "LastUpdates.Title",
@@ -882,5 +902,13 @@
   {
     "Id": "steamskins.String9",
     "Valor": "This is how the new selected appearance appears on Steam."
+  },
+  {
+    "Id": "cities.String1",
+    "Valor": "Functional city management game inspired by Cities Skylines"
+  },
+  {
+    "Id": "cities.String2",
+    "Valor": "I set out to make a game that wasn't the typical platformer that came in all the Unity tutorials and I ended up making a minimally functional game even with achievements for Steam. I would have liked to deepen the development with it, but the direction that Unity has taken in recent years has forced me to put this game on hold."
   }
 ]
