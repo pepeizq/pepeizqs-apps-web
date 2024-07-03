@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Microsoft.Data.SqlClient
+@{
     #nullable disable
 
     string github = "https://github.com/pepeizq/";
@@ -79,7 +80,7 @@
 
     <footer class="pie">
         <div class="cuerpo-ancho" style="padding-top: 30px; padding-bottom: 30px; display: flex; align-items: center; font-size: 17px;">
-            <div style="width: 65%; text-align: left;">
+            <div style="width: 50%; text-align: left;">
                 <div>
                     &copy; @DateTime.Now.Year.ToString() • <a href="https://pepeizqapps.com/" style="text-decoration: none;" target="_blank">pepeizq's apps</a> • <a href="https://pepeizqdeals.com/" style="text-decoration: none;" target="_blank">pepeizq's deals</a>
                 </div>
@@ -89,10 +90,58 @@
                 </div>
             </div>
 
-            <div style="width: 25%; text-align: right;">
-                <div style="display: flex; align-items: center; justify-content: center; font-size: 24px; text-align: center;">
-                    <div style="margin-left: 6px; margin-right: 6px;"><a href="@github" target="_blank"><i class="fa-brands fa-github"></i></a></div>
-                </div>
+            <div style="width: 40%; overflow: hidden;">
+                @{
+                    int estrellas = 0;
+                    int forks = 0;
+                    int suscriptores = 0;
+
+                    List<global::BaseDatos.GithubBaseDatos> bdGithub = new List<global::BaseDatos.GithubBaseDatos>();
+
+                    SqlConnection conexion = new SqlConnection();
+
+                    if (conexion.State != System.Data.ConnectionState.Open)
+                    {
+                        conexion = Herramientas.BaseDatos.Conectar();
+                    }
+
+                    using (conexion)
+                    {
+                        bdGithub = global::BaseDatos.Github.Todo(conexion);
+                    }
+
+                    foreach (var entrada in bdGithub)
+                    {
+                        estrellas = estrellas + entrada.Estrellas;
+                        forks = forks + entrada.Forks;
+                        suscriptores = suscriptores + entrada.Suscriptores;
+                    }
+                }
+
+                <a href="https://github.com/pepeizq/" target="_blank" style="text-decoration: none;">
+                    <div class="boton-github" style="padding: 20px; background-color: rgba(36, 41, 46, 0.85); color: var(--colorTexto);">
+                        <div style="display: flex; align-items: center;">
+                            <i class="fa-brands fa-github" style="font-size: 32px;"></i>
+
+                            <div style="width: 100%; padding-left: 20px; font-size: 15px;">
+                                @Herramientas.Idiomas.CogerCadena(idioma, "Index.Github1")
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; font-size: 14px; margin-left: 52px; margin-top: 15px;">
+                            <div>@Herramientas.Idiomas.CogerCadena(idioma, "Index.Github2")</div>
+
+                            <div style="margin-left: 15px;"><i class="fa-solid fa-star"></i></div>
+                            <div style="padding-left: 10px;">@estrellas</div>
+
+                            <div style="margin-left: 15px;"><i class="fa-solid fa-code-fork"></i></div>
+                            <div style="padding-left: 10px;">@forks</div>
+
+                            <div style="margin-left: 15px;"><i class="fa-solid fa-eye"></i></div>
+                            <div style="padding-left: 10px;">@suscriptores</div>
+                        </div>
+                    </div>
+                </a>
             </div>
 
             <div style="width: 10%; text-align: right;">
