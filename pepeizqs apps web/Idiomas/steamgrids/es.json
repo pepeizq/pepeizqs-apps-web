@@ -1,0 +1,15 @@
+{
+  "String1": "App para cambiar automáticamente las portadas de los juegos en Steam",
+  "String2": "La web Steamgriddb siempre me ha parecido perfecta para cambiar las carátulas de los juegos en Steam, pero peca de un gran defecto, es tedioso cambiar las caratulas a través de la web. Así que hice una mini app para simplificar el proceso.",
+  "String3": "A continuación os detallo como funciona:",
+  "String4": "Integración con Steamgriddb (1)",
+  "String5": "Primero necesitáis crearos una cuenta en Steamgriddb y coger la clave de la API asignada a vuestra cuenta.",
+  "String6": "Integración con Steamgriddb (2)",
+  "String7": "Después tenéis que añadir la clave de la API en la app.",
+  "String8": "Integración con Steam",
+  "String9": "La app detectara automáticamente los juegos de Steam que estén instalados en el ordenador.",
+  "String10": "Selección de carátulas (1)",
+  "String11": "Cuando seleccionas el juego la app cargará que carátulas hay disponibles para el juego, el ejemplo de la captura es el juego Wasteland 3.",
+  "String12": "Selección de carátulas (2)",
+  "String13": "Y el último paso es seleccionar la carátula, la app se encargará automáticamente de hacer el cambio en Steam."
+}

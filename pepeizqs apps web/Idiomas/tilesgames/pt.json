@@ -1,0 +1,15 @@
+{
+  "String1": "App para adicionar blocos de jogos para Windows 10",
+  "String2": "Desenvolvi este aplicativo anos atrás, quando o Windows 10 tinha Tiles. Para aqueles que usam essa versão do sistema operacional, o aplicativo ainda funcionará para vocês. ",
+  "String3": "Abaixo detalho como funciona:",
+  "String4": "Pesquisa por plataforma",
+  "String5": "Antes de adicionar um bloco ao menu Iniciar, o aplicativo permite selecionar diferentes plataformas disponíveis para jogos.",
+  "String6": "Detecção automática de jogos instalados",
+  "String7": "O aplicativo pode detectar automaticamente quais jogos você instalou no seu computador sem precisar fazer nada.",
+  "String8": "Personalização de blocos",
+  "String9": "Embora o aplicativo carregue imagens padrão do jogo para o Tile, o usuário pode alterá-las à vontade ou até mesmo modificar qual jogo o Tile irá rodar.",
+  "String10": "Como aparece no Windows 10",
+  "String11": "Você pode adicionar vários Tiles e o resultado final depende de você.",
+  "String12": "Também compatível com Windows 11",
+  "String13": "O aplicativo também funciona no Windows 11, mas infelizmente só é capaz de adicionar um ícone ao menu Iniciar."
+}

@@ -1,0 +1,13 @@
+{
+  "String1": "App para conectar a Steam otras plataformas de juegos",
+  "String2": "Esta app la desarrolle por que Playnite me parecía absurdamente complicada de usar, la hice con el único propósito de 'conectar' a Steam los juegos que el usuario tuviera en plataformas como GOG o Epic Games de la manera más sencilla posible.",
+  "String3": "No puede estar en la tienda de Microsoft por que impusieron una norma de que una app no puede 'necesitar' de otra app (luego se preguntarán por el escaso uso de la tienda de los usuarios). Así que tenéis la app para descargar desde Github y a continuación os explico su uso:",
+  "String4": "Soporte para varias plataformas",
+  "String5": "Dado que en Windows hay varias plataformas de juegos, la app tiene soporte para poder conectar a Steam otras 6 plataformas.",
+  "String6": "Autodetección de juegos instalados",
+  "String7": "La app puede detectar automáticamente que juegos tienes instalados en tu ordenador en varias plataformas, depende de ti que juegos quieres añadir a Steam.",
+  "String8": "Juegos añadidos automáticamente en Steam",
+  "String9": "En Steam no vas a tener que hacer absolutamente nada, la app ya se encarga de añadir el acceso directo del juego que has seleccionado además de la correspondiente imagen.",
+  "String10": "Modificación en Steam",
+  "String11": "Siempre podrás modificar en Steam el acceso directo al juego que hayas conectado."
+}

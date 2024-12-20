@@ -1,0 +1,15 @@
+{
+  "String1": "App para mudar automaticamente capas de jogos no Steam",
+  "String2": "Sempre achei o site Steamgriddb perfeito para mudar capas de jogos no Steam, mas ele tem uma grande falha: é tedioso mudar capas através do site. ",
+  "String3": "Abaixo detalho como funciona:",
+  "String4": "Integração Steamgriddb (1)",
+  "String5": "Primeiro você precisa criar uma conta no Steamgriddb e obter a chave API atribuída à sua conta.",
+  "String6": "Integração Steamgriddb (2)",
+  "String7": "Então você deve adicionar a chave API no aplicativo.",
+  "String8": "Integração Steam",
+  "String9": "O aplicativo detectará automaticamente os jogos Steam instalados no seu computador.",
+  "String10": "Seleção de capas (1)",
+  "String11": "Ao selecionar o jogo o aplicativo irá carregar quais capas estão disponíveis para o jogo, o exemplo na captura de tela é o jogo Wasteland 3.",
+  "String12": "Seleção de capas (2)",
+  "String13": "E o último passo é selecionar a capa, o app se encarregará automaticamente de adicioná-la ao Steam."
+}

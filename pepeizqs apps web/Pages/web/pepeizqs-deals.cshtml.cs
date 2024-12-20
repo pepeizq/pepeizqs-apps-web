@@ -17,11 +17,16 @@ namespace pepeizqs_apps_web.Pages.webs
 
         public void OnGet()
         {
-            try
-            {
-                idioma = Request.Headers["Accept-Language"].ToString().Split(";").FirstOrDefault()?.Split(",").FirstOrDefault();
-            }
-            catch { }
-        }
+			idioma = Request.Query["language"];
+
+			if (string.IsNullOrEmpty(idioma) == true)
+			{
+				try
+				{
+					idioma = Request.Headers["Accept-Language"].ToString().Split(";").FirstOrDefault()?.Split(",").FirstOrDefault();
+				}
+				catch { }
+			}
+		}
     }
 }

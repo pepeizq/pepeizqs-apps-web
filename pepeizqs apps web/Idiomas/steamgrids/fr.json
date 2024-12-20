@@ -1,0 +1,15 @@
+{
+  "String1": "Application pour changer automatiquement les couvertures de jeu sur Steam",
+  "String2": "J'ai toujours trouvé le site Steamgriddb parfait pour changer de couverture de jeu sur Steam, mais il présente un défaut majeur, il est fastidieux de changer de couverture via le site. ",
+  "String3": "Ci-dessous je détaille comment cela fonctionne :",
+  "String4": "Intégration Steamgriddb (1)",
+  "String5": "Vous devez d’abord créer un compte sur Steamgriddb et obtenir la clé API attribuée à votre compte.",
+  "String6": "Intégration Steamgriddb (2)",
+  "String7": "Ensuite, vous devez ajouter la clé API dans l'application.",
+  "String8": "Intégration Steam",
+  "String9": "L'application détectera automatiquement les jeux Steam installés sur votre ordinateur.",
+  "String10": "Sélection de couvertures (1)",
+  "String11": "Lorsque vous sélectionnez le jeu, l'application chargera les couvertures disponibles pour le jeu, l'exemple dans la capture d'écran est le jeu Wasteland 3.",
+  "String12": "Sélection de couvertures (2)",
+  "String13": "Et la dernière étape consiste à sélectionner la couverture, l'application se chargera automatiquement de l'ajouter à Steam."
+}

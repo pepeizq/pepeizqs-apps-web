@@ -1,0 +1,8 @@
+{
+  "String1": "Application pour gérer une base de données que j'utilise dans d'autres applications",
+  "String2": "Cette application n'a qu'un seul but, gérer une base de données qui utilise d'autres applications que j'ai développées. ",
+  "String3": "Surveillance de base de données",
+  "String4": "J'ai créé une interface de base pour voir que les différentes tables de la base de données sont chargées correctement et peuvent être lues par d'autres applications.",
+  "String5": "Prise en charge des fichiers JSON",
+  "String6": "Afin de pouvoir travailler depuis n'importe quelle application ou site Web, l'application génère des fichiers .json pour les différentes bases de données."
+}

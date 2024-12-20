@@ -1,0 +1,11 @@
+{
+  "String1": "App para ayudar a la gestión de la web pepeizqdeals.com",
+  "String2": "Desarrollé esta aplicación para automatizar algunas funciones de la web pepeizqdeals.com que me resultaban imposibles de crear dentro de la web.",
+  "String3": "A continuación os explico las funciones que tiene la aplicación:",
+  "String4": "Automatización de redes sociales",
+  "String5": "Dado lo complicado que pueden llegar a ser algunas redes sociales para anunciar las novedades de la web, externalice el proceso con esta app.",
+  "String6": "Auto publicación en Grupos de Steam",
+  "String7": "Steam no ofrece ninguna herramienta para automatizar el proceso de añadir nuevas noticias a los grupos de Steam, así que desarrolle un navegador web que automatiza el proceso de añadir noticias en varios idiomas.",
+  "String8": "Integración con Humble Store",
+  "String9": "Dadas las medidas de seguridad de la tienda y su nulo soporte técnico me resultaba imposible mirar las ofertas de la tienda dentro de la web, así que tuve que crear un 'saltador de ips' para mirar las ofertas."
+}

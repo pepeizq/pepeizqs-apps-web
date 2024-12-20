@@ -1,0 +1,17 @@
+{
+  "String1": "Site d'offres de jeux vidéo PC des magasins officiels",
+  "String2": "J'ai créé ce site Web en tant que joueur de jeux vidéo sur PC qui aime rémunérer ses créateurs pour leurs jeux, mais comme je ne suis pas millionnaire, j'avais besoin de connaître les meilleures offres avec un enregistrement détaillé de chaque jeu.",
+  "String3": "Ci-dessous je détaille les capacités techniques du site :",
+  "String4": "Mise à jour automatisée",
+  "String5": "Le site Web est automatisé pour toujours rechercher des offres de jeux vidéo. Toutes les 4 heures environ, il termine chaque cycle de recherche d'offres dans tous les magasins auxquels j'ai accès.",
+  "String6": "Mise à jour manuelle",
+  "String7": "Lorsqu'un événement spécial survient, je peux générer des informations sur le Web. ",
+  "String8": "Profil pour chaque jeu",
+  "String9": "Le site Web est capable de gérer des profils individuels pour des dizaines de milliers de jeux. Dans chaque profil, je peux modifier n'importe quelle donnée de jeu sans avoir à ouvrir la base de données manuellement.",
+  "String10": "Notifications par courrier électronique",
+  "String11": "J'ai développé cette fonctionnalité pour les utilisateurs qui aiment recevoir des notifications par e-mail des jeux dont les jeux atteignent un nouveau prix minimum, cela fonctionne également pour les nouvelles notifications d'actualités.",
+  "String12": "Intégration avec Steam",
+  "String13": "Pour faciliter la gestion d'une liste de jeux souhaités, j'ai développé une intégration avec Steam pour importer la liste de l'utilisateur à partir de là. ",
+  "String14": "Cadeaux pour les utilisateurs",
+  "String15": "Pour récompenser les utilisateurs qui m'ont aidé avec le site Web à un moment donné, j'ai développé cette fonctionnalité, j'espère qu'un jour je pourrai faire de vrais cadeaux de jeux."
+}

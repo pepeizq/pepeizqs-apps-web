@@ -1,0 +1,13 @@
+{
+  "String1": "App zum Überprüfen und Durchsuchen von Spielleistungsvideos auf Steam",
+  "String2": "Mit dieser App wollte ich den Überblick über die Erfolge in meinen Steam-Spielen behalten und mit nur einem Mausklick Videos auf YouTube über die Erfolge ansehen, die mir entgangen sind.",
+  "String3": "Im Folgenden beschreibe ich detailliert, wie es funktioniert:",
+  "String4": "Unterstützung für mehrere Konten",
+  "String5": "Sie können beliebig viele Steam-Konten hinzufügen, sofern diese über öffentliche Berechtigungen zum Lesen von Spieldaten verfügen.",
+  "String6": "Wählen Sie das Spiel aus",
+  "String7": "Die App lädt alle Spiele, für die es Erfolge im ausgewählten Steam-Konto gibt, und enthält auch eine Suchmaschine für den Fall, dass Sie eine große Anzahl an Spielen haben.",
+  "String8": "Blatt für jedes Spiel",
+  "String9": "Für jedes Spiel erstellt die App eine Liste der erreichten und nicht erreichten Erfolge.",
+  "String10": "Erfolgsvideo",
+  "String11": "Wenn Sie auf den Erfolg klicken, lädt die App direkt ein Video mit der Anleitung zum Erhalt des Erfolgs, sofern es auf YouTube verfügbar ist."
+}

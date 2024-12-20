@@ -16,7 +16,7 @@
 <!-- #region Cabecera -->
 
 @{
-	string descripcion = Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1");
+	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id);
 	string titulo = proyecto.Nombre + " • " + descripcion;
 	string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
 	string icono = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
@@ -40,7 +40,7 @@
 
 	<div style="padding: 20px 30px;">
 		<div style="font-size: 22px;">@proyecto.Nombre</div>
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id)</div>
 
 		@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
 		{
@@ -51,11 +51,11 @@
 
 <div style="background-color: @proyecto.Color2; overflow: hidden;">
 	<a href="https://github.com/pepeizq/@proyecto.Github" target="_blank" style="text-decoration: none;">
-		<div class="boton-github" style="background-color: #24292e; color: var(--colorTexto); display: flex; align-items: center; padding: 15px 25px;" title="@Herramientas.Idiomas.CogerCadena(idioma, "Github.String7")">
+		<div class="boton-github" style="background-color: #24292e; color: var(--colorTexto); display: flex; align-items: center; padding: 15px 25px;" title="@Herramientas.Idiomas.BuscarTexto(idioma, "String7", "Github")">
 			<i class="fa-brands fa-github" style="font-size: 24px;"></i>
 
 			<div style="width: 100%; padding-left: 20px; padding-right: 20px; font-size: 15px;">
-				@Herramientas.Idiomas.CogerCadena(idioma, "Github.String1")
+				@Herramientas.Idiomas.BuscarTexto(idioma, "String1", "Github")
 			</div>
 
 			<div style="text-align: right; display: flex; align-items: center; font-size: 14px;">
@@ -74,11 +74,11 @@
 
 <div style="background-color: @proyecto.Color1; padding: 50px;">
 	<div>
-		@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String2")
+		@Herramientas.Idiomas.BuscarTexto(idioma, "String2", proyecto.Id)
 	</div>
 	
 	<div style="margin-top: 20px;">
-		@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String3")
+		@Herramientas.Idiomas.BuscarTexto(idioma, "String3", proyecto.Id)
 	</div>
 </div>
 
@@ -94,9 +94,9 @@
 	</div>
 
 	<div style="width: 55%;">
-		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String4")</div>
+		<div style="font-size: 20px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String4", proyecto.Id)</div>
 
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String5")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String5", proyecto.Id)</div>
 	</div>
 </div>
 
@@ -112,9 +112,9 @@
 	</div>
 
 	<div style="width: 55%;">
-		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String6")</div>
+		<div style="font-size: 20px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String6", proyecto.Id)</div>
 
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String7")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String7", proyecto.Id)</div>
 	</div>
 </div>
 
@@ -130,9 +130,9 @@
 	</div>
 
 	<div style="width: 55%;">
-		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String8")</div>
+		<div style="font-size: 20px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String8", proyecto.Id)</div>
 
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String9")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String9", proyecto.Id)</div>
 	</div>
 </div>
 
@@ -148,9 +148,9 @@
 	</div>
 
 	<div style="width: 55%;">
-		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String10")</div>
+		<div style="font-size: 20px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String10", proyecto.Id)</div>
 
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String11")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String11", proyecto.Id)</div>
 	</div>
 </div>
 
@@ -166,9 +166,9 @@
 	</div>
 
 	<div style="width: 55%;">
-		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String12")</div>
+		<div style="font-size: 20px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String12", proyecto.Id)</div>
 
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String13")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String13", proyecto.Id)</div>
 	</div>
 </div>
 
@@ -184,9 +184,9 @@
 	</div>
 
 	<div style="width: 55%;">
-		<div style="font-size: 20px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String14")</div>
+		<div style="font-size: 20px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String14", proyecto.Id)</div>
 
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String15")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String15", proyecto.Id)</div>
 	</div>
 </div>
 

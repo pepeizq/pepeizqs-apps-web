@@ -1,0 +1,13 @@
+{
+  "String1": "App to check and search game achievement videos on Steam",
+  "String2": "With this app I intended to keep track of the achievements in my Steam games and watch videos on YouTube about the achievements that I was missing with just a click of the mouse.",
+  "String3": "Below I detail how it works:",
+  "String4": "Support for multiple accounts",
+  "String5": "You can add as many Steam accounts as you want as long as they have public permissions to read game data.",
+  "String6": "Select the game",
+  "String7": "The app will load all the games that have achievements in the selected Steam account, and also includes a search engine in case you have a large number of games.",
+  "String8": "Sheet for each game",
+  "String9": "For each game the app generates a list of achievements achieved and those not achieved.",
+  "String10": "Achievement video",
+  "String11": "When you click on the achievement, the app will directly load a video on how to obtain the achievement, if it is available on YouTube."
+}

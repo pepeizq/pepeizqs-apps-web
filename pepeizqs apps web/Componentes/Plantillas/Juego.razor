@@ -69,7 +69,7 @@
 <!-- #region Cabecera -->
 
 @{
-	string descripcion = Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1");
+	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id);
 	string titulo = proyecto.Nombre + " • " + descripcion;
 	string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
 	string icono = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
@@ -93,7 +93,7 @@
 
 	<div style="padding: 20px 30px;">
 		<h1 style="font-size: 22px;">@proyecto.Nombre</h1>
-		<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id)</div>
 
 		@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
 		{
@@ -106,11 +106,11 @@
 
 <div style="background-color: @proyecto.Color2; overflow: hidden;">
 	<a href="https://github.com/pepeizq/@proyecto.Github" target="_blank" style="text-decoration: none;">
-		<div class="boton-github" style="background-color: #24292e; color: var(--colorTexto); display: flex; align-items: center; padding: 15px 25px;" title="@Herramientas.Idiomas.CogerCadena(idioma, "Github.String7")">
+		<div class="boton-github" style="background-color: #24292e; color: var(--colorTexto); display: flex; align-items: center; padding: 15px 25px;" title="@Herramientas.Idiomas.BuscarTexto(idioma, "String7", "Github")">
 			<i class="fa-brands fa-github" style="font-size: 24px;"></i>
 
 			<div style="width: 100%; padding-left: 20px; padding-right: 20px; font-size: 15px;">
-				@Herramientas.Idiomas.CogerCadena(idioma, "Github.String1")
+				@Herramientas.Idiomas.BuscarTexto(idioma, "String1", "Github")
 			</div>
 
 			<div style="text-align: right; display: flex; align-items: center; font-size: 14px;">
@@ -131,13 +131,13 @@
 {
 	<div style="background-color: @proyecto.Color1; padding: 50px;">
 		<div>
-			@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String" + intro.Texto1)
+			@Herramientas.Idiomas.BuscarTexto(idioma, "String" + intro.Texto1, proyecto.Id)
 		</div>
 
 		@if (string.IsNullOrEmpty(intro.Texto2) == false)
 		{
 			<div style="margin-top: 20px;">
-				@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String" + intro.Texto2)
+				@Herramientas.Idiomas.BuscarTexto(idioma, "String" + intro.Texto2, proyecto.Id)
 			</div>
 		}
 	</div>

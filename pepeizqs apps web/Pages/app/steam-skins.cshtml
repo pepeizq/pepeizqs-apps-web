@@ -1,10 +1,11 @@
 ﻿@page
+@using Listados
 @model pepeizqs_apps_web.Pages.apps.steam_skinsModel
 
 @{
     string id = "steamskins";
 
-    ViewData["Title"] = Listados.Proyectos.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.CogerCadena(Model.idioma, Listados.Proyectos.DevolverProyecto(id).Id + ".String1");
+    ViewData["Title"] = Listados.Proyectos.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.BuscarTexto(Model.idioma, "String1", Listados.Proyectos.DevolverProyecto(id).Id);
     Layout = "/Pages/Shared/_Layout.cshtml";
 
     Modulos.Intro intro = new Modulos.Intro()
@@ -34,12 +35,48 @@
             Texto2 = "9"
         }
     };
-}
 
-@(await Html.RenderComponentAsync<Componentes.Plantillas.App>(RenderMode.ServerPrerendered, new
-{
-    idioma = Model.idioma,
-    id = id,
-    intro = intro,
-    secciones = secciones
-}))
+    bool seo = false;
+    string? userAgent = string.Empty;
+
+    if (HttpContext != null)
+    {
+        userAgent = HttpContext.Request.Headers.UserAgent;
+
+        if (string.IsNullOrEmpty(userAgent) == false)
+        {
+            if (userAgent.Contains("http://www.google.com/bot.html") == true || userAgent.Contains("http://www.bing.com/bingbot.html") == true)
+            {
+                seo = true;
+            }
+        }
+    }
+
+    if (seo == true)
+    {
+        Proyecto proyecto = Listados.Proyectos.DevolverProyecto(id);
+        string descripcion = Herramientas.Idiomas.BuscarTexto(Model.idioma, "String1", proyecto.Id);
+        string titulo = proyecto.Nombre + " • " + descripcion;
+        string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
+        string icono = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+
+        @(await Html.RenderComponentAsync<Componentes.Seo>(RenderMode.ServerPrerendered, new
+        {
+            idioma = Model.idioma,
+            descripcion = descripcion,
+            titulo = titulo,
+            enlace = enlace,
+            icono = icono
+        }))
+    }
+    else
+    {
+        @(await Html.RenderComponentAsync<Componentes.Plantillas.App>(RenderMode.Server, new
+        {
+            idioma = Model.idioma,
+            id = id,
+            intro = intro,
+            secciones = secciones
+        }))
+    }
+}

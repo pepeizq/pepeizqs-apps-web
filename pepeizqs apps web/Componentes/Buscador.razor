@@ -1,5 +1,5 @@
 ﻿@using Listados
-@using Microsoft.AspNetCore.Components.Web;
+@using Microsoft.AspNetCore.Components.Web
 
 <style>
     .buscador-panel {
@@ -12,7 +12,7 @@
         z-index: 1000;
         margin-top: var(--alturaCabecera);
         padding: 10px;
-        backdrop-filter: blur(20px);
+        background-color: var(--fondoOscuroTransparente);
     }
 </style>
 
@@ -36,7 +36,7 @@
 
                                 <div style="width: 100%; padding-left: 15px; padding-right: 15px;">
                                     <div style="font-size: 19px;">@resultado.Nombre</div>
-                                    <div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, resultado.Id + ".String1")</div>
+                                    <div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String1", resultado.Id)</div>
                                 </div>
                             </div>
                         </a>
@@ -94,5 +94,4 @@
             }
         }     
     }
-
 }

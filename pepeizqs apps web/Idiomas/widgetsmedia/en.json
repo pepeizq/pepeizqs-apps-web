@@ -1,0 +1,17 @@
+{
+  "String1": "App to add Widgets to your streaming tv shows and movies in Windows 11",
+  "String2": "With the release of Windows 11, a new feature called Widgets appeared. Personally, I don't see it as very useful, but I still developed an app similar to the one I made for the Windows 10 Tiles.",
+  "String3": "Below I detail how it works:",
+  "String4": "Search by Platform",
+  "String5": "Before adding a Widget, the app can search for a series or movie available on the selected platform.",
+  "String6": "Movie/series selection",
+  "String7": "Because many movies and series are parts of large franchises, the app also shows results related to your search.",
+  "String8": "Widgets Customization",
+  "String9": "Although the app will load default images of the series or movie for the Widget, the user can change them at will or even modify which streaming will run.",
+  "String10": "How to Add the Widget (1)",
+  "String11": "Due to the little flexibility that Microsoft allows with Widgets, you have to make a few last clicks to finally add the widget, first of all you will have to add the Widget from the app.",
+  "String12": "How to Add the Widget (2)",
+  "String13": "Secondly, you will have to open the Widgets app and add the Widget, it sounds strange but thanks to Microsoft you have to do it that way.",
+  "String14": "How to Add the Widget (3)",
+  "String15": "And finally select my app."
+}

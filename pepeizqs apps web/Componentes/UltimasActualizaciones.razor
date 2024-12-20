@@ -4,13 +4,13 @@
 
 <div style="background-color: var(--fondoEntrada); padding: 50px;">
 	<div style="font-size: 22px;">
-		@Herramientas.Idiomas.CogerCadena(idioma, "LastUpdates.Title")
+		@Herramientas.Idiomas.BuscarTexto(idioma, "Title", "LastUpdates")
 	</div>
 
 	<hr/>
 
 	<div style="margin-bottom: 40px;">
-		@Herramientas.Idiomas.CogerCadena(idioma, "LastUpdates.String1")
+		@Herramientas.Idiomas.BuscarTexto(idioma, "String1", "LastUpdates")
 	</div>
 
 	@foreach (var proyecto in proyectos)
@@ -24,7 +24,7 @@
 						</div>
 
 						<div style="margin-top: 5px;">
-							@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Proyecto.Id + ".String1")
+							@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Proyecto.Id)
 						</div>
 					</div>
 

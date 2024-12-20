@@ -1,0 +1,15 @@
+{
+  "String1": "Application pour ajouter des émissions de télévision et des films en streaming Tiles pour Windows 10",
+  "String2": "J'ai développé cette application il y a des années lorsque Windows 10 avait Tiles, pour ceux d'entre vous qui utilisent cette version du système d'exploitation, l'application fonctionnera toujours pour vous. ",
+  "String3": "Ci-dessous je détaille comment cela fonctionne :",
+  "String4": "Recherche par plateforme",
+  "String5": "Avant d'ajouter une vignette au menu Démarrer, l'application peut rechercher une série ou un film disponible sur la plateforme sélectionnée.",
+  "String6": "Sélection de films/séries",
+  "String7": "Étant donné que de nombreux films et séries font partie de grandes franchises, l'application affiche également les résultats liés à votre recherche.",
+  "String8": "Personnalisation des tuiles",
+  "String9": "Bien que l'application chargera les images par défaut de la série ou du film pour le Tile, l'utilisateur peut les modifier à volonté ou même modifier le film que le Tile exécutera.",
+  "String10": "Comment cela apparaît dans Windows 10",
+  "String11": "Vous pouvez ajouter plusieurs Tiles et le résultat final dépend de vous.",
+  "String12": "Également compatible avec Windows 11",
+  "String13": "L'application fonctionne également sur Windows 11, mais elle n'est malheureusement capable d'ajouter qu'une icône au menu Démarrer."
+}

@@ -1,0 +1,13 @@
+{
+  "String1": "Application pour vérifier et rechercher des vidéos de réussite de jeu sur Steam",
+  "String2": "Avec cette application, j'avais l'intention de suivre les réalisations de mes jeux Steam et de regarder des vidéos sur YouTube sur les réalisations qui me manquaient d'un simple clic de souris.",
+  "String3": "Ci-dessous je détaille comment cela fonctionne :",
+  "String4": "Prise en charge de plusieurs comptes",
+  "String5": "Vous pouvez ajouter autant de comptes Steam que vous le souhaitez, à condition qu'ils disposent des autorisations publiques pour lire les données du jeu.",
+  "String6": "Sélectionnez le jeu",
+  "String7": "L'application chargera tous les jeux qui ont des succès dans le compte Steam sélectionné et comprendra également un moteur de recherche au cas où vous auriez un grand nombre de jeux.",
+  "String8": "Fiche pour chaque jeu",
+  "String9": "Pour chaque jeu, l'application génère une liste des réalisations réalisées et de celles non réalisées.",
+  "String10": "Vidéo de réussite",
+  "String11": "Lorsque vous cliquez sur le succès, l'application chargera directement une vidéo expliquant comment obtenir le succès, si elle est disponible sur YouTube."
+}

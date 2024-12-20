@@ -1,0 +1,15 @@
+{
+  "String1": "App to add game Tiles for Windows 10",
+  "String2": "I developed this application years ago when Windows 10 had Tiles, for those of you who use that version of the operating system the app will still work for you. Although the app is paid, you can use the app for free by downloading the source code and with Visual Studio installed.",
+  "String3": "Below I detail how it works:",
+  "String4": "Search by Platform",
+  "String5": "Before adding a Tile to the Start menu, the app allows you to select different platforms that are available for games.",
+  "String6": "Autodetection of installed games",
+  "String7": "The app can automatically detect what games you have installed on your computer without having to do anything yourself.",
+  "String8": "Tiles Customization",
+  "String9": "Although the app will load default images of the game for the Tile, the user can change them at will or even modify which game the Tile will run.",
+  "String10": "How it appears in Windows 10",
+  "String11": "You can add several Tiles and the final result depends on you.",
+  "String12": "Also Compatible with Windows 11",
+  "String13": "The app also works on Windows 11, but it is only capable of adding an icon to the Start menu unfortunately."
+}

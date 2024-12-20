@@ -1,0 +1,15 @@
+{
+  "String1": "App per cambiare automaticamente le copertine dei giochi su Steam",
+  "String2": "Ho sempre trovato il sito web di Steamgriddb perfetto per cambiare le copertine dei giochi su Steam, ma ha un grosso difetto: è noioso cambiare le copertine tramite il sito web. ",
+  "String3": "Di seguito dettaglio il funzionamento:",
+  "String4": "Integrazione con Steamgriddb (1)",
+  "String5": "Per prima cosa devi creare un account su Steamgriddb e ottenere la chiave API assegnata al tuo account.",
+  "String6": "Integrazione con Steamgriddb (2)",
+  "String7": "Quindi devi aggiungere la chiave API nell'app.",
+  "String8": "Integrazione con Steam",
+  "String9": "L'app rileverà automaticamente i giochi Steam installati sul tuo computer.",
+  "String10": "Selezione di coperture (1)",
+  "String11": "Quando selezioni il gioco, l'app caricherà quali copertine sono disponibili per il gioco, l'esempio nello screenshot è il gioco Wasteland 3.",
+  "String12": "Selezione di coperture (2)",
+  "String13": "E l'ultimo passaggio è selezionare la copertina, l'app si occuperà automaticamente di aggiungerla a Steam."
+}

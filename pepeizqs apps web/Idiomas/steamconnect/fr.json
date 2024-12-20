@@ -1,0 +1,13 @@
+{
+  "String1": "Application pour connecter d'autres plateformes de jeux à Steam",
+  "String2": "J'ai commencé à développer cette application parce que Playnite semblait absurdement compliqué à utiliser, je l'ai fait dans le seul but de « connecter » à Steam les jeux que l'utilisateur avait sur des plateformes comme GOG ou Epic Games de la manière la plus simple possible (sans plus).",
+  "String3": "Elle ne peut pas être dans le Microsoft Store car ils ont imposé une règle selon laquelle une application ne peut pas « avoir besoin » d'une autre application (ils s'interrogeront alors sur la faible utilisation du magasin par les utilisateurs). ",
+  "String4": "Prise en charge de diverses plates-formes",
+  "String5": "Comme il existe plusieurs plates-formes de jeu sous Windows, l'application prend en charge la connexion de 6 autres plates-formes à Steam.",
+  "String6": "Détection automatique des jeux installés",
+  "String7": "L'application peut détecter automatiquement les jeux que vous avez installés sur votre ordinateur sur différentes plates-formes, c'est à vous de décider quels jeux vous souhaitez ajouter à Steam.",
+  "String8": "Jeux ajoutés automatiquement sur Steam",
+  "String9": "Dans Steam vous n'aurez rien à faire du tout, l'application se charge déjà d'ajouter le raccourci du jeu que vous avez sélectionné en plus de l'image correspondante.",
+  "String10": "Modification sur Steam",
+  "String11": "Vous pouvez toujours modifier le raccourci vers le jeu que vous avez connecté sur Steam."
+}

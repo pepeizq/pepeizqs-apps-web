@@ -1,0 +1,13 @@
+{
+  "String1": "App zur Anbindung anderer Gaming-Plattformen an Steam",
+  "String2": "Ich habe mit der Entwicklung dieser App begonnen, weil die Verwendung von Playnite absurd kompliziert erschien. Ich habe sie mit dem einzigen Ziel erstellt, die Spiele, die der Benutzer auf Plattformen wie GOG oder Epic Games hatte, auf möglichst einfache Weise mit Steam zu „verbinden“ (mehr nicht).",
+  "String3": "Es kann nicht im Microsoft Store verfügbar sein, da dort die Regel eingeführt wurde, dass eine App keine andere App „brauchen“ darf (dann werden sie sich über die geringe Nutzung des Stores durch Benutzer wundern). ",
+  "String4": "Unterstützung für verschiedene Plattformen",
+  "String5": "Da es in Windows mehrere Spieleplattformen gibt, unterstützt die App die Verbindung von sechs weiteren Plattformen mit Steam.",
+  "String6": "Automatische Erkennung installierter Spiele",
+  "String7": "Die App kann automatisch erkennen, welche Spiele Sie auf verschiedenen Plattformen auf Ihrem Computer installiert haben. Es liegt an Ihnen, welche Spiele Sie zu Steam hinzufügen möchten.",
+  "String8": "Spiele werden automatisch auf Steam hinzugefügt",
+  "String9": "In Steam müssen Sie überhaupt nichts tun, die App kümmert sich bereits darum, zusätzlich zum entsprechenden Bild die Verknüpfung des von Ihnen ausgewählten Spiels hinzuzufügen.",
+  "String10": "Modifikation auf Steam",
+  "String11": "Sie können die Verknüpfung zu dem Spiel, das Sie über Steam verbunden haben, jederzeit ändern."
+}

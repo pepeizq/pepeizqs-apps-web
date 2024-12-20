@@ -1,0 +1,17 @@
+{
+  "String1": "Site de ofertas de videogames para PC em lojas oficiais",
+  "String2": "Criei este site como um jogador de videogame para PC que gosta de pagar seus criadores pelos seus jogos, mas como não sou milionário precisei estar atento às melhores ofertas com um registro detalhado de cada jogo.",
+  "String3": "Abaixo detalho as capacidades técnicas do site:",
+  "String4": "Atualização automatizada",
+  "String5": "O site é automatizado para estar sempre em busca de ofertas de videogame, aproximadamente a cada 4 horas ele completa cada ciclo de busca de ofertas em todas as lojas que tenho acesso.",
+  "String6": "Atualização manual",
+  "String7": "Quando ocorre um evento especial, posso gerar notícias na web. ",
+  "String8": "Perfil para cada jogo",
+  "String9": "O site é capaz de gerenciar perfis individuais para dezenas de milhares de jogos, dentro de cada perfil posso editar qualquer dado do jogo sem ter que abrir o banco de dados manualmente.",
+  "String10": "Notificações por e-mail",
+  "String11": "Desenvolvi esse recurso para aqueles usuários que gostam de receber notificações por e-mail de jogos cujos jogos atingem um novo preço mínimo, funciona também para notificações de novas notícias.",
+  "String12": "Integração com Steam",
+  "String13": "Para facilitar o gerenciamento de uma lista de jogos desejados, desenvolvi uma integração com o Steam para importar a lista de usuários de lá. ",
+  "String14": "Brindes para usuários",
+  "String15": "Para recompensar os usuários que me ajudaram com o site em algum momento desenvolvi esse recurso, espero um dia poder fazer brindes de jogos reais."
+}

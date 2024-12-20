@@ -1,0 +1,8 @@
+{
+  "String1": "App para gestionar una base de datos que utilizo en otras apps",
+  "String2": "Esta aplicación solo tiene un único cometido, gestionar una base de datos que utiliza otras aplicaciones que he desarrollado. Me resultaba más cómodo actualizar la base de datos de manera extera con esta app, que actualizar 3 apps manualmente.",
+  "String3": "Monitorización de la Base de Datos",
+  "String4": "Creé una interfaz básica para ver que las diferentes tablas de la base de datos se carguen adecuamente y puedan ser leidas por otras apps.",
+  "String5": "Soporte para ficheros JSON",
+  "String6": "Con el objetivo de poder trabajar desde cualquier app o web, la app genera ficheros .json para las diversas bases de datos."
+}

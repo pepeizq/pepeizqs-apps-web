@@ -1,0 +1,17 @@
+{
+  "String1": "Application pour ajouter des widgets à vos jeux sous Windows 11",
+  "String2": "Avec la sortie de Windows 11, une nouvelle fonctionnalité appelée Widgets est apparue. ",
+  "String3": "Ci-dessous je détaille comment cela fonctionne :",
+  "String4": "Recherche par plateforme",
+  "String5": "Vous devez d’abord sélectionner la plateforme sur laquelle vous avez le jeu.",
+  "String6": "Détection automatique des jeux installés",
+  "String7": "L'application peut détecter automatiquement les jeux que vous avez installés sur votre ordinateur.",
+  "String8": "Personnalisation des widgets",
+  "String9": "Bien que l'application chargera les images par défaut du jeu pour le Widget, l'utilisateur peut les changer à sa guise ou même modifier le jeu que le Widget exécutera.",
+  "String10": "Comment ajouter le widget (1)",
+  "String11": "En raison du peu de flexibilité que Microsoft permet avec les Widgets, vous devez faire quelques derniers clics pour enfin ajouter le widget, vous devrez tout d'abord ajouter le Widget depuis l'application.",
+  "String12": "Comment ajouter le widget (2)",
+  "String13": "Deuxièmement, vous devrez ouvrir l'application Widgets et ajouter le Widget, cela semble étrange mais grâce à Microsoft, vous devez le faire de cette façon.",
+  "String14": "Comment ajouter le widget (3)",
+  "String15": "Et enfin sélectionnez mon application."
+}

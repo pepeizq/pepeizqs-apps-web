@@ -1,0 +1,13 @@
+{
+  "String1": "App para comprobar y buscar vídeos de logros de juegos en Steam",
+  "String2": "Con esta app pretendía tener un seguimiento de los logros en mis juegos de Steam y ver videos en Youtube sobre los logros que me faltaban con solo dar un click de ratón.",
+  "String3": "A continuación os detallo como funciona:",
+  "String4": "Soporte para varias cuentas",
+  "String5": "Puedes añadir todas las cuentas de Steam que quieras mientras tengan los permisos en público para poder leer los datos de los juegos.",
+  "String6": "Selecciona el juego",
+  "String7": "La app cargará todos los juegos que dispongan de logros en la cuenta de Steam seleccionada, aparte incluye un buscador por si tienes una gran cantidad de juegos.",
+  "String8": "Ficha para cada juego",
+  "String9": "Para cada juego la app genera un listado de los logros conseguidos y de los que no.",
+  "String10": "Vídeo del logro",
+  "String11": "Al clickear en el logro la app cargará directamente un video sobre como obtener el logro, si lo hay disponible en Youtube."
+}

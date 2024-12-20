@@ -1,0 +1,13 @@
+{
+  "String1": "App to connect other gaming platforms to Steam",
+  "String2": "I started developing this app because Playnite seemed absurdly complicated to use, I made it with the sole purpose of 'connecting' to Steam the games that the user had on platforms like GOG or Epic Games in the simplest way possible (nothing more).",
+  "String3": "It cannot be in the Microsoft Store because they imposed a rule that an app cannot 'need' another app (then they will wonder about the low use of the store by users). So you have the app to download from Github and below I will explain its use:",
+  "String4": "Support for various platforms",
+  "String5": "Since there are several gaming platforms in Windows, the app has support for connecting 6 other platforms to Steam.",
+  "String6": "Autodetection of installed games",
+  "String7": "The app can automatically detect what games you have installed on your computer on various platforms, it is up to you which games you want to add to Steam.",
+  "String8": "Games added automatically on Steam",
+  "String9": "In Steam you will not have to do anything at all, the app already takes care of adding the shortcut of the game you have selected in addition to the corresponding image.",
+  "String10": "Modification on Steam",
+  "String11": "You can always modify the shortcut to the game you have connected on Steam."
+}

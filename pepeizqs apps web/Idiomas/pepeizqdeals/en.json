@@ -1,0 +1,17 @@
+{
+  "String1": "Website of PC video game deals from official stores",
+  "String2": "I created this website as a PC video game player who likes to pay their creators for their games, but since I am not a millionaire i needed to be aware of the best deals with a detailed record of each game.",
+  "String3": "Below I detail the technical capabilities of the website:",
+  "String4": "Automated Update",
+  "String5": "The website is automated to always be looking for video game deals, approximately every 4 hours it completes each cycle of looking at deals in all the stores that i have access to.",
+  "String6": "Manual Update",
+  "String7": "When a special event occurs, I can generate news on the web. Generally, these news are to inform visitors about temporarily free games, bundles of several games, or new additions to subscription services.",
+  "String8": "Profile for each game",
+  "String9": "The website is capable of managing individual profiles for tens of thousands of games, within each profile I can edit any game data without having to open the database manually.",
+  "String10": "Email notifications",
+  "String11": "I developed this feature for those users who like to receive email notifications of games whose games reach a new minimum price, it also works for new news notifications.",
+  "String12": "Integration with Steam",
+  "String13": "To make it easier to manage a list of desired games, I developed an integration with Steam to import the user's list from there. It also helps me to show the user if they already have the game in various sections of the website.",
+  "String14": "Giveaways for users",
+  "String15": "To reward those users who have helped me with the website at some point I developed this feature, hopefully one day I can do real game giveaways."
+}

@@ -1,0 +1,17 @@
+{
+  "String1": "App to add Widgets to your games in Windows 11",
+  "String2": "With the release of Windows 11, a new feature called Widgets appeared. Personally, I don't see it as very useful, but I still developed an app similar to the one I made for the Windows 10 Tiles.",
+  "String3": "Below I detail how it works:",
+  "String4": "Search by Platform",
+  "String5": "First you must select the platform where you have the game.",
+  "String6": "Autodetection of installed games",
+  "String7": "The app can automatically detect what games you have installed on your computer.",
+  "String8": "Widgets Customization",
+  "String9": "Although the app will load default images of the game for the Widget, the user can change them to their liking or even modify which game the Widget will run.",
+  "String10": "How to Add the Widget (1)",
+  "String11": "Due to the little flexibility that Microsoft allows with Widgets, you have to make a few last clicks to finally add the widget, first of all you will have to add the Widget from the app.",
+  "String12": "How to Add the Widget (2)",
+  "String13": "Secondly, you will have to open the Widgets app and add the Widget, it sounds strange but thanks to Microsoft you have to do it that way.",
+  "String14": "How to Add the Widget (3)",
+  "String15": "And finally select my app."
+}

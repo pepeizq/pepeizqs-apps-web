@@ -23,7 +23,7 @@
 
 <div style="background-color: var(--fondoEntrada);">	
 	<div style="display: flex; align-items: center; backdrop-filter: brightness(80%); width: 100%; padding: 50px;">
-		<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.Presentation")</span>
+		<span style="color: var(--colorTexto);">@Idiomas.BuscarTexto(idioma, "Presentation", "Index")</span>
 	</div>
 
 	<div style="display: flex; align-items: start; padding: 50px;">
@@ -40,7 +40,7 @@
 
 						<button @onclick="@(e => CambiarProyectos(e))" class="boton-lateral" style="@fondo">
 							<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-								<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.All")</span>
+								<span style="color: var(--colorTexto);">@Idiomas.BuscarTexto(idioma, "All", "Index")</span>
 								<span style="color: var(--colorTexto); margin-left: 10px;">(@Listados.Proyectos.Generar().Count)</span>
 							</div>
 						</button>
@@ -59,7 +59,7 @@
 
 							<button @onclick="@(e => CambiarProyectos(e, ProyectoTipo.App))" class="boton-lateral" style="@fondoApp">
 								<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-									<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.App")</span>
+									<span style="color: var(--colorTexto);">@Idiomas.BuscarTexto(idioma, "App", "Index")</span>
 									<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(ProyectoTipo.App))</span>
 								</div>
 							</button>
@@ -77,7 +77,7 @@
 
 							<button @onclick="@(e => CambiarProyectos(e, ProyectoTipo.Web))" class="boton-lateral" style="@fondoWeb">
 								<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-									<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.Web")</span>
+									<span style="color: var(--colorTexto);">@Idiomas.BuscarTexto(idioma, "Web", "Index")</span>
 									<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(ProyectoTipo.Web))</span>
 								</div>
 							</button>
@@ -95,7 +95,7 @@
 
 							<button @onclick="@(e => CambiarProyectos(e, ProyectoTipo.Juego))" class="boton-lateral" style="@fondoJuego">
 								<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-									<span style="color: var(--colorTexto);">@Idiomas.CogerCadena(idioma, "Index.Game")</span>
+									<span style="color: var(--colorTexto);">@Idiomas.BuscarTexto(idioma, "Game", "Index")</span>
 									<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(ProyectoTipo.Juego))</span>
 								</div>
 							</button>
@@ -139,27 +139,12 @@
 			</div>
 		</div>
 		
-		<div style="width: 80%;">
+		<div style="width: 80%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
 			@{
-				int i = 0;
-				string espacios = string.Empty;
 				string enlace = string.Empty;
 
 				foreach (var proyecto in proyectos)
 				{
-					if (i == 0)
-					{
-						espacios = "margin-bottom: 20px;";
-					}
-					else if (i == proyectos.Count - 1)
-					{
-						espacios = "margin-top: 20px;";
-					}
-					else
-					{
-						espacios = "margin-top: 20px; margin-bottom: 20px;";
-					}
-
 					if (string.IsNullOrEmpty(proyecto.Ubicacion) == true && string.IsNullOrEmpty(proyecto.Github) == false)
 					{
 						enlace = "https://github.com/pepeizq/" + proyecto.Github + "/";
@@ -169,20 +154,19 @@
 						enlace = proyecto.Ubicacion;
 					}
 
-					<div class="expandir" style="width: 100%; @espacios">
+					<div class="expandir" style="width: 100%; height: 100%;">
 						<a href="@enlace" style="text-decoration: none; color: var(--colorTexto);">
-							<div style="display: flex; align-items: center; border: 1px solid var(--colorEnlace); background-color: @proyecto.Color1;">
-								<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 100px; height: 100px; object-fit: cover;" />
+							<div style="display: flex; flex-direction: column; height: 100%; border: 1px solid var(--colorEnlace); background-color: @proyecto.Color1;">
+								<img src="/imagenes/@proyecto.Id/logo.webp" style="height: 100px; object-fit: cover; opacity: 0.5;" />
 							
-								<div style="padding: 15px 30px;">
+								<div style="padding: 20px;">
 									<div style="font-size: 19px;">@proyecto.Nombre</div>
-									<div style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(idioma, proyecto.Id + ".String1")</div>
+									<hr/>
+									<div>@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id)</div>
 								</div>
 							</div>
 						</a>
 					</div>
-
-					i += 1;
 				}
 			}
 		</div>

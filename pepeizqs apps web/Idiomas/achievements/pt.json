@@ -1,0 +1,13 @@
+{
+  "String1": "App para verificar e pesquisar vídeos de conquistas de jogos no Steam",
+  "String2": "Com este aplicativo eu pretendia acompanhar as conquistas dos meus jogos Steam e assistir vídeos no YouTube sobre as conquistas que estavam faltando com apenas um clique do mouse.",
+  "String3": "Abaixo detalho como funciona:",
+  "String4": "Suporte para múltiplas contas",
+  "String5": "Você pode adicionar quantas contas Steam desejar, desde que elas tenham permissões públicas para ler os dados do jogo.",
+  "String6": "Selecione o jogo",
+  "String7": "O aplicativo irá carregar todos os jogos que possuem conquistas na conta Steam selecionada, e também inclui um mecanismo de busca caso você tenha um grande número de jogos.",
+  "String8": "Ficha para cada jogo",
+  "String9": "Para cada jogo o aplicativo gera uma lista de conquistas alcançadas e não alcançadas.",
+  "String10": "Vídeo de conquista",
+  "String11": "Ao clicar na conquista, o aplicativo carregará diretamente um vídeo de como obter a conquista, caso esteja disponível no YouTube."
+}

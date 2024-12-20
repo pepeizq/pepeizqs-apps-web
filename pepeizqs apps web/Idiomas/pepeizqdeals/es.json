@@ -1,0 +1,17 @@
+{
+  "String1": "Web de ofertas de videojuegos para PC procedentes de tiendas oficiales",
+  "String2": "Cree esta pagina web como jugador de videojuegos para PC que le gusta pagar por sus juegos a sus creadores, pero como no soy millonario necesitaba estar al corriente de las mejores ofertas con un registro detallado de cada juego.",
+  "String3": "A continuación os detallo las capacidades técnicas de la web:",
+  "String4": "Actualización Automatizada",
+  "String5": "La web está automatizada para estar buscando siempre ofertas de videojuegos, aproximadamente cada 4 horas completa cada ciclo de mirar ofertas en todas las tiendas las que tengo acceso.",
+  "String6": "Actualización Manual",
+  "String7": "Para cuando se da un evento especial puedo generar una noticia en la web, generalmente estas noticias son para informar a los visitantes de juegos temporalmente gratis, bundles de varios juegos o nuevos juegos añadidos a los servicios de suscripción.",
+  "String8": "Ficha para cada juego",
+  "String9": "La web es capaz de gestionar fichas individuales para decenas de miles de juegos, dentro de cada ficha puedo editar cualquier dato del juego sin tener que abrir la base de datos manualmente.",
+  "String10": "Notificaciones por correo",
+  "String11": "Desarrollé esta característica para aquellos usuarios que les gusta recibir notificaciones por correo de juegos cuyos alcanzan un nuevo precio mínimo, también funciona para las notificaciones de nuevas noticias.",
+  "String12": "Integración con Steam",
+  "String13": "Para facilitar la gestión de una lista de juegos deseados, desarrollé una integración con Steam para importar la lista del usuario desde allí. Además me sirve para enseñar al usuario si ya posee el juego en varias secciones de la web.",
+  "String14": "Sorteos para los usuarios",
+  "String15": "Para recompensar a aquellos usuarios que me han ayudado con la web en algún momento desarrollé esta característica, ojala algún día pueda hacer sorteos de juegos de verdad."
+}

@@ -2,25 +2,25 @@
 @model PrivacyModel
 
 @{
-    ViewData["Title"] = Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.Title");
+    ViewData["Title"] = Herramientas.Idiomas.BuscarTexto(Model.idioma, "Title", "Privacy");
     Layout = "/Pages/Shared/_Layout.cshtml";
 }
 
 <div style="background-color: var(--fondoEntrada); padding: 50px;">
     <div style="font-size: 22px;">
-        @Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.Title")
+        @Herramientas.Idiomas.BuscarTexto(Model.idioma, "Title", "Privacy")
     </div>
 
     <hr />
 
-    <div>@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String1")</div>
+    <div>@Herramientas.Idiomas.BuscarTexto(Model.idioma, "String1", "Privacy")</div>
 
     <ul style="margin-top: 20px;">
-        <li>@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String2")</li>
-        <li style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String3")</li>
-        <li style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String4")</li>
-        <li style="margin-top: 10px;">@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String5")</li>
+        <li>@Herramientas.Idiomas.BuscarTexto(Model.idioma, "String2", "Privacy")</li>
+        <li style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(Model.idioma, "String3", "Privacy")</li>
+        <li style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(Model.idioma, "String4", "Privacy")</li>
+        <li style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(Model.idioma, "String5", "Privacy")</li>
     </ul>
 
-    <div>@Herramientas.Idiomas.CogerCadena(Model.idioma, "Privacy.String6")</div>
+    <div>@Herramientas.Idiomas.BuscarTexto(Model.idioma, "String6", "Privacy")</div>
 </div>

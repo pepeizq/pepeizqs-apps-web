@@ -1,0 +1,17 @@
+{
+  "String1": "Website mit Angeboten für PC-Videospiele aus offiziellen Geschäften",
+  "String2": "Ich habe diese Website als PC-Videospielspieler erstellt, der seine Entwickler gerne für ihre Spiele bezahlt. Da ich jedoch kein Millionär bin, musste ich mich über die besten Angebote informieren und jedes Spiel detailliert aufzeichnen.",
+  "String3": "Im Folgenden beschreibe ich die technischen Möglichkeiten der Website:",
+  "String4": "Automatisierte Aktualisierung",
+  "String5": "Die Website ist so automatisiert, dass sie immer nach Angeboten für Videospiele sucht. Ungefähr alle vier Stunden schließt sie den Suchzyklus nach Angeboten in allen Geschäften ab, zu denen ich Zugang habe.",
+  "String6": "Manuelles Update",
+  "String7": "Wenn ein besonderes Ereignis eintritt, kann ich Nachrichten im Internet generieren. ",
+  "String8": "Profil für jedes Spiel",
+  "String9": "Die Website ist in der Lage, individuelle Profile für Zehntausende Spiele zu verwalten. Innerhalb jedes Profils kann ich beliebige Spieldaten bearbeiten, ohne die Datenbank manuell öffnen zu müssen.",
+  "String10": "E-Mail-Benachrichtigungen",
+  "String11": "Ich habe diese Funktion für Benutzer entwickelt, die E-Mail-Benachrichtigungen über Spiele erhalten möchten, deren Spiele einen neuen Mindestpreis erreichen. Sie funktioniert auch für Benachrichtigungen über neue Neuigkeiten.",
+  "String12": "Integration mit Steam",
+  "String13": "Um die Verwaltung einer Liste gewünschter Spiele zu erleichtern, habe ich eine Integration mit Steam entwickelt, um die Liste des Benutzers von dort zu importieren. ",
+  "String14": "Werbegeschenke für Benutzer",
+  "String15": "Um die Benutzer zu belohnen, die mir irgendwann bei der Website geholfen haben, habe ich diese Funktion entwickelt, damit ich eines Tages hoffentlich echte Spiele verschenken kann."
+}

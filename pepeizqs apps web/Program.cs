@@ -1,7 +1,38 @@
 using Herramientas;
+using Microsoft.AspNetCore.ResponseCompression;
+using System.Globalization;
+using System.IO.Compression;
+using System.Threading.RateLimiting;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+#region Compresion (Primero)
+
+builder.Services.AddResponseCompression(options =>
+{
+	options.Providers.Add<BrotliCompressionProvider>();
+	options.Providers.Add<GzipCompressionProvider>();
+	options.EnableForHttps = true;
+});
+
+builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
+{
+	options.Level = CompressionLevel.Optimal;
+});
+
+builder.Services.Configure<GzipCompressionProviderOptions>(options =>
+{
+	options.Level = CompressionLevel.Optimal;
+});
+
+#endregion
+
+#region Redireccionador
+
+builder.Services.AddControllersWithViews();
+
+#endregion
 
 // Add services to the container.
 
@@ -15,12 +46,6 @@ var builder = WebApplication.CreateBuilder(args);
 //});
 
 builder.Services.AddRazorPages();
-
-#region Redireccionador
-
-builder.Services.AddControllersWithViews();
-
-#endregion
 
 #region Seo
 
@@ -55,6 +80,51 @@ builder.Services.AddSingleton<IDecompiladores, Decompiladores2>();
 
 #endregion
 
+#region Antibots
+
+builder.Services.AddRateLimiter(opciones =>
+{
+	opciones.OnRejected = (contexto, _) =>
+	{
+		if (contexto.Lease.TryGetMetadata(MetadataName.RetryAfter, out var retryAfter))
+		{
+			contexto.HttpContext.Response.Headers.RetryAfter =
+				((int)retryAfter.TotalSeconds).ToString(NumberFormatInfo.InvariantInfo);
+		}
+
+		contexto.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
+		contexto.HttpContext.Response.WriteAsync("Too many requests. Please try again later. If you are a bot, go fuck yourself somewhere else.");
+
+		return new ValueTask();
+	};
+
+	opciones.GlobalLimiter = PartitionedRateLimiter.CreateChained(
+		PartitionedRateLimiter.Create<HttpContext, string>(contexto =>
+		{
+			string? usuario = contexto.User.Identity?.Name;
+
+			if (string.IsNullOrEmpty(usuario) == true)
+			{
+				return RateLimitPartition.GetFixedWindowLimiter(
+					partitionKey: contexto.Request.Headers.Host.ToString(),
+					factory: partition => new FixedWindowRateLimiterOptions
+					{
+						AutoReplenishment = true,
+						PermitLimit = 200,
+						QueueLimit = 0,
+						Window = TimeSpan.FromMinutes(1)
+					});
+			}
+			else
+			{
+				return RateLimitPartition.GetNoLimiter("");
+			}
+		})
+	);
+});
+
+#endregion
+
 #region Blazor
 
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
@@ -71,30 +141,14 @@ var app = builder.Build();
     app.UseHsts();
 //}
 
-#region Seo
+#region Compresion (Primero)
 
-app.UseHeadElementServerPrerendering();
+app.UseResponseCompression();
 
 #endregion
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-#region Redireccionador
-
-app.MapControllers();
-
-#endregion
-
-app.Use(async (context, next) =>
-{
-	await next();
-	if (context.Response.StatusCode == 404)
-	{
-		context.Request.Path = "/";
-		await next();
-	}
-});
+app.MapStaticAssets();
 
 app.UseRouting();
 
@@ -105,6 +159,24 @@ app.MapRazorPages();
 #region Blazor
 
 app.MapBlazorHub();
+
+#endregion
+
+#region Seo
+
+app.UseHeadElementServerPrerendering();
+
+#endregion
+
+#region Redireccionador
+
+app.MapControllers();
+
+#endregion
+
+#region Antibots
+
+app.UseRateLimiter();
 
 #endregion
 

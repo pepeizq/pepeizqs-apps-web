@@ -1,0 +1,11 @@
+{
+  "String1": "App para ajudar a gerenciar o site pepeizqdeals.com",
+  "String2": "Desenvolvi esta aplicação para automatizar algumas funções do site pepeizqdeals.com que eram impossíveis de desenvolver dentro do site.",
+  "String3": "Abaixo explico as funções que o aplicativo possui:",
+  "String4": "Automação de mídia social",
+  "String5": "Dado o quão complicado algumas redes sociais podem ser para anunciar novidades na web, terceirizei o processo com este aplicativo.",
+  "String6": "Publicação automática em grupos Steam",
+  "String7": "O Steam não oferece nenhuma ferramenta para automatizar o processo de adição de novas notícias aos grupos Steam, então desenvolva um navegador que automatize o processo de adição de notícias em vários idiomas.",
+  "String8": "Integração com Humble Store",
+  "String9": "Dadas as medidas de segurança da loja e a falta de suporte técnico, foi-me impossível consultar as ofertas da loja no site, por isso tive que criar um 'ips jumper' para ver as ofertas."
+}

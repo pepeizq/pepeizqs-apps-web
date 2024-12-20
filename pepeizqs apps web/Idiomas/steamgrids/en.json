@@ -1,0 +1,15 @@
+{
+  "String1": "App to automatically change game covers on Steam",
+  "String2": "I've always found the Steamgriddb website to be perfect for changing game covers on Steam, but it has one major flaw, it's tedious to change covers via the website. So I made a mini app to simplify the process.",
+  "String3": "Below I detail how it works:",
+  "String4": "Steamgriddb Integration (1)",
+  "String5": "First you need to create an account on Steamgriddb and get the API key assigned to your account.",
+  "String6": "Steamgriddb Integration (2)",
+  "String7": "Then you have to add the API key in the app.",
+  "String8": "Steam Integration",
+  "String9": "The app will automatically detect Steam games that are installed on your computer.",
+  "String10": "Selection of covers (1)",
+  "String11": "When you select the game the app will load which covers are available for the game, the example in the screenshot is the game Wasteland 3.",
+  "String12": "Selection of covers (2)",
+  "String13": "And the last step is to select the cover, the app will automatically take care of adding it to Steam."
+}

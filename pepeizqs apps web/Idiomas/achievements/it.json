@@ -1,0 +1,13 @@
+{
+  "String1": "App per controllare e cercare video sugli obiettivi dei giochi su Steam",
+  "String2": "Con questa app volevo tenere traccia dei risultati ottenuti nei miei giochi Steam e guardare i video su YouTube sui risultati che mi mancavano con un semplice clic del mouse.",
+  "String3": "Di seguito dettaglio il funzionamento:",
+  "String4": "Supporto per più account",
+  "String5": "Puoi aggiungere tutti gli account Steam che desideri purché dispongano delle autorizzazioni pubbliche per leggere i dati di gioco.",
+  "String6": "Seleziona il gioco",
+  "String7": "L'app caricherà tutti i giochi che hanno obiettivi nell'account Steam selezionato e includerà anche un motore di ricerca nel caso in cui tu abbia un gran numero di giochi.",
+  "String8": "Foglio per ogni gioco",
+  "String9": "Per ogni gioco l'app genera un elenco dei risultati raggiunti e di quelli non raggiunti.",
+  "String10": "Video sul raggiungimento",
+  "String11": "Quando fai clic sull'obiettivo, l'app caricherà direttamente un video su come ottenere l'obiettivo, se disponibile su YouTube."
+}

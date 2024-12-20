@@ -1,0 +1,15 @@
+{
+  "String1": "App para añadir Tiles de videojuegos en Windows 10",
+  "String2": "Esta aplicación la desarrollé hace años cuando Windows 10 disponía de Tiles, para aquellos que uséis esa versión del sistema operativo todavía os funcionará la app. Aunque la app es de pago podéis usar gratuitamente la app descargando el código fuente y con el Visual Studio instalado.",
+  "String3": "A continuación os detallo como funciona:",
+  "String4": "Búsqueda por Plataforma",
+  "String5": "Antes de añadir una Tile al menú de Inicio, la app permite seleccionar diferentes plataformas que hay disponibles para juegos.",
+  "String6": "Autodetección de juegos instalados",
+  "String7": "La app puede detectar automáticamente que juegos tienes instalados en tu ordenador sin que tengas que hacer nada.",
+  "String8": "Personalización de las Tiles",
+  "String9": "Aunque la app cargará unas imágenes por defecto del juego para la Tile, el usuario puede cambiarlas a su gusto o incluso modificar que juego ejecutará la Tile.",
+  "String10": "Como aparece en Windows 10",
+  "String11": "Puedes añadir varias Tiles y depende de ti el resultado final.",
+  "String12": "También compatible con Windows 11",
+  "String13": "La app funciona también en Windows 11, pero solo es capaz de añadir un icono al menú de Inicio."
+}

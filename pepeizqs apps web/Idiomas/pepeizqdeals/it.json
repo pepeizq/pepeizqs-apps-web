@@ -1,0 +1,17 @@
+{
+  "String1": "Sito Web di offerte di videogiochi per PC da negozi ufficiali",
+  "String2": "Ho creato questo sito Web come giocatore di videogiochi per PC a cui piace pagare i propri creatori per i loro giochi, ma poiché non sono un milionario avevo bisogno di essere a conoscenza delle migliori offerte con una registrazione dettagliata di ogni gioco.",
+  "String3": "Di seguito descrivo in dettaglio le capacità tecniche del sito web:",
+  "String4": "Aggiornamento automatico",
+  "String5": "Il sito Web è automatizzato per essere sempre alla ricerca di offerte di videogiochi, circa ogni 4 ore completa ogni ciclo di visualizzazione delle offerte in tutti i negozi a cui ho accesso.",
+  "String6": "Aggiornamento manuale",
+  "String7": "Quando si verifica un evento speciale, posso generare notizie sul web. ",
+  "String8": "Profilo per ogni gioco",
+  "String9": "Il sito è in grado di gestire profili individuali per decine di migliaia di giochi, all'interno di ogni profilo posso modificare qualsiasi dato di gioco senza dover aprire manualmente il database.",
+  "String10": "Notifiche e-mail",
+  "String11": "Ho sviluppato questa funzionalità per quegli utenti che desiderano ricevere notifiche via email dei giochi i cui giochi raggiungono un nuovo prezzo minimo, funziona anche per le notifiche di nuove notizie.",
+  "String12": "Integrazione con Steam",
+  "String13": "Per facilitare la gestione dell'elenco dei giochi desiderati, ho sviluppato un'integrazione con Steam per importare da lì l'elenco degli utenti. ",
+  "String14": "Omaggi per gli utenti",
+  "String15": "Per premiare quegli utenti che mi hanno aiutato con il sito web ad un certo punto ho sviluppato questa funzionalità, spero che un giorno potrò fare veri e propri omaggi di giochi."
+}
