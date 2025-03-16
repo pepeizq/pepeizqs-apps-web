@@ -13,18 +13,27 @@
 		}
 </style>
 
-<!-- #region Cabecera -->
-
 @{
 	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id);
 	string titulo = proyecto.Nombre + " • " + descripcion;
-	string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
-	string icono = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+	string enlace = "https://pepeizqapps.com/" + proyecto.Ubicacion;
+	string imagen = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+
+	<PageTitle>@titulo</PageTitle>
+	<HeadContent>
+		<meta name="og:title" Content="@titulo" />
+		<meta name="description" content="@descripcion" />
+		<meta name="og:description" content="@descripcion" />
+		<meta name="og:url" content="@enlace" />
+		<meta name="og:image" content="@imagen" />
+		<meta name="og:site_name" content="pepeizq's apps" />
+		<meta name="og:type" content="website" />
+		<meta name="robots" content="index, follow, noimageindex" />
+		<meta name="keywords" content="pepeizq, deals, source code, developer" />
+
+		<link rel="canonical" href="@enlace" />
+	</HeadContent>
 }
-
-<Seo idioma="@idioma" titulo="@titulo" descripcion="@descripcion" enlace="@enlace" icono="@icono" />
-
-<!-- #endregion -->
 
 <div style="background-color: @proyecto.Color1; display: flex; align-items: center;">
 	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)

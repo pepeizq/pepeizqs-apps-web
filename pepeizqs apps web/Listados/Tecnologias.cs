@@ -33,12 +33,22 @@ namespace Listados
                 Id = TecnologiaTipo.Unity,
                 Nombre = "Unity",
                 Imagen = "unity.webp",
-                MostrarNombre = false
+                MostrarNombre = true
             };
 
             tecnologias.Add(tecnologia3);
 
-            return tecnologias;
+			Tecnologia tecnologia4 = new Tecnologia
+			{
+				Id = TecnologiaTipo.Blazor,
+				Nombre = "Blazor",
+				Imagen = "blazor.webp",
+				MostrarNombre = true
+			};
+
+			tecnologias.Add(tecnologia4);
+
+			return tecnologias;
 		}
 	}
 
@@ -46,7 +56,8 @@ namespace Listados
 	{
 		ASPNetCore,
 		WinUI,
-		Unity
+		Unity,
+		Blazor
 	}
 
 	public class Tecnologia

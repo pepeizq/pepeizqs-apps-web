@@ -1,9 +1,9 @@
 using Herramientas;
+using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.Globalization;
 using System.IO.Compression;
 using System.Threading.RateLimiting;
-using Toolbelt.Blazor.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,15 +11,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddResponseCompression(options =>
 {
-	options.Providers.Add<BrotliCompressionProvider>();
+	//options.Providers.Add<BrotliCompressionProvider>();
 	options.Providers.Add<GzipCompressionProvider>();
 	options.EnableForHttps = true;
 });
 
-builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
-{
-	options.Level = CompressionLevel.Optimal;
-});
+//builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
+//{
+//	options.Level = CompressionLevel.Optimal;
+//});
 
 builder.Services.Configure<GzipCompressionProviderOptions>(options =>
 {
@@ -28,28 +28,21 @@ builder.Services.Configure<GzipCompressionProviderOptions>(options =>
 
 #endregion
 
-#region Redireccionador
+builder.Services.AddWebOptimizer(opciones => {
+	opciones.AddCssBundle("/css/bundle.css", new NUglify.Css.CssSettings
+	{
+		CommentMode = NUglify.Css.CssComment.None,
 
-builder.Services.AddControllersWithViews();
+	}, "lib/bootstrap/dist/css/bootstrap.min.css", "css/colores_texto.css", "css/principal.css", "css/site.css", "lib/font-awesome/css/all.css");
 
-#endregion
-
-// Add services to the container.
-
-//builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
-//   .AddNegotiate();
-
-//builder.Services.AddAuthorization(options =>
-//{
-//	// By default, all incoming requests will be authorized according to the default policy.
-//	options.FallbackPolicy = options.DefaultPolicy;
-//});
+	opciones.AddJavaScriptBundle("/superjs.js", "lib/jquery/dist/jquery.min.js", "lib/bootstrap/dist/js/bootstrap.bundle.min.js", "js/site.js");
+});
 
 builder.Services.AddRazorPages();
 
-#region Seo
+#region Redireccionador
 
-builder.Services.AddHeadElementHelper();
+builder.Services.AddControllersWithViews();
 
 #endregion
 
@@ -110,7 +103,7 @@ builder.Services.AddRateLimiter(opciones =>
 					factory: partition => new FixedWindowRateLimiterOptions
 					{
 						AutoReplenishment = true,
-						PermitLimit = 200,
+						PermitLimit = 500,
 						QueueLimit = 0,
 						Window = TimeSpan.FromMinutes(1)
 					});
@@ -131,6 +124,17 @@ builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
 #endregion
 
+#region Mejora velocidad carga
+
+builder.Services.AddHsts(opciones =>
+{
+	opciones.Preload = true;
+	opciones.IncludeSubDomains = true;
+	opciones.MaxAge = TimeSpan.FromDays(730);
+});
+
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -147,6 +151,12 @@ app.UseResponseCompression();
 
 #endregion
 
+#region Optimizador (Despues Compresion)
+
+app.UseWebOptimizer();
+
+#endregion
+
 app.UseHttpsRedirection();
 app.MapStaticAssets();
 
@@ -159,12 +169,6 @@ app.MapRazorPages();
 #region Blazor
 
 app.MapBlazorHub();
-
-#endregion
-
-#region Seo
-
-app.UseHeadElementServerPrerendering();
 
 #endregion
 

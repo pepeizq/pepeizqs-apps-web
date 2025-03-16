@@ -13,47 +13,5 @@
         Texto1 = "2"
     };
 
-    bool seo = false;
-    string? userAgent = string.Empty;
-
-    if (HttpContext != null)
-    {
-        userAgent = HttpContext.Request.Headers.UserAgent;
-
-        if (string.IsNullOrEmpty(userAgent) == false)
-        {
-            if (userAgent.Contains("http://www.google.com/bot.html") == true || userAgent.Contains("http://www.bing.com/bingbot.html") == true)
-            {
-                seo = true;
-            }
-        }
-    }
-
-    if (seo == true)
-    {
-        Proyecto proyecto = Listados.Proyectos.DevolverProyecto(id);
-        string descripcion = Herramientas.Idiomas.BuscarTexto(Model.idioma, "String1", proyecto.Id);
-        string titulo = proyecto.Nombre + " • " + descripcion;
-        string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
-        string icono = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
-
-        @(await Html.RenderComponentAsync<Componentes.Seo>(RenderMode.ServerPrerendered, new
-        {
-            idioma = Model.idioma,
-            descripcion = descripcion,
-            titulo = titulo,
-            enlace = enlace,
-            icono = icono
-        }))
-    }
-    else
-    {
-        @(await Html.RenderComponentAsync<Componentes.Plantillas.Juego>(RenderMode.Server, new
-        {
-            idioma = Model.idioma,
-            id = id,
-            intro = intro,
-            capturas = 9
-        }))
-    }
+    <component type="typeof(Componentes.Plantillas.Juego)" render-mode="Server" param-idioma="Model.idioma" param-id="id" param-intro="intro" param-capturas="9" />
 }

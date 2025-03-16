@@ -74,7 +74,7 @@ namespace Listados
                 Color2 = "#1b2838",
                 Enlace = "https://pepeizqdeals.com/",
                 Tipo = ProyectoTipo.Web,
-				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore }
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore, TecnologiaTipo.Blazor }
 			};
 
             proyectos.Add(proyecto1);
@@ -98,9 +98,9 @@ namespace Listados
 				Id = "pepeizqapps",
 				Nombre = "pepeizq's apps",
 				Github = "pepeizqs-apps-web",
-                Color1 = "#003f3f",
+                Color1 = "#002b2b",
 				Tipo = ProyectoTipo.Web,
-				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore }
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.ASPNetCore, TecnologiaTipo.Blazor }
 			};
 
 			proyectos.Add(proyecto3);
@@ -108,7 +108,7 @@ namespace Listados
             Proyecto proyecto4 = new Proyecto
             {
                 Id = "tilesgames",
-                Nombre = "pepeizq's Tiles for Games",
+                Nombre = "Tiles for Games",
                 Github = "Tiles-Games",
                 Ubicacion = "/app/tiles-games",
                 Enlace = "https://apps.microsoft.com/detail/9MXKL17J89JN",
@@ -138,7 +138,7 @@ namespace Listados
             Proyecto proyecto6 = new Proyecto
             {
                 Id = "tilesmedia",
-                Nombre = "pepeizq's Tiles for Streaming",
+                Nombre = "Tiles for Streaming",
                 Github = "Tiles-Media",
                 Ubicacion = "/app/tiles-media",
 				Enlace = "https://apps.microsoft.com/detail/9PNFN1QNMZR9",
@@ -154,11 +154,11 @@ namespace Listados
 			Proyecto proyecto7 = new Proyecto
 			{
 				Id = "widgetsgames",
-				Nombre = "pepeizq's Widgets for Games",
+				Nombre = "Widgets for Games",
 				Github = "Widgets-Games",
 				Ubicacion = "/app/widgets-games",
 				Enlace = "https://apps.microsoft.com/detail/9N6RH8C536LS",
-				Color1 = "#193748",
+				Color1 = "#0f212b",
 				Color2 = "#234d65",
 				Tipo = ProyectoTipo.App,
 				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
@@ -170,7 +170,7 @@ namespace Listados
             Proyecto proyecto8 = new Proyecto
             {
                 Id = "widgetsmedia",
-                Nombre = "pepeizq's Widgets for Streaming",
+                Nombre = "Widgets for Streaming",
                 Github = "Widgets-Media",
                 Ubicacion = "/app/widgets-media",
                 Enlace = "https://apps.microsoft.com/detail/9NTHP669WBDD",
@@ -186,7 +186,7 @@ namespace Listados
             Proyecto proyecto9 = new Proyecto
             {
                 Id = "steamconnect",
-                Nombre = "pepeizq's Steam Connect",
+                Nombre = "Steam Connect",
                 Github = "Steam-Connect",
                 Ubicacion = "/app/steam-connect",
                 Enlace = "https://github.com/pepeizq/Steam-Connect/",
@@ -202,7 +202,7 @@ namespace Listados
 			Proyecto proyecto10 = new Proyecto
 			{
 				Id = "achievements",
-				Nombre = "pepeizq's Achievements for Games",
+				Nombre = "Achievements for Games",
 				Github = "Steam-Achievements",
 				Ubicacion = "/app/achievements-for-games",
 				Enlace = "https://apps.microsoft.com/detail/9MZZX81TDT20",
@@ -218,11 +218,11 @@ namespace Listados
 			Proyecto proyecto11 = new Proyecto
 			{
 				Id = "steamgrids",
-				Nombre = "pepeizq's Steam Grids",
+				Nombre = "Steam Grids",
 				Github = "Steam-Grids",
 				Ubicacion = "/app/steam-grids",
 				Enlace = "https://github.com/pepeizq/Steam-Grids/",
-				Color1 = "#32414c",
+				Color1 = "#1b2329",
 				Color2 = "#222d34",
 				Tipo = ProyectoTipo.App,
 				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.WinUI },
@@ -234,7 +234,7 @@ namespace Listados
             Proyecto proyecto12 = new Proyecto
             {
                 Id = "steamskins",
-                Nombre = "pepeizq's Steam Skins",
+                Nombre = "Steam Skins",
                 Github = "Steam-Skins-WinUI",
                 Ubicacion = "/app/steam-skins",
                 Enlace = "https://github.com/pepeizq/Steam-Skins-WinUI/",
@@ -299,7 +299,8 @@ namespace Listados
 	{
 		App,
         Web,
-        Juego
+        Juego,
+        Complemento
 	}
 
     public class ProyectoGithub

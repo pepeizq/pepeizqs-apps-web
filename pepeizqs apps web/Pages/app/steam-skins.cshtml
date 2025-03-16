@@ -52,31 +52,5 @@
         }
     }
 
-    if (seo == true)
-    {
-        Proyecto proyecto = Listados.Proyectos.DevolverProyecto(id);
-        string descripcion = Herramientas.Idiomas.BuscarTexto(Model.idioma, "String1", proyecto.Id);
-        string titulo = proyecto.Nombre + " • " + descripcion;
-        string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
-        string icono = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
-
-        @(await Html.RenderComponentAsync<Componentes.Seo>(RenderMode.ServerPrerendered, new
-        {
-            idioma = Model.idioma,
-            descripcion = descripcion,
-            titulo = titulo,
-            enlace = enlace,
-            icono = icono
-        }))
-    }
-    else
-    {
-        @(await Html.RenderComponentAsync<Componentes.Plantillas.App>(RenderMode.Server, new
-        {
-            idioma = Model.idioma,
-            id = id,
-            intro = intro,
-            secciones = secciones
-        }))
-    }
+    <component type="typeof(Componentes.Plantillas.App)" render-mode="Server" param-idioma="Model.idioma" param-id="id" param-intro="intro" param-secciones="secciones" />
 }

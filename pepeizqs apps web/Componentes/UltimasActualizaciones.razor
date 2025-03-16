@@ -1,6 +1,28 @@
 ﻿@using Listados
-@using Microsoft.AspNetCore.Components.Web;
+@using Microsoft.AspNetCore.Components.Web
 @using Microsoft.Data.SqlClient
+
+@{
+	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "String2", "LastUpdates");
+	string titulo = Herramientas.Idiomas.BuscarTexto(idioma, "Title", "LastUpdates") + " • " + descripcion;
+	string enlace = "https://pepeizqapps.com/last-updates";
+	string imagen = "https://pepeizqapps.com/imagenes/logo/logo6.png";
+
+	<PageTitle>@titulo</PageTitle>
+	<HeadContent>
+		<meta name="og:title" Content="@titulo" />
+		<meta name="description" content="@descripcion" />
+		<meta name="og:description" content="@descripcion" />
+		<meta name="og:url" content="@enlace" />
+		<meta name="og:image" content="@imagen" />
+		<meta name="og:site_name" content="pepeizq's apps" />
+		<meta name="og:type" content="website" />
+		<meta name="robots" content="index, follow, noimageindex" />
+		<meta name="keywords" content="pepeizq, deals, source code, developer" />
+
+		<link rel="canonical" href="@enlace" />
+	</HeadContent>
+}
 
 <div style="background-color: var(--fondoEntrada); padding: 50px;">
 	<div style="font-size: 22px;">

@@ -1,6 +1,28 @@
 ﻿@using Herramientas
-@using Microsoft.AspNetCore.Components.Web;
+@using Microsoft.AspNetCore.Components.Web
 @using Listados
+
+@{
+	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "Subtitle", "Index");
+	string titulo = "pepeizq's apps • " + descripcion;
+	string enlace = "https://pepeizqapps.com/";
+	string imagen = "https://pepeizqapps.com/logo/logo6.png";
+
+	<PageTitle>@titulo</PageTitle>
+	<HeadContent>
+		<meta name="og:title" Content="@titulo" />
+		<meta name="description" content="@descripcion" />
+		<meta name="og:description" content="@descripcion" />
+		<meta name="og:url" content="@enlace" />
+		<meta name="og:image" content="@imagen" />
+		<meta name="og:site_name" content="pepeizq's apps" />
+		<meta name="og:type" content="website" />
+		<meta name="robots" content="index, follow, noimageindex" />
+		<meta name="keywords" content="pepeizq, apps, source code, developer" />
+
+		<link rel="canonical" href="@enlace" />
+	</HeadContent>
+}
 
 <style>
 	.boton-github {
@@ -22,7 +44,7 @@
 </style>
 
 <div style="background-color: var(--fondoEntrada);">	
-	<div style="display: flex; align-items: center; backdrop-filter: brightness(80%); width: 100%; padding: 50px;">
+	<div style="display: flex; align-items: center; backdrop-filter: brightness(80%); width: 100%; padding: 30px 50px;">
 		<span style="color: var(--colorTexto);">@Idiomas.BuscarTexto(idioma, "Presentation", "Index")</span>
 	</div>
 
@@ -119,14 +141,14 @@
 									@if (tecnologia.MostrarNombre == false)
 									{
 										<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-											<img src="/imagenes/tecnologias/@tecnologia.Imagen" style="max-height: 20px; object-fit: contain;" />
+											<img src="/imagenes/tecnologias/@tecnologia.Imagen" style="max-height: 20px; object-fit: contain;" alt="@tecnologia.Nombre"/>
 											<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(tecnologia.Id))</span>
 										</div>
 									}
 									else
 									{
 										<div style="display: flex; align-items: center; width: 100%; height: 100%;">
-											<img src="/imagenes/tecnologias/@tecnologia.Imagen" style="max-height: 20px; object-fit: contain;" />
+											<img src="/imagenes/tecnologias/@tecnologia.Imagen" style="max-height: 20px; object-fit: contain;" alt="@tecnologia.Nombre"/>
 											<span style="color: var(--colorTexto); margin-left: 10px;">@tecnologia.Nombre</span>
 											<span style="color: var(--colorTexto); margin-left: 10px;">(@LeerProyectos(tecnologia.Id))</span>
 										</div>
@@ -140,34 +162,34 @@
 		</div>
 		
 		<div style="width: 80%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-			@{
-				string enlace = string.Empty;
+			@foreach (var proyecto in proyectos)
+			{
+				string enlaceProyecto = string.Empty;
 
-				foreach (var proyecto in proyectos)
+				if (string.IsNullOrEmpty(proyecto.Ubicacion) == true && string.IsNullOrEmpty(proyecto.Github) == false)
 				{
-					if (string.IsNullOrEmpty(proyecto.Ubicacion) == true && string.IsNullOrEmpty(proyecto.Github) == false)
-					{
-						enlace = "https://github.com/pepeizq/" + proyecto.Github + "/";
-					}
-					else
-					{
-						enlace = proyecto.Ubicacion;
-					}
-
-					<div class="expandir" style="width: 100%; height: 100%;">
-						<a href="@enlace" style="text-decoration: none; color: var(--colorTexto);">
-							<div style="display: flex; flex-direction: column; height: 100%; border: 1px solid var(--colorEnlace); background-color: @proyecto.Color1;">
-								<img src="/imagenes/@proyecto.Id/logo.webp" style="height: 100px; object-fit: cover; opacity: 0.5;" />
-							
-								<div style="padding: 20px;">
-									<div style="font-size: 19px;">@proyecto.Nombre</div>
-									<hr/>
-									<div>@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id)</div>
-								</div>
-							</div>
-						</a>
-					</div>
+					enlaceProyecto = "https://github.com/pepeizq/" + proyecto.Github + "/";
 				}
+				else
+				{
+					enlaceProyecto = "https://pepeizqapps.com" + proyecto.Ubicacion;
+				}
+		
+				<a href=@enlaceProyecto target="_blank" style="padding: 0px; border: 0px; color: var(--colorTexto); text-decoration: none;">
+					<div class="expandir" style="display: flex; flex-direction: column; width: 100%; height: 100%; border: 1px solid var(--fondoOscuro); overflow: hidden; position: relative; background-color: @proyecto.Color1;">
+						<img style="opacity: 0.5; position: absolute; left: 0; top: 0; bottom: 0; width: 100%; height: auto; object-fit: fill;"
+							src="/imagenes/@proyecto.Id/captura1.webp">
+
+						<div style="position: relative; height: 100%; display: flex; flex-direction: column; border: 2px solid @proyecto.Color1; margin: 15px; background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro));">
+							<div style="display: flex; align-items: center; gap: 15px; margin: 2px; padding: 15px; background-color: @proyecto.Color1;">
+								<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 32px; height: 32px; object-fit: cover;" />
+								<div style="font-size: 18px; width: 100%; text-align: center;">@proyecto.Nombre</div>
+							</div>
+
+							<div style="padding: 10px; text-align: center;">@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id)</div>
+						</div>
+					</div>
+				</a>
 			}
 		</div>
 	</div>
@@ -189,6 +211,12 @@
 	{
 		tipoSeleccionado = "Todos";
 		tecnologias = Listados.Tecnologias.Generar();
+
+        if (tecnologias.Count > 0)
+        {
+			tecnologias = tecnologias.OrderBy(x => x.Nombre).ToList();
+        }
+
 		proyectos = Listados.Proyectos.Generar(true);
 	}
 
