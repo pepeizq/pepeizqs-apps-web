@@ -28,21 +28,6 @@
             Texto2 = "6"
         }
     };
-    bool seo = false;
-    string? userAgent = string.Empty;
-
-    if (HttpContext != null)
-    {
-        userAgent = HttpContext.Request.Headers.UserAgent;
-
-        if (string.IsNullOrEmpty(userAgent) == false)
-        {
-            if (userAgent.Contains("http://www.google.com/bot.html") == true || userAgent.Contains("http://www.bing.com/bingbot.html") == true)
-            {
-                seo = true;
-            }
-        }
-    }
 
     <component type="typeof(Componentes.Plantillas.App)" render-mode="Server" param-idioma="Model.idioma" param-id="id" param-intro="intro" param-secciones="secciones" />
 }

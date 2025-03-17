@@ -1,4 +1,11 @@
 ﻿@page
-@model pepeizqs_apps_web.Pages.extension.pepeizq_dealsModel
+@model pepeizqs_apps_web.Pages.extension.pepeizqdealsModel
+
 @{
+    string id = "pepeizqdeals3";
+
+    ViewData["Title"] = Listados.Proyectos.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.BuscarTexto(Model.idioma, "String1", Listados.Proyectos.DevolverProyecto(id).Id);
+    Layout = "/Pages/Shared/_Layout.cshtml";
+
+    <component type="typeof(Componentes.Complementos.Pepeizqdeals)" render-mode="Server" param-idioma="Model.idioma" />
 }

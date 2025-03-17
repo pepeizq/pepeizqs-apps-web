@@ -1,0 +1,195 @@
+﻿@using BaseDatos
+@using Listados
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.Data.SqlClient
+
+
+@{
+	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id);
+	string titulo = proyecto.Nombre + " • " + descripcion;
+	string enlace = "https://pepeizqapps.com/" + proyecto.Ubicacion;
+	string imagen = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+
+	<PageTitle>@titulo</PageTitle>
+	<HeadContent>
+		<meta name="og:title" Content="@titulo" />
+		<meta name="description" content="@descripcion" />
+		<meta name="og:description" content="@descripcion" />
+		<meta name="og:url" content="@enlace" />
+		<meta name="og:image" content="@imagen" />
+		<meta name="og:site_name" content="pepeizq's apps" />
+		<meta name="og:type" content="website" />
+		<meta name="robots" content="index, follow, noimageindex" />
+		<meta name="keywords" content="pepeizq, deals, source code, developer" />
+
+		<link rel="canonical" href="@enlace" />
+	</HeadContent>
+}
+
+<style>
+	.boton-github {
+		transition: transform .5s;
+	}
+
+		.boton-github:hover {
+			transform: scale(1.01);
+		}
+
+	.boton-imagen {
+		transition: transform .2s;
+	}
+
+		.boton-imagen:hover {
+			transform: scale(1.05);
+		}
+</style>
+
+
+<div style="background-color: @proyecto.Color1; display: flex; align-items: center;">
+	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
+	{
+		<a href="@proyecto.Enlace" target="_blank">
+			<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+		</a>
+	}
+	else
+	{
+		<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+	}
+
+	<div style="padding: 20px 30px;">
+		<div style="font-size: 22px;">@proyecto.Nombre</div>
+		<div style="margin-top: 10px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id)</div>
+	</div>
+</div>
+
+<div style="display: flex; flex-direction: column; background-color: var(--fondoEntrada); padding: 30px; gap: 30px;">
+	<div style="display: flex; align-items: stretch; gap: 40px;">
+		<div style="width: 66%; background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro)); display: flex; flex-direction: column; gap: 10px; padding: 15px 25px; justify-content: center; text-align: center;">
+			<div style="font-size: 18px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String2", proyecto.Id)</div>
+
+			<div>
+				<a href="@chrome" target="_blank">
+					<div class="boton-imagen">
+						<img style="width: 40px; height: 40px;" src="/imagenes/tecnologias/chrome.webp" />
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div style="width: 33%; background-color: @proyecto.Color2;">
+			<a href="https://github.com/pepeizq/@proyecto.Github" target="_blank" style="text-decoration: none;">
+				<div class="boton-github" style="background-color: #24292e; color: var(--colorTexto); display: flex; flex-direction: column; gap: 10px; padding: 15px 25px; justify-content: center; text-align: center; height: 100%;" title="@Herramientas.Idiomas.BuscarTexto(idioma, "String3", proyecto.Id)">
+					<div style="font-size: 18px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String3", proyecto.Id)</div>
+					
+					<svg style="width: 32px; height: 32px; fill: var(--colorTexto); display: block; margin: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                    </svg>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div style="background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro)); display: flex; align-items: center; gap: 60px; padding: 30px;">
+		@{
+			string captura1 = "/imagenes/" + proyecto.Id + "/captura1.webp";
+		}
+		
+		<a @onclick="(e => CargarImagen(e, captura1))" target="_self" style="text-align: center;">
+			<img src="@captura1" class="expandir" style="width: 30vw; border: 1px solid var(--colorEnlace);" />
+		</a>
+
+		<div style="display: flex; flex-direction: column; gap: 40px;">
+			<div>@Herramientas.Idiomas.BuscarTexto(idioma, "String4", proyecto.Id)</div>
+
+			<div>
+				<div>@Herramientas.Idiomas.BuscarTexto(idioma, "String5", proyecto.Id)</div>
+				<ul style="margin-top: 10px;">
+					<li>@Herramientas.Idiomas.BuscarTexto(idioma, "String6", proyecto.Id)</li>	
+					<li>@Herramientas.Idiomas.BuscarTexto(idioma, "String7", proyecto.Id)</li>
+					<li>@Herramientas.Idiomas.BuscarTexto(idioma, "String8", proyecto.Id)</li>	
+				</ul>
+			</div>
+		</div>	
+	</div>
+
+	<div style="background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro)); padding: 30px; display: flex; flex-direction: column; gap: 30px;">
+		<div style="text-align: center;">
+			@Herramientas.Idiomas.BuscarTexto(idioma, "String9", proyecto.Id)
+		</div>
+
+		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+			@{
+				int i = 2;
+
+				while (i < 6)
+				{
+					string captura = "/imagenes/" + proyecto.Id + "/captura" + i.ToString() + ".webp";
+
+					<a @onclick="(e => CargarImagen(e, captura))" target="_self" style="text-align: center;">
+						<img src="@captura" class="expandir" style="border: 1px solid var(--colorEnlace); max-width: 100%; max-height: 100%;" />
+					</a>
+
+					i += 1;
+				}
+			}
+		</div>
+	</div>
+</div>
+
+@if (string.IsNullOrEmpty(imagenAbierta) == false)
+{
+	<div style="height: 100%; width: 100%; left: 0; top: 0; overflow-x: auto; position: fixed; z-index: 10000; padding: 20px; backdrop-filter: blur(15px);">
+		<div style="height: auto; width: auto;">
+			<button style="color: var(--colorTextoVisitado); background-color: transparent; border: 0px;" @onclick="(e => CerrarImagen(e))">
+				<svg xmlns="http://www.w3.org/2000/svg" style="width: 30px; height: 30px; fill: var(--colorTextoVisitado);" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+			</button>
+		
+			<img src="@imagenAbierta" style="width: 100%; height: 100%; margin-top: 20px;" alt="image"/>
+		</div>
+	</div>
+}
+
+@code {
+
+	#nullable disable
+
+	[Parameter]
+	public string idioma { get; set; }
+
+	private string id = "pepeizqdeals3";
+
+	private string imagenAbierta = string.Empty;
+
+	SqlConnection conexion = new SqlConnection();
+
+	private Proyecto proyecto = new Proyecto();
+	private GithubBaseDatos github = new GithubBaseDatos();
+
+	private string chrome = "https://chromewebstore.google.com/detail/ndbpejegbkeanojebmfidnbjahlfebno/";
+
+	protected override void OnInitialized()
+	{
+		proyecto = global::Listados.Proyectos.DevolverProyecto(id);
+
+		if (conexion.State != System.Data.ConnectionState.Open)
+		{
+			conexion = Herramientas.BaseDatos.Conectar();
+		}
+
+		using (conexion)
+		{
+			github = BaseDatos.Github.Buscar(conexion, proyecto.Github);
+		}
+	}
+
+	private void CargarImagen(MouseEventArgs e, string nuevaImagen)
+	{
+		imagenAbierta = nuevaImagen;
+	}
+
+	private void CerrarImagen(MouseEventArgs e)
+	{
+		imagenAbierta = string.Empty;
+	}
+}

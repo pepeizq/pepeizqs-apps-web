@@ -263,9 +263,25 @@ namespace Listados
 
             proyectos.Add(proyecto13);
 
-            //-----------------------------------------
+			Proyecto proyecto14 = new Proyecto
+			{
+				Id = "pepeizqdeals3",
+				Nombre = "pepeizq's deals",
+				Github = "pepeizq-deals-extension",
+				Ubicacion = "/extension/pepeizq-deals",
+				Enlace = "https://chromewebstore.google.com/detail/ndbpejegbkeanojebmfidnbjahlfebno/",
+				Color1 = "#002033",
+				Color2 = "#1b2838",
+				Tipo = ProyectoTipo.Complemento,
+				Tecnologias = new List<TecnologiaTipo>() { TecnologiaTipo.Blazor },
+				Buscador = new List<string>() { "chrome", "edge" }
+			};
 
-            if (proyectos.Count > 0)
+			proyectos.Add(proyecto14);
+
+			//-----------------------------------------
+
+			if (proyectos.Count > 0)
             {
 				if (azar == false)
                 {
