@@ -68,10 +68,16 @@
 		<div style="width: 66%; background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro)); display: flex; flex-direction: column; gap: 10px; padding: 15px 25px; justify-content: center; text-align: center;">
 			<div style="font-size: 18px;">@Herramientas.Idiomas.BuscarTexto(idioma, "String2", proyecto.Id)</div>
 
-			<div>
+			<div style="display: flex; align-items: center; gap: 20px; justify-content: center;">
 				<a href="@chrome" target="_blank">
 					<div class="boton-imagen">
 						<img style="width: 40px; height: 40px;" src="/imagenes/tecnologias/chrome.webp" />
+					</div>
+				</a>
+
+				<a href="@edge" target="_blank">
+					<div class="boton-imagen">
+						<img style="width: 40px; height: 40px;" src="/imagenes/tecnologias/edge.webp" />
 					</div>
 				</a>
 			</div>
@@ -167,6 +173,7 @@
 	private GithubBaseDatos github = new GithubBaseDatos();
 
 	private string chrome = "https://chromewebstore.google.com/detail/ndbpejegbkeanojebmfidnbjahlfebno/";
+	private string edge = "https://microsoftedge.microsoft.com/addons/detail/ginjggkpgajamlcnckkjhbblibanbklh";
 
 	protected override void OnInitialized()
 	{
