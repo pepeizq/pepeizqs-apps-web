@@ -8,5 +8,5 @@
     ViewData["Title"] = Listados.Proyectos.DevolverProyecto(id).Nombre + " • " + Herramientas.Idiomas.BuscarTexto(Model.idioma, "String1", Listados.Proyectos.DevolverProyecto(id).Id);
     Layout = "/Pages/Shared/_Layout.cshtml";
 
-    <component type="typeof(Componentes.Webs.Pepeizqdeals)" render-mode="Server" param-idioma="Model.idioma" />
+    <component type="typeof(Componentes.Webs.Pepeizqdeals)" render-mode="ServerPrerendered" param-idioma="Model.idioma" />
 }

@@ -5,5 +5,5 @@
     ViewData["Title"] = "pepeizq's apps • " + Herramientas.Idiomas.BuscarTexto(Model.idioma, "Subtitle", "Index");
     Layout = "/Pages/Shared/_Layout.cshtml";
 
-    <component type="typeof(Componentes.Portada)" render-mode="Server" param-idioma="Model.idioma" />
+    <component type="typeof(Componentes.Portada)" render-mode="ServerPrerendered" param-idioma="Model.idioma" />
 }
