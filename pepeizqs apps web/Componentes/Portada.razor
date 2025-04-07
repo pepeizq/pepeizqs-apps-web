@@ -1,6 +1,9 @@
 ﻿@using Herramientas
+@using Microsoft.AspNetCore.Components.Routing
 @using Microsoft.AspNetCore.Components.Web
 @using Listados
+
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 
 @{
 	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "Subtitle", "Index");
@@ -18,6 +21,43 @@
 		<meta name="og:type" content="website" />
 		<meta name="robots" content="index, follow" />
 		<meta name="keywords" content="pepeizq, apps, source code, developer" />
+
+		<script type="application/ld+json">
+			{
+			  "@@context": "https://schema.org",
+			  "@@type": "BreadcrumbList",
+			  "itemListElement": [{
+				"@@type": "ListItem",
+				"position": 1,
+				"name": "Last Updates",
+				"item": "https://pepeizqapps.com/last-updates"
+			  }]
+			}
+		</script>
+
+		<script type="application/ld+json">
+			{
+			  "@@context": "https://schema.org",
+			  "@@type": "Organization",
+			  "name": "pepeizq's apps",
+              "description": "@descripcion",
+              "url": "@enlace",
+              "logo": {
+                "@@type": "ImageObject",
+				"url": "@imagen",
+                "caption": "pepeizq's apps logo"
+			  },
+			  "contactPoint": {
+                "@@type": "ContactPoint",
+				"email": "admin@pepeizqapps.com",
+                "areaServed": "Worldwide",
+                "availableLanguage": "Spanish, English"
+			  },
+			  "sameAs": [
+				  "https://github.com/pepeizq/"
+			  ]
+			}
+		</script>
 
 		<link rel="canonical" href="@enlace" />
 	</HeadContent>
@@ -192,18 +232,19 @@
 					enlaceProyecto = "https://pepeizqapps.com" + proyecto.Ubicacion;
 				}
 		
-				<a href=@enlaceProyecto target="_blank" style="padding: 0px; border: 0px; color: var(--colorTexto); text-decoration: none;">
+				<a href="@enlaceProyecto" style="padding: 0px; border: 0px; color: var(--colorTexto); text-decoration: none;">
 					<div class="expandir" style="display: flex; flex-direction: column; width: 100%; height: 100%; border: 1px solid var(--fondoOscuro); overflow: hidden; position: relative; background-color: @proyecto.Color1;">
-						<img style="opacity: 0.5; position: absolute; left: 0; top: 0; bottom: 0; width: 100%; height: auto; object-fit: fill;"
-							src="/imagenes/@proyecto.Id/captura1.webp">
+						<div style="display: flex; justify-content: center; align-items: center; overflow: hidden;">
+							<img style="height: 100px; flex-shrink: 0; min-width: 100%; object-fit: cover; opacity: 0.5;" src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura1.webp", 297, 100)"/>
+						</div>
 
-						<div style="position: relative; height: 100%; display: flex; flex-direction: column; border: 2px solid @proyecto.Color1; margin: 15px; background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro));">
-							<div style="display: flex; align-items: center; gap: 15px; margin: 2px; padding: 15px; background-color: @proyecto.Color1;">
-								<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 32px; height: 32px; object-fit: cover;" />
+						<div style="display: flex; flex-direction: column; border: 2px solid @proyecto.Color1; background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro)); flex: 1;">
+							<div style="display: flex; align-items: center; gap: 15px; padding: 15px; background-color: @proyecto.Color1;">
+								<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/logo.webp", 40, 40)" style="width: 40px; height: 40px; object-fit: cover;" />
 								<div style="font-size: 18px; width: 100%; text-align: center;">@proyecto.Nombre</div>
 							</div>
 
-							<div style="padding: 10px; text-align: center;">@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id)</div>
+							<div style="padding: 15px; text-align: center;">@Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id)</div>
 						</div>
 					</div>
 				</a>

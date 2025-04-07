@@ -1,5 +1,4 @@
 using Herramientas;
-using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.Globalization;
 using System.IO.Compression;
@@ -120,7 +119,10 @@ builder.Services.AddRateLimiter(opciones =>
 
 #region Blazor
 
-builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents(opciones =>
+{
+	opciones.DetailedErrors = true;
+});
 
 #endregion
 
@@ -158,6 +160,7 @@ app.UseWebOptimizer();
 #endregion
 
 app.UseHttpsRedirection();
+app.UseAntiforgery();
 app.MapStaticAssets();
 
 app.UseRouting();

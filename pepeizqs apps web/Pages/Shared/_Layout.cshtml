@@ -50,13 +50,13 @@
                         <svg style="width: 20px; height: 20px; fill: var(--colorTexto);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
                     </button>
                     <div class="menu-dropdown-contenido">
-                        <a class="texto-cabecera menu-dropdown-item" asp-page="/last-updates" target="_blank">
+                        <a class="texto-cabecera menu-dropdown-item" asp-page="/last-updates">
                             @Herramientas.Idiomas.BuscarTexto(idioma, "Title", "LastUpdates")
                         </a>
                     </div>
                 </div>
 
-                <a class="texto-logo" asp-page="/Index" target="_blank">pepeizq's apps</a>
+                <a class="texto-logo" asp-page="/Index">pepeizq's apps</a>
 
                 <component type="typeof(Componentes.Buscador)" render-mode="ServerPrerendered" param-idioma="Model.idioma" />
 
@@ -157,21 +157,17 @@
             </div>
 
             <div style="width: 10%; text-align: right;">
-                <a onclick="moverScroll('cuerpazo')" style="color: var(--colorTextoOscuro); text-decoration: none; cursor: pointer;">
+                <button onclick="moverScroll('cuerpazo')" style="color: var(--colorTextoOscuro); text-decoration: none; cursor: pointer; cursor: pointer; background-color: transparent; border: 0px;" title="Up">
                     <svg style="width: 24px; height: 24px; fill: var(--colorEnlace);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" /></svg>
-                </a>
+                </button>
             </div>
         </div>
     </footer>
 
-@*     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script> *@
-
     <script src="~/superjs.js" defer></script>
 
-    <script src="_framework/blazor.server.js" autostart="false"></script>
-    <script>
+    <script src="_framework/blazor.web.js"@*  autostart="false" *@></script>
+@*     <script>
         async function boot() {
             await Blazor.start()
 
@@ -184,7 +180,7 @@
         }
 
         boot()
-    </script>
+    </script> *@
 
     <script>
         function moverScroll(id) {

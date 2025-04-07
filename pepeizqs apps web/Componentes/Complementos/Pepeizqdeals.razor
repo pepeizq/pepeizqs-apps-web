@@ -9,6 +9,22 @@
 	string titulo = proyecto.Nombre + " • " + descripcion;
 	string enlace = "https://pepeizqapps.com/" + proyecto.Ubicacion;
 	string imagen = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+	string keywords = "pepeizq";
+
+	if (string.IsNullOrEmpty(descripcion) == false)
+	{
+		string[] keywordsEnBruto = Herramientas.Buscador.LimpiarNombre(titulo, false).Split(' ');
+		List<string> keywordsLista = new List<string>();
+		keywordsLista.AddRange(keywordsEnBruto);
+
+		foreach (string keyword in keywordsLista)
+		{
+			if (keyword.Length > 3)
+			{
+				keywords = keywords + ", " + keyword;
+			}
+		}
+	}
 
 	<HeadContent>
 		<meta name="og:title" Content="@titulo" />
@@ -19,7 +35,27 @@
 		<meta name="og:site_name" content="pepeizq's apps" />
 		<meta name="og:type" content="website" />
 		<meta name="robots" content="index, follow" />
-		<meta name="keywords" content="pepeizq, deals, source code, developer" />
+		<meta name="keywords" content="@keywords" />
+
+		<script type="application/ld+json">
+			{
+			  "@@context": "https://schema.org",
+			  "@@type": "SoftwareApplication",
+			  "name": "pepeizq's deals for Steam and GOG",
+			  "operatingSystem": "WINDOWS",
+			  "applicationCategory": "BrowserApplication",
+			  "offers": {
+				"@@type": "Offer",
+				"price": 0,
+				"priceCurrency": "EUR"
+			  },
+			  "aggregateRating": {
+				"@@type": "AggregateRating",
+				"ratingValue": 4.5,
+				"ratingCount": 3
+			  }
+			}
+		</script>
 
 		<link rel="canonical" href="@enlace" />
 	</HeadContent>
@@ -48,12 +84,12 @@
 	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
 	{
 		<a href="@proyecto.Enlace" target="_blank">
-			<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+			<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/logo.webp", 140, 140)" style="width: 140px; height: 140px;" alt="logo"/>
 		</a>
 	}
 	else
 	{
-		<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+		<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/logo.webp", 140, 140)" style="width: 140px; height: 140px;" alt="logo"/>
 	}
 
 	<div style="padding: 20px 30px;">
@@ -70,13 +106,13 @@
 			<div style="display: flex; align-items: center; gap: 20px; justify-content: center;">
 				<a href="@chrome" target="_blank">
 					<div class="boton-imagen">
-						<img style="width: 40px; height: 40px;" src="/imagenes/tecnologias/chrome.webp" />
+						<img style="width: 40px; height: 40px;" src="@Herramientas.Imagenes.ServidorExterno("/imagenes/tecnologias/chrome.webp", 40, 40)" alt="chrome"/>
 					</div>
 				</a>
 
 				<a href="@edge" target="_blank">
 					<div class="boton-imagen">
-						<img style="width: 40px; height: 40px;" src="/imagenes/tecnologias/edge.webp" />
+						<img style="width: 40px; height: 40px;" src="@Herramientas.Imagenes.ServidorExterno("/imagenes/tecnologias/edge.webp", 40, 40)" alt="edge"/>
 					</div>
 				</a>
 			</div>
@@ -100,9 +136,9 @@
 			string captura1 = "/imagenes/" + proyecto.Id + "/captura1.webp";
 		}
 		
-		<a @onclick="(e => CargarImagen(e, captura1))" target="_self" style="text-align: center;">
-			<img src="@captura1" class="expandir" style="width: 30vw; border: 1px solid var(--colorEnlace);" />
-		</a>
+		<button @onclick="(e => CargarImagen(e, captura1))" style="text-align: center; padding: 0px; border: 0px; background: transparent;">
+			<img src="@Herramientas.Imagenes.ServidorExterno(captura1)" class="expandir" style="width: 30vw; border: 1px solid var(--colorEnlace); cursor: pointer;" alt="screenshot"/>
+		</button>
 
 		<div style="display: flex; flex-direction: column; gap: 40px;">
 			<div>@Herramientas.Idiomas.BuscarTexto(idioma, "String4", proyecto.Id)</div>
@@ -131,9 +167,9 @@
 				{
 					string captura = "/imagenes/" + proyecto.Id + "/captura" + i.ToString() + ".webp";
 
-					<a @onclick="(e => CargarImagen(e, captura))" target="_self" style="text-align: center;">
-						<img src="@captura" class="expandir" style="border: 1px solid var(--colorEnlace); max-width: 100%; max-height: 100%;" />
-					</a>
+					<button @onclick="(e => CargarImagen(e, captura))" style="text-align: center; padding: 0px; border: 0px; background: transparent;">
+						<img src="@Herramientas.Imagenes.ServidorExterno(captura)" class="expandir" style="border: 1px solid var(--colorEnlace); max-width: 100%; max-height: 100%; cursor: pointer;" alt="screenshot"/>
+					</button>
 
 					i += 1;
 				}
@@ -150,7 +186,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" style="width: 30px; height: 30px; fill: var(--colorTextoVisitado);" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
 			</button>
 		
-			<img src="@imagenAbierta" style="width: 100%; height: 100%; margin-top: 20px;" alt="image"/>
+			<img src="@Herramientas.Imagenes.ServidorExterno(imagenAbierta)" style="width: 100%; height: 100%; margin-top: 20px;" alt="image"/>
 		</div>
 	</div>
 }
