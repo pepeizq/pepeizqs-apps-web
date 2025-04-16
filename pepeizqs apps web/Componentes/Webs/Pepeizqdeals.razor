@@ -6,8 +6,24 @@
 @{
 	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id);
 	string titulo = proyecto.Nombre + " • " + descripcion;
-	string enlace = "https://pepeizqapps.com/" + proyecto.Ubicacion;
+	string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
 	string imagen = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+	string keywords = "source code";
+
+	if (string.IsNullOrEmpty(descripcion) == false)
+	{
+		string[] keywordsEnBruto = Herramientas.Buscador.LimpiarNombre(titulo, false).Split(' ');
+		List<string> keywordsLista = new List<string>();
+		keywordsLista.AddRange(keywordsEnBruto);
+
+		foreach (string keyword in keywordsLista)
+		{
+			if (keyword.Length > 3 && keywords.Contains(keyword) == false)
+			{
+				keywords = keywords + ", " + keyword;
+			}
+		}
+	}
 
 	<HeadContent>
 		<meta name="og:title" Content="@titulo" />
@@ -18,7 +34,28 @@
 		<meta name="og:site_name" content="pepeizq's apps" />
 		<meta name="og:type" content="website" />
 		<meta name="robots" content="index, follow" />
-		<meta name="keywords" content="pepeizq, deals, source code, developer" />
+		<meta name="keywords" content="@keywords" />
+
+		<script type="application/ld+json">
+			{
+			  "@@context": "https://schema.org",
+			  "@@type": "Organization",
+			  "name": "pepeizq's deals",
+			  "description": "@descripcion",
+			  "url": "@enlace",
+			  "logo": {
+				"@@type": "ImageObject",
+				"url": "@imagen",
+				"caption": "pepeizq's deals logo"
+			  },
+			  "contactPoint": {
+				"@@type": "ContactPoint",
+				"email": "@enlace/contact",
+				"areaServed": "Worldwide",
+				"availableLanguage": "Spanish, English"
+			  }
+			}
+		</script>
 
 		<link rel="canonical" href="@enlace" />
 	</HeadContent>
@@ -38,12 +75,12 @@
 	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
 	{
 		<a href="@proyecto.Enlace" target="_blank">
-			<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+			<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/logo.webp", 140, 140)" style="width: 140px; height: 140px;" />
 		</a>
 	}
 	else
 	{
-		<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 140px; height: 140px;" />
+		<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/logo.webp", 140, 140)" style="width: 140px; height: 140px;" />
 	}
 
 	<div style="padding: 20px 30px;">
@@ -102,11 +139,11 @@
 	<div style="background-color: color-mix(in oklab, @proyecto.Color2 50%, var(--fondoOscuro)); padding: 40px; display: flex; align-items: center;">
 		<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 			<a href="/imagenes/@proyecto.Id/captura1.webp" target="_blank" style="margin-right: 20px;">
-				<img src="/imagenes/@proyecto.Id/captura1.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura1.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 
 			<a href="/imagenes/@proyecto.Id/captura4.webp" target="_blank">
-				<img src="/imagenes/@proyecto.Id/captura4.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura4.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 		</div>
 
@@ -120,11 +157,11 @@
 	<div style="background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro)); padding: 40px; display: flex; align-items: center;">
 		<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 			<a href="/imagenes/@proyecto.Id/captura2.webp" target="_blank" style="margin-right: 20px;">
-				<img src="/imagenes/@proyecto.Id/captura2.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura2.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 
 			<a href="/imagenes/@proyecto.Id/captura3.webp" target="_blank">
-				<img src="/imagenes/@proyecto.Id/captura3.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura3.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 		</div>
 
@@ -138,11 +175,11 @@
 	<div style="background-color: color-mix(in oklab, @proyecto.Color2 50%, var(--fondoOscuro)); padding: 40px; display: flex; align-items: center;">
 		<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 			<a href="/imagenes/@proyecto.Id/captura5.webp" target="_blank" style="margin-right: 20px;">
-				<img src="/imagenes/@proyecto.Id/captura5.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura5.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 
 			<a href="/imagenes/@proyecto.Id/captura6.webp" target="_blank">
-				<img src="/imagenes/@proyecto.Id/captura6.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura6.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 		</div>
 
@@ -156,11 +193,11 @@
 	<div style="background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro)); padding: 40px; display: flex; align-items: center;">
 		<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 			<a href="/imagenes/@proyecto.Id/captura7.webp" target="_blank" style="margin-right: 20px;">
-				<img src="/imagenes/@proyecto.Id/captura7.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura7.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 
 			<a href="/imagenes/@proyecto.Id/captura8.webp" target="_blank">
-				<img src="/imagenes/@proyecto.Id/captura8.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura8.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 		</div>
 
@@ -174,11 +211,11 @@
 	<div style="background-color: color-mix(in oklab, @proyecto.Color2 50%, var(--fondoOscuro)); padding: 40px; display: flex; align-items: center;">
 		<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 			<a href="/imagenes/@proyecto.Id/captura9.webp" target="_blank" style="margin-right: 20px;">
-				<img src="/imagenes/@proyecto.Id/captura9.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura9.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 
 			<a href="/imagenes/@proyecto.Id/captura10.webp" target="_blank">
-				<img src="/imagenes/@proyecto.Id/captura10.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura10.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 		</div>
 
@@ -192,11 +229,11 @@
 	<div style="background-color: color-mix(in oklab, @proyecto.Color1 50%, var(--fondoOscuro)); padding: 40px; display: flex; align-items: center;">
 		<div style="display: flex; align-items: center; width: 55%; padding-right: 50px;">
 			<a href="/imagenes/@proyecto.Id/captura11.webp" target="_blank" style="margin-right: 20px;">
-				<img src="/imagenes/@proyecto.Id/captura11.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura11.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 
 			<a href="/imagenes/@proyecto.Id/captura12.webp" target="_blank">
-				<img src="/imagenes/@proyecto.Id/captura12.webp" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
+				<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/captura12.webp")" class="expandir" style="width: 100%; border: 1px solid var(--colorEnlace);" />
 			</a>
 		</div>
 

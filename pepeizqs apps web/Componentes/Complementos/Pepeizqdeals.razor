@@ -7,9 +7,9 @@
 @{
 	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "String1", proyecto.Id);
 	string titulo = proyecto.Nombre + " • " + descripcion;
-	string enlace = "https://pepeizqapps.com/" + proyecto.Ubicacion;
+	string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
 	string imagen = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
-	string keywords = "pepeizq";
+	string keywords = "source code";
 
 	if (string.IsNullOrEmpty(descripcion) == false)
 	{
@@ -19,7 +19,7 @@
 
 		foreach (string keyword in keywordsLista)
 		{
-			if (keyword.Length > 3)
+			if (keyword.Length > 3 && keywords.Contains(keyword) == false)
 			{
 				keywords = keywords + ", " + keyword;
 			}
@@ -42,6 +42,7 @@
 			  "@@context": "https://schema.org",
 			  "@@type": "SoftwareApplication",
 			  "name": "pepeizq's deals for Steam and GOG",
+			  "description": "@descripcion",
 			  "operatingSystem": "WINDOWS",
 			  "applicationCategory": "BrowserApplication",
 			  "offers": {

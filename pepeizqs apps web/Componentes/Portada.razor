@@ -1,15 +1,28 @@
 ﻿@using Herramientas
-@using Microsoft.AspNetCore.Components.Routing
-@using Microsoft.AspNetCore.Components.Web
+<Component />@using Microsoft.AspNetCore.Components.Web
 @using Listados
-
-@rendermode @(new InteractiveServerRenderMode(prerender: false))
 
 @{
 	string descripcion = Herramientas.Idiomas.BuscarTexto(idioma, "Subtitle", "Index");
 	string titulo = "pepeizq's apps • " + descripcion;
 	string enlace = "https://pepeizqapps.com/";
 	string imagen = "https://pepeizqapps.com/logo/logo6.png";
+	string keywords = "source code";
+
+	if (string.IsNullOrEmpty(descripcion) == false)
+	{
+		string[] keywordsEnBruto = Herramientas.Buscador.LimpiarNombre(titulo, false).Split(' ');
+		List<string> keywordsLista = new List<string>();
+		keywordsLista.AddRange(keywordsEnBruto);
+
+		foreach (string keyword in keywordsLista)
+		{
+			if (keyword.Length > 3 && keywords.Contains(keyword) == false)
+			{
+				keywords = keywords + ", " + keyword;
+			}
+		}
+	}
 
 	<HeadContent>
 		<meta name="og:title" Content="@titulo" />
@@ -20,7 +33,7 @@
 		<meta name="og:site_name" content="pepeizq's apps" />
 		<meta name="og:type" content="website" />
 		<meta name="robots" content="index, follow" />
-		<meta name="keywords" content="pepeizq, apps, source code, developer" />
+		<meta name="keywords" content="@keywords" />
 
 		<script type="application/ld+json">
 			{

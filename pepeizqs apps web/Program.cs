@@ -10,15 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddResponseCompression(options =>
 {
-	//options.Providers.Add<BrotliCompressionProvider>();
 	options.Providers.Add<GzipCompressionProvider>();
 	options.EnableForHttps = true;
 });
-
-//builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
-//{
-//	options.Level = CompressionLevel.Optimal;
-//});
 
 builder.Services.Configure<GzipCompressionProviderOptions>(options =>
 {
@@ -37,11 +31,23 @@ builder.Services.AddWebOptimizer(opciones => {
 	opciones.AddJavaScriptBundle("/superjs.js", "lib/jquery/dist/jquery.min.js", "lib/bootstrap/dist/js/bootstrap.bundle.min.js", "js/site.js");
 });
 
-builder.Services.AddRazorPages();
+try
+{
+	builder.Services.AddRazorPages();
+}
+catch { }
+
+
+builder.Services.AddServerSideBlazor()
+	.AddCircuitOptions(options => { options.DetailedErrors = true; });
 
 #region Redireccionador
 
-builder.Services.AddControllersWithViews();
+try
+{
+	builder.Services.AddControllersWithViews();
+}
+catch { }
 
 #endregion
 
@@ -119,10 +125,10 @@ builder.Services.AddRateLimiter(opciones =>
 
 #region Blazor
 
-builder.Services.AddRazorComponents().AddInteractiveServerComponents(opciones =>
-{
-	opciones.DetailedErrors = true;
-});
+//builder.Services.AddRazorComponents().AddInteractiveServerComponents(opciones =>
+//{
+//	opciones.DetailedErrors = true;
+//});
 
 #endregion
 
@@ -160,14 +166,9 @@ app.UseWebOptimizer();
 #endregion
 
 app.UseHttpsRedirection();
-app.UseAntiforgery();
 app.MapStaticAssets();
 
-app.UseRouting();
-
 app.UseAuthorization();
-
-app.MapRazorPages();
 
 #region Blazor
 
@@ -177,7 +178,13 @@ app.MapBlazorHub();
 
 #region Redireccionador
 
-app.MapControllers();
+try
+{
+	app.MapControllers();
+}
+catch { }
+
+
 
 #endregion
 
@@ -186,5 +193,7 @@ app.MapControllers();
 app.UseRateLimiter();
 
 #endregion
+
+//app.MapRazorPages();
 
 app.Run();

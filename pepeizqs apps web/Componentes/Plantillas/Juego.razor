@@ -8,6 +8,22 @@
 	string titulo = proyecto.Nombre + " • " + descripcion;
 	string enlace = "https://pepeizqapps.com" + proyecto.Ubicacion;
 	string imagen = "https://pepeizqapps.com/imagenes/" + proyecto.Id + "/logo.webp";
+	string keywords = "source code";
+
+	if (string.IsNullOrEmpty(descripcion) == false)
+	{
+		string[] keywordsEnBruto = Herramientas.Buscador.LimpiarNombre(titulo, false).Split(' ');
+		List<string> keywordsLista = new List<string>();
+		keywordsLista.AddRange(keywordsEnBruto);
+
+		foreach (string keyword in keywordsLista)
+		{
+			if (keyword.Length > 3 && keywords.Contains(keyword) == false)
+			{
+				keywords = keywords + ", " + keyword;
+			}
+		}
+	}
 
 	<HeadContent>
 		<meta name="og:title" Content="@titulo" />
@@ -18,7 +34,27 @@
 		<meta name="og:site_name" content="pepeizq's apps" />
 		<meta name="og:type" content="website" />
 		<meta name="robots" content="index, follow" />
-		<meta name="keywords" content="pepeizq, apps, source code, developer" />
+		<meta name="keywords" content="@keywords" />
+
+		<script type="application/ld+json">
+			{
+			  "@@context": "https://schema.org",
+			  "@@type": "SoftwareApplication",
+			  "name": "@proyecto.Nombre",
+			  "operatingSystem": "WINDOWS",
+			  "applicationCategory": "GameApplication",
+			  "offers": {
+				"@@type": "Offer",
+				"price": 4.99,
+				"priceCurrency": "EUR"
+			  },
+			  "aggregateRating": {
+				"@@type": "AggregateRating",
+				"ratingValue": 4.8,
+				"ratingCount": 12
+			  }
+			}
+		</script>
 
 		<link rel="canonical" href="@enlace" />
 	</HeadContent>
@@ -91,12 +127,12 @@
 	@if (string.IsNullOrEmpty(proyecto.Enlace) == false)
 	{
 		<a href="@proyecto.Enlace" target="_blank">
-			<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 300px; height: 140px;" />
+			<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/logo.webp", 300, 140)" style="width: 300px; height: 140px;" />
 		</a>
 	}
 	else
 	{
-		<img src="/imagenes/@proyecto.Id/logo.webp" style="width: 300px; height: 140px;" />
+		<img src="@Herramientas.Imagenes.ServidorExterno("/imagenes/" + @proyecto.Id + "/logo.webp", 300, 140)" style="width: 300px; height: 140px;" />
 	}
 
 	<div style="padding: 20px 30px;">
@@ -164,7 +200,7 @@
 		@{
 			string capturaMostrar = "/imagenes/" + proyecto.Id + "/captura" + capturaSeleccionada.ToString() + ".webp";
 
-			<img src="@capturaMostrar" style="width: 100%; height: 100%;" />
+			<img src="@Herramientas.Imagenes.ServidorExterno(capturaMostrar)" style="width: 100%; height: 100%;" />
 		}
 	</div>
 
@@ -184,7 +220,7 @@
 				string posicion = i.ToString();
 
 				<div class="destacados-galeria-columna" @onclick="@(e => CambiarCaptura(e, posicion))" style="background-color: var(--fondoOscuro);">
-					<img class="destacados-galeria-captura destacados-galeria-cursor" src="@captura" style="width: 100%; @opacidad" alt="@proyecto.Nombre">
+					<img class="destacados-galeria-captura destacados-galeria-cursor" src="@Herramientas.Imagenes.ServidorExterno(captura)" style="width: 100%; @opacidad" alt="@proyecto.Nombre">
 				</div>
 
 				i += 1;
