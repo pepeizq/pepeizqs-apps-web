@@ -10,9 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddResponseCompression(options =>
 {
+	//options.Providers.Add<BrotliCompressionProvider>();
 	options.Providers.Add<GzipCompressionProvider>();
 	options.EnableForHttps = true;
 });
+
+//builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
+//{
+//	options.Level = CompressionLevel.Optimal;
+//});
 
 builder.Services.Configure<GzipCompressionProviderOptions>(options =>
 {
@@ -31,23 +37,11 @@ builder.Services.AddWebOptimizer(opciones => {
 	opciones.AddJavaScriptBundle("/superjs.js", "lib/jquery/dist/jquery.min.js", "lib/bootstrap/dist/js/bootstrap.bundle.min.js", "js/site.js");
 });
 
-try
-{
-	builder.Services.AddRazorPages();
-}
-catch { }
-
-
-builder.Services.AddServerSideBlazor()
-	.AddCircuitOptions(options => { options.DetailedErrors = true; });
+builder.Services.AddRazorPages();
 
 #region Redireccionador
 
-try
-{
-	builder.Services.AddControllersWithViews();
-}
-catch { }
+builder.Services.AddControllersWithViews();
 
 #endregion
 
@@ -55,7 +49,7 @@ catch { }
 
 builder.Services.Configure<HostOptions>(hostOptions =>
 {
-    hostOptions.BackgroundServiceExceptionBehavior = BackgroundServiceExceptionBehavior.Ignore;
+	hostOptions.BackgroundServiceExceptionBehavior = BackgroundServiceExceptionBehavior.Ignore;
 });
 
 builder.Services.AddSingleton<Tareas.TareaGithub>();
@@ -67,12 +61,12 @@ builder.Services.AddHostedService(provider => provider.GetRequiredService<Tareas
 #region Decompilador
 
 builder.Services.AddHttpClient<IDecompiladores, Decompiladores2>()
-    .ConfigurePrimaryHttpMessageHandler(() =>
-        new HttpClientHandler
-        {
-            AutomaticDecompression = System.Net.DecompressionMethods.GZip,
-            MaxConnectionsPerServer = 2
-        });
+	.ConfigurePrimaryHttpMessageHandler(() =>
+		new HttpClientHandler
+		{
+			AutomaticDecompression = System.Net.DecompressionMethods.GZip,
+			MaxConnectionsPerServer = 2
+		});
 
 builder.Services.AddSingleton<IDecompiladores, Decompiladores2>();
 
@@ -125,10 +119,10 @@ builder.Services.AddRateLimiter(opciones =>
 
 #region Blazor
 
-//builder.Services.AddRazorComponents().AddInteractiveServerComponents(opciones =>
-//{
-//	opciones.DetailedErrors = true;
-//});
+builder.Services.AddRazorComponents().AddInteractiveServerComponents(opciones =>
+{
+	opciones.DetailedErrors = true;
+});
 
 #endregion
 
@@ -148,9 +142,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 //if (!app.Environment.IsDevelopment())
 //{
-    //app.UseExceptionHandler("/Error");
-    app.UseDeveloperExceptionPage();
-    app.UseHsts();
+//app.UseExceptionHandler("/Error");
+app.UseDeveloperExceptionPage();
+app.UseHsts();
 //}
 
 #region Compresion (Primero)
@@ -166,9 +160,14 @@ app.UseWebOptimizer();
 #endregion
 
 app.UseHttpsRedirection();
+app.UseAntiforgery();
 app.MapStaticAssets();
 
+app.UseRouting();
+
 app.UseAuthorization();
+
+app.MapRazorPages();
 
 #region Blazor
 
@@ -178,13 +177,7 @@ app.MapBlazorHub();
 
 #region Redireccionador
 
-try
-{
-	app.MapControllers();
-}
-catch { }
-
-
+app.MapControllers();
 
 #endregion
 
@@ -193,7 +186,5 @@ catch { }
 app.UseRateLimiter();
 
 #endregion
-
-//app.MapRazorPages();
 
 app.Run();
